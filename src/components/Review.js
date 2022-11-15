@@ -23,10 +23,10 @@ const Review = ({ theme }) => {
               always loved working with team Taniik ”
             </p>
             <div className="stars">
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
             </div>
             <h3 className="client-name">
               Bharat Bhattad, <br /> Head of Digital Marketing,
@@ -48,10 +48,10 @@ const Review = ({ theme }) => {
               always loved working with team Taniik ”
             </p>
             <div className="stars">
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
             </div>
             <h3 className="client-name">
               Bharat Bhattad, <br /> Head of Digital Marketing,
@@ -73,10 +73,10 @@ const Review = ({ theme }) => {
               always loved working with team Taniik ”
             </p>
             <div className="stars">
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
-              <img src={star} className="star" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
+              <img src={star} className="star" alt="img" />
             </div>
             <h3 className="client-name">
               Bharat Bhattad, <br /> Head of Digital Marketing,

@@ -15,7 +15,11 @@ const Timeline = () => {
               <div class="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
-                    <img className="timeline-card-image" src={TimelineImg1} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg1}
+                      alt="img"
+                    />
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6">
                     <h1 className="timeline-card-title">
@@ -30,7 +34,11 @@ const Timeline = () => {
                     </p>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6 d-none d-md-block d-lg-block d-xl-block">
-                    <img className="timeline-card-image" src={TimelineImg1} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg1}
+                      alt="img"
+                    />
                   </div>
                 </div>
               </div>
@@ -41,7 +49,11 @@ const Timeline = () => {
               <div class="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
-                    <img className="timeline-card-image" src={TimelineImg2} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg2}
+                      alt="img"
+                    />
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6">
                     <h1 className="timeline-card-title">
@@ -56,7 +68,11 @@ const Timeline = () => {
                     </p>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6 d-none d-md-block d-lg-block d-xl-block">
-                    <img className="timeline-card-image" src={TimelineImg2} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg2}
+                      alt="img"
+                    />
                   </div>
                 </div>
               </div>
@@ -67,7 +83,11 @@ const Timeline = () => {
               <div class="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
-                    <img className="timeline-card-image" src={TimelineImg3} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg3}
+                      alt="img"
+                    />
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6">
                     <h1 className="timeline-card-title">
@@ -82,7 +102,11 @@ const Timeline = () => {
                     </p>
                   </div>
                   <div className="col-md-6 col-lg-6 col-xl-6 d-none d-md-block d-lg-block d-xl-block">
-                    <img className="timeline-card-image" src={TimelineImg3} />
+                    <img
+                      className="timeline-card-image"
+                      src={TimelineImg3}
+                      alt="img"
+                    />
                   </div>
                 </div>
               </div>
