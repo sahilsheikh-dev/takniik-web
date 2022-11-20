@@ -7,6 +7,7 @@ import AboutImageText from "../components/AboutImageText";
 import AboutTeam from "../components/AboutTeam";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ScrollToTop from "../components/ScrollToTop";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 
 const StyledApp = styled.div`
@@ -50,6 +51,7 @@ const AboutUs = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
+          <ScrollToTop />
           <AboutHero />
           <AboutImageText />
           <AboutContent />

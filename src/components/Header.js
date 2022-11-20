@@ -106,7 +106,7 @@ const Header = ({ themeToggler, theme }) => {
                   <NavLink className="nav-link">Services</NavLink>
                 </Nav.Link>
                 <Nav.Link href="#">
-                  <NavLink className="nav-link">Our Work</NavLink>
+                  <NavLink className="nav-link">Case Studies</NavLink>
                 </Nav.Link>
                 <Nav.Link href="#">
                   <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
@@ -115,6 +115,14 @@ const Header = ({ themeToggler, theme }) => {
                 </Nav.Link>
               </Nav>
               <ButtonGroup className="nav-btn-section">
+                <NavBtn className="nav-btn" href="#">
+                  <Link
+                    to={"/marketingHomepage"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <span className="nav-btn-title">Switch to Marketing</span>
+                  </Link>
+                </NavBtn>
                 <NavBtn className="nav-btn" href="#">
                   <Link to={"/contact"} style={{ textDecoration: "none" }}>
                     <span className="nav-btn-title">Contact Us</span>

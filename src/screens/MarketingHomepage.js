@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Contactform from "../components/Contactform";
-import Contactinfo from "../components/Contactinfo";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ScrollToTop from "../components/ScrollToTop";
@@ -12,7 +10,7 @@ const StyledApp = styled.div`
   color: ${({ theme }) => theme.text};
 `;
 
-const Contactpage = () => {
+const MarketingHomepage = () => {
   const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
@@ -49,8 +47,9 @@ const Contactpage = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
-          <Contactform theme={theme} />
-          <Contactinfo />
+          <div className="text-center">
+            <h1>Marketing Homepage</h1>
+          </div>
           <Footer />
         </section>
       </StyledApp>
@@ -58,4 +57,4 @@ const Contactpage = () => {
   );
 };
 
-export default Contactpage;
+export default MarketingHomepage;

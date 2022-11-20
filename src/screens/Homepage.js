@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Review from "../components/Review";
+import ScrollToTop from "../components/ScrollToTop";
 import Services from "../components/Services";
 import Timeline from "../components/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
@@ -52,6 +53,7 @@ const Homepage = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
+          <ScrollToTop />
           <Hero />
           <Clients theme={theme} />
           <Services theme={theme} />

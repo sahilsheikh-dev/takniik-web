@@ -3,11 +3,11 @@ import { Container, Image } from "react-bootstrap";
 import AchievementLogoDark from "../assets/img/AchievementLogoDark.png";
 import AchievementLogoLight from "../assets/img/AchievementLogoLight.png";
 
-const Achievements = ({theme}) => {
+const Achievements = ({ theme }) => {
   return (
     <Container>
       <div className="achievement">
-        <h1 className="achievement-heading">Global Achievements</h1>
+        <h1 className="achievement-heading">Global Certificates</h1>
         <p className="achievement-subheading">
           Our design solutions have not only won hearts and{" "}
           <br className="d-none d-lg-block d-xl-block" />
@@ -16,35 +16,60 @@ const Achievements = ({theme}) => {
 
         <div className="row">
           <div className="achievement-info text-center col-6 col-lg-4 col-xl-4">
-            <Image src={theme === 'dark' ? AchievementLogoDark : AchievementLogoLight} className="achievement-logo" />
+            <Image
+              src={
+                theme === "dark" ? AchievementLogoDark : AchievementLogoLight
+              }
+              className="achievement-logo"
+            />
             <h2 className="achievement-title">DNA Paris Design Winner</h2>
             <p className="achievement-description">
               DNA PARIS DESIGN AWARD, 2022
             </p>
           </div>
           <div className="achievement-info text-center col-6 col-lg-4 col-xl-4">
-            <Image src={theme === 'dark' ? AchievementLogoDark : AchievementLogoLight} className="achievement-logo" />
+            <Image
+              src={
+                theme === "dark" ? AchievementLogoDark : AchievementLogoLight
+              }
+              className="achievement-logo"
+            />
             <h2 className="achievement-title">DNA Paris Design Winner</h2>
             <p className="achievement-description">
               DNA PARIS DESIGN AWARD, 2022
             </p>
           </div>
           <div className="achievement-info text-center col-6 col-lg-4 col-xl-4">
-            <Image src={theme === 'dark' ? AchievementLogoDark : AchievementLogoLight} className="achievement-logo" />
+            <Image
+              src={
+                theme === "dark" ? AchievementLogoDark : AchievementLogoLight
+              }
+              className="achievement-logo"
+            />
             <h2 className="achievement-title">DNA Paris Design Winner</h2>
             <p className="achievement-description">
               DNA PARIS DESIGN AWARD, 2022
             </p>
           </div>
           <div className="achievement-info text-center col-6 col-lg-4 col-xl-4">
-            <Image src={theme === 'dark' ? AchievementLogoDark : AchievementLogoLight} className="achievement-logo" />
+            <Image
+              src={
+                theme === "dark" ? AchievementLogoDark : AchievementLogoLight
+              }
+              className="achievement-logo"
+            />
             <h2 className="achievement-title">DNA Paris Design Winner</h2>
             <p className="achievement-description">
               DNA PARIS DESIGN AWARD, 2022
             </p>
           </div>
           <div className="achievement-info text-center col-6 col-lg-4 col-xl-4">
-            <Image src={theme === 'dark' ? AchievementLogoDark : AchievementLogoLight} className="achievement-logo" />
+            <Image
+              src={
+                theme === "dark" ? AchievementLogoDark : AchievementLogoLight
+              }
+              className="achievement-logo"
+            />
             <h2 className="achievement-title">DNA Paris Design Winner</h2>
             <p className="achievement-description">
               DNA PARIS DESIGN AWARD, 2022
