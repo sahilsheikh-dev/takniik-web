@@ -8,7 +8,7 @@ const Hero = () => {
         Cobuild Products with <br className="d-block d-lg-none d-xl-none" />
         Higher <br className="d-none d-lg-block d-xl-block" /> Chances of{" "}
         <br className="d-block d-lg-none d-xl-none" />
-        <span className="hero-title-gradient">Success!</span>
+        <span className="hero-title-gradient">&nbsp;Success!</span>
       </h1>
 
       <p className="hero-subtitle">

@@ -10,7 +10,7 @@ const StyledApp = styled.div`
   color: ${({ theme }) => theme.text};
 `;
 
-const MarketingHomepage = () => {
+const TechnicalHomepage = () => {
   const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
@@ -48,7 +48,7 @@ const MarketingHomepage = () => {
         <section id="main">
           <ScrollToTop />
           <div className="text-center">
-            <h1>Marketing Homepage</h1>
+            <h1>Technical Homepage</h1>
           </div>
           <Footer />
         </section>
@@ -57,4 +57,4 @@ const MarketingHomepage = () => {
   );
 };
 
-export default MarketingHomepage;
+export default TechnicalHomepage;

@@ -135,26 +135,59 @@ body {
 }
 
 .hero-title-gradient {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%);
-  -webkit-background-clip: text;
+  position: absolute;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff55f1,
+    #ff0ff3,
+    #0033ff,
+    #ff00c4,
+    #ff0000
+  );
+  background-size: 400%;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
+  animation: animateTextBeg 10s linear infinite;
+}
+
+@keyframes animateTextBeg {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 .hero-btn {
-  background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%);
+  /* background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff55f1,
+    #ff0ff3,
+    #0033ff,
+    #ff00c4,
+    #ff0000
+  );
+  background-size: 400%;
   border-radius: 50px;
   align-items: center;
   margin-top: 30px;
   padding: 16px 36px 16px 40px;
   gap: 10px;
   font-style: normal;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   text-align: center;
   text-transform: capitalize;
+  animation: animateTextBeg 10s linear infinite;
 }
 
 .hero-info {
@@ -1039,10 +1072,21 @@ input:-webkit-autofill:active {
   text-align: left;
   margin-top: 8px;
   margin-left: 15px;
-  background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%);
+  /* background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff55f1,
+    #ff0ff3,
+    #0033ff,
+    #ff00c4,
+    #ff0000
+  );
+  background-size: 400%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: animateTextBeg 10s linear infinite;
 }
 
 .contact-card-description {

@@ -15,7 +15,7 @@ const AboutImageText = () => {
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">mission</span>
+              Our <span className="hero-title-gradient">&nbsp;mission</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
@@ -27,7 +27,7 @@ const AboutImageText = () => {
         <div className="row about-our-section">
           <div className="col-md-6 col-lg-6 col-xl-6 d-none d-md-block d-lg-block d-xl-block">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">culture</span>
+              Our <span className="hero-title-gradient">&nbsp;culture</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
@@ -44,7 +44,7 @@ const AboutImageText = () => {
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">culture</span>
+              Our <span className="hero-title-gradient">&nbsp;culture</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
@@ -59,7 +59,7 @@ const AboutImageText = () => {
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">story</span>
+              Our <span className="hero-title-gradient">&nbsp;story</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
