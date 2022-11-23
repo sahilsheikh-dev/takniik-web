@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
-import AchievementLogoDark from "../assets/img/AchievementLogoDark.png";
-import AchievementLogoLight from "../assets/img/AchievementLogoLight.png";
+import AchievementLogoDark from "../../../assets/img/AchievementLogoDark.png";
+import AchievementLogoLight from "../../../assets/img/AchievementLogoLight.png";
 
 const Achievements = ({ theme }) => {
   return (

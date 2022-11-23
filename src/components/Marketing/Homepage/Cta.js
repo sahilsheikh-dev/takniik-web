@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
-import { NavBtn } from "../theme";
+import { NavBtn } from "../../../theme";
 
 const Cta = ({ theme }) => {
   return (

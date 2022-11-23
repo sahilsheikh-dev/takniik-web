@@ -1,12 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../assets/css/style.css";
-import NavLogo from "../assets/svg/nav-logo.svg";
+import "../../assets/css/style.css";
+import NavLogo from "../../assets/svg/nav-logo.svg";
 import { Nav, NavLink, Container, Image, Navbar } from "react-bootstrap";
-import Instagram from "../assets/svg/Instagram.svg";
-import Facebook from "../assets/svg/Facebook.svg";
-import Linkedin from "../assets/svg/Linkedin.svg";
-import Twitter from "../assets/svg/Twitter.svg";
+import Instagram from "../../assets/svg/Instagram.svg";
+import Facebook from "../../assets/svg/Facebook.svg";
+import Linkedin from "../../assets/svg/Linkedin.svg";
+import Twitter from "../../assets/svg/Twitter.svg";
 
 const Footer = () => {
   return (

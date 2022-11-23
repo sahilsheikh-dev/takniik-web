@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Achievements from "../components/Achievements";
-import Clients from "../components/Clients";
-import Cta from "../components/Cta";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Review from "../components/Review";
-import ScrollToTop from "../components/ScrollToTop";
-import Services from "../components/Services";
-import Timeline from "../components/Timeline";
-import { darkTheme, GlobalStyles, lightTheme } from "../theme";
+import AboutContent from "../../components/Marketing/AboutUs/AboutContent";
+import AboutCta from "../../components/Marketing/AboutUs/AboutCta";
+import AboutHero from "../../components/Marketing/AboutUs/AboutHero";
+import AboutImageText from "../../components/Marketing/AboutUs/AboutImageText";
+import AboutTeam from "../../components/Marketing/AboutUs/AboutTeam";
+import Footer from "../../components/Commons/Footer";
+import Header from "../../components/Commons/Header";
+import ScrollToTop from "../../components/Commons/ScrollToTop";
+import { darkTheme, GlobalStyles, lightTheme } from "../../theme";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
 `;
 
-const Homepage = () => {
+const AboutUs = () => {
   const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
@@ -54,13 +52,11 @@ const Homepage = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
-          <Hero />
-          <Clients theme={theme} />
-          <Services theme={theme} />
-          <Achievements theme={theme} />
-          <Review theme={theme} />
-          <Timeline theme={theme} />
-          <Cta theme={theme} />
+          <AboutHero />
+          <AboutImageText />
+          <AboutContent />
+          <AboutTeam />
+          <AboutCta />
           <Footer />
         </section>
       </StyledApp>
@@ -68,4 +64,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default AboutUs;

@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import AboutBulb from "../assets/svg/about-bulb.svg";
-import AboutHand from "../assets/svg/about-hand.svg";
-import AboutLamp from "../assets/svg/about-lamp.svg";
+import AboutBulb from "../../../assets/svg/about-bulb.svg";
+import AboutHand from "../../../assets/svg/about-hand.svg";
+import AboutLamp from "../../../assets/svg/about-lamp.svg";
 
 const AboutContent = () => {
   return (

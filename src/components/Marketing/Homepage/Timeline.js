@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import TimelineImg1 from "../assets/img/timelineImg1.png";
-import TimelineImg2 from "../assets/img/timelineImg2.png";
-import TimelineImg3 from "../assets/img/timelineImg3.png";
+import TimelineImg1 from "../../../assets/img/timelineImg1.png";
+import TimelineImg2 from "../../../assets/img/timelineImg2.png";
+import TimelineImg3 from "../../../assets/img/timelineImg3.png";
 
 const Timeline = () => {
   return (

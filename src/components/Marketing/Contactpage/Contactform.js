@@ -5,13 +5,13 @@ import {
   ContactInputNumber,
   ContactSelect,
   ContactSpanNumber,
-} from "../theme";
-import LocationIcon from "../assets/svg/LocationIcon.svg";
-import ContactTickIcon from "../assets/svg/ContactTickIcon.svg";
-import ContactCallIcon from "../assets/svg/ContactCallIcon.svg";
-import ContactMessageIcon from "../assets/svg/ContactMessageIcon.svg";
-import ContactBgLight from "../assets/svg/ContactBgLight.svg";
-import ContactBgDark from "../assets/svg/ContactBgDark.svg";
+} from "../../../theme";
+import LocationIcon from "../../../assets/svg/LocationIcon.svg";
+import ContactTickIcon from "../../../assets/svg/ContactTickIcon.svg";
+import ContactCallIcon from "../../../assets/svg/ContactCallIcon.svg";
+import ContactMessageIcon from "../../../assets/svg/ContactMessageIcon.svg";
+import ContactBgLight from "../../../assets/svg/ContactBgLight.svg";
+import ContactBgDark from "../../../assets/svg/ContactBgDark.svg";
 
 const Contactform = ({ theme }) => {
   return (

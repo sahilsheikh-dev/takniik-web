@@ -140,12 +140,12 @@ body {
     linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
   background: linear-gradient(
     90deg,
-    #ff0000,
-    #ff55f1,
-    #ff0ff3,
-    #0033ff,
-    #ff00c4,
-    #ff0000
+    #ff6ec0,
+    #e709d4,
+    #8932fb,
+    #923efa,
+    #fb10c4,
+    #ae2cf9
   );
   background-size: 400%;
   -webkit-text-fill-color: transparent;
@@ -158,8 +158,11 @@ body {
   0% {
     background-position: 0%;
   }
-  100% {
+  50% {
     background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
   }
 }
 
@@ -167,12 +170,12 @@ body {
   /* background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
   background: linear-gradient(
     90deg,
-    #ff0000,
-    #ff55f1,
-    #ff0ff3,
-    #0033ff,
-    #ff00c4,
-    #ff0000
+    #ff6ec0,
+    #e709d4,
+    #8932fb,
+    #923efa,
+    #fb10c4,
+    #ae2cf9
   );
   background-size: 400%;
   border-radius: 50px;
@@ -1075,12 +1078,12 @@ input:-webkit-autofill:active {
   /* background: linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
   background: linear-gradient(
     90deg,
-    #ff0000,
-    #ff55f1,
-    #ff0ff3,
-    #0033ff,
-    #ff00c4,
-    #ff0000
+    #ff6ec0,
+    #e709d4,
+    #8932fb,
+    #923efa,
+    #fb10c4,
+    #ae2cf9
   );
   background-size: 400%;
   -webkit-background-clip: text;

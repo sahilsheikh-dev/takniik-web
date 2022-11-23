@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import ReviewBgDark from "../assets/svg/reviewBgDark.svg";
-import ReviewBgLight from "../assets/svg/reviewBgLight.svg";
-import star from "../assets/svg/star.svg";
+import ReviewBgDark from "../../../assets/svg/reviewBgDark.svg";
+import ReviewBgLight from "../../../assets/svg/reviewBgLight.svg";
+import star from "../../../assets/svg/star.svg";
 
 const Review = ({ theme }) => {
   return (

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutUs from "./screens/AboutUs";
-import Contactpage from "./screens/Contactpage";
-import Homepage from "./screens/Homepage";
-import TechnicalHomepage from "./screens/TechnicalHomepage";
+import AboutUs from "./screens/Marketing/AboutUs";
+import Contactpage from "./screens/Marketing/Contactpage";
+import Homepage from "./screens/Marketing/Homepage";
+import TechnicalHomepage from "./screens/Technical/Homepage";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contactpage />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/technicalHomepage" element={<TechnicalHomepage />} />
+        <Route path="/Homepage" element={<TechnicalHomepage />} />
         {/* <Route path="/ProjectInfo/:projectIndex" element={<ProjectInfo />} /> */}
       </Routes>
     </BrowserRouter>

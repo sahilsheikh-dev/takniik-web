@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Contactform from "../components/Contactform";
-import Contactinfo from "../components/Contactinfo";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import ScrollToTop from "../components/ScrollToTop";
-import { darkTheme, GlobalStyles, lightTheme } from "../theme";
+import Footer from "../../components/Commons/Footer";
+import Header from "../../components/Commons/Header";
+import ScrollToTop from "../../components/Commons/ScrollToTop";
+import { darkTheme, GlobalStyles, lightTheme } from "../../theme";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
 `;
 
-const Contactpage = () => {
+const Homepage = () => {
   const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
@@ -49,8 +47,9 @@ const Contactpage = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
-          <Contactform theme={theme} />
-          <Contactinfo />
+          <div className="text-center">
+            <h1>Technical Homepage</h1>
+          </div>
           <Footer />
         </section>
       </StyledApp>
@@ -58,4 +57,4 @@ const Contactpage = () => {
   );
 };
 
-export default Contactpage;
+export default Homepage;

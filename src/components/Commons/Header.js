@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "../assets/css/style.css";
+import "../../assets/css/style.css";
 import { ButtonGroup, Container, Image, Nav, Navbar } from "react-bootstrap";
-import NavLogo from "../assets/svg/nav-logo.svg";
-// import Moon from "../assets/svg/Moon.svg";
-import MoonActive from "../assets/svg/MoonActive.svg";
-// import Sun from "../assets/svg/Sun.svg";
-import SunActive from "../assets/svg/SunActive.svg";
-import NavToggleDark from "../assets/svg/NavToggleDark.svg";
-import NavToggleLight from "../assets/svg/NavToggleLight.svg";
-import CloseLight from "../assets/svg/CloseLight.svg";
-import CloseDark from "../assets/svg/CloseDark.svg";
+import NavLogo from "../../assets/svg/nav-logo.svg";
+// import Moon from "../../assets/svg/Moon.svg";
+import MoonActive from "../../assets/svg/MoonActive.svg";
+// import Sun from "../../assets/svg/Sun.svg";
+import SunActive from "../../assets/svg/SunActive.svg";
+import NavToggleDark from "../../assets/svg/NavToggleDark.svg";
+import NavToggleLight from "../../assets/svg/NavToggleLight.svg";
+import CloseLight from "../../assets/svg/CloseLight.svg";
+import CloseDark from "../../assets/svg/CloseDark.svg";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme, GlobalStyles, lightTheme, NavBtn, NavLink } from "../theme";
-import riveToggle from "../assets/rive/toggler.riv";
+import { darkTheme, GlobalStyles, lightTheme, NavBtn, NavLink } from "../../theme";
+import riveToggle from "../../assets/rive/toggler.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
 
@@ -116,10 +116,7 @@ const Header = ({ themeToggler, theme }) => {
               </Nav>
               <ButtonGroup className="nav-btn-section">
                 <NavBtn className="nav-btn" href="#">
-                  <Link
-                    to={"/technicalHomepage"}
-                    style={{ textDecoration: "none" }}
-                  >
+                  <Link to={"/Homepage"} style={{ textDecoration: "none" }}>
                     <span className="nav-btn-title">Switch to Technical</span>
                   </Link>
                 </NavBtn>

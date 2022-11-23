@@ -1,8 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import ContactBookIcon from "../assets/svg/Contact-book-icon.svg";
-import ContactStarIcon from "../assets/svg/Contact-star-icon.svg";
-import ContactUsersIcon from "../assets/svg/Contact-users-icon.svg";
+import ContactBookIcon from "../../../assets/svg/Contact-book-icon.svg";
+import ContactStarIcon from "../../../assets/svg/Contact-star-icon.svg";
+import ContactUsersIcon from "../../../assets/svg/Contact-users-icon.svg";
 
 const Contactinfo = () => {
   return (
