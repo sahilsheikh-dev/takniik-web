@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../assets/css/style.css";
-import { ButtonGroup, Container, Image, Nav, Navbar } from "react-bootstrap";
+import {
+  ButtonGroup,
+  Container,
+  Dropdown,
+  Image,
+  Nav,
+  Navbar,
+} from "react-bootstrap";
 import NavLogo from "../../assets/svg/nav-logo.svg";
 // import Moon from "../../assets/svg/Moon.svg";
 import MoonActive from "../../assets/svg/MoonActive.svg";
@@ -12,7 +19,13 @@ import NavToggleLight from "../../assets/svg/NavToggleLight.svg";
 import CloseLight from "../../assets/svg/CloseLight.svg";
 import CloseDark from "../../assets/svg/CloseDark.svg";
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme, GlobalStyles, lightTheme, NavBtn, NavLink } from "../../theme";
+import {
+  darkTheme,
+  GlobalStyles,
+  lightTheme,
+  NavBtn,
+  NavLink,
+} from "../../theme";
 import riveToggle from "../../assets/rive/toggler.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
@@ -26,6 +39,14 @@ const Header = ({ themeToggler, theme }) => {
   const [showIcon, setShowIcon] = useState(false);
   const [togglerNavIconDark, settoggleNavIconDark] = useState(NavToggleDark);
   const [togglerNavIconLight, settoggleNavIconLight] = useState(NavToggleLight);
+
+  const [show, setShow] = useState(false);
+  const showDropdown = (e) => {
+    setShow(!show);
+  };
+  const hideDropdown = (e) => {
+    setShow(false);
+  };
 
   const STATEMACHINE_NAME = "Switch";
   const INPUT_NAME = "Trigger 1";
@@ -102,9 +123,27 @@ const Header = ({ themeToggler, theme }) => {
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mx-auto nav-link-section">
-                <Nav.Link href="#">
-                  <NavLink className="nav-link">Services</NavLink>
-                </Nav.Link>
+                <Dropdown
+                  className="nav-link"
+                  id="collasible-nav-dropdown"
+                  show={show}
+                  onMouseEnter={showDropdown}
+                  onMouseLeave={hideDropdown}
+                >
+                  <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
+                    <NavLink className="hover-pink text-decoration-none nav-opt">
+                      Services
+                    </NavLink>
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu  style={{backgroundColor: theme === "dark" ? "#181A1C" : "#F5F5F5", marginTop:"-5px"}}>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/seo">SEO</Dropdown.Item>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/videoproduction">Video Production</Dropdown.Item>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/videoediting">Video Editing</Dropdown.Item>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/contentwriting">Content Writing</Dropdown.Item>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/smo">SMO</Dropdown.Item>
+                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/graphicdesigning">Graphic Designing</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
                 <Nav.Link href="#">
                   <NavLink className="nav-link">Case Studies</NavLink>
                 </Nav.Link>

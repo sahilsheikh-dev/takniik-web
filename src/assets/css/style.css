@@ -33,6 +33,20 @@ body {
   color: #ff55f1;
 }
 
+.hover-pink {
+  background-color: transparent !important;
+  border: none;
+}
+
+.hover-pink:hover {
+  color: #ff55f1;
+}
+
+.hover-item:hover {
+  background-color: #e709d4;
+  color: #fafcff !important;
+}
+
 .nav-btn {
   padding: 0px 36px;
   border: 2px solid transparent;
