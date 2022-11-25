@@ -116,7 +116,7 @@ const Header = ({ themeToggler, theme }) => {
               </Nav>
               <ButtonGroup className="nav-btn-section">
                 <NavBtn className="nav-btn" href="#">
-                  <Link to={"/Homepage"} style={{ textDecoration: "none" }}>
+                  <Link to={"/technical"} style={{ textDecoration: "none" }}>
                     <span className="nav-btn-title">Switch to Technical</span>
                   </Link>
                 </NavBtn>

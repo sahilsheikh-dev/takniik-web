@@ -5,46 +5,46 @@ import Service1 from "../../../assets/img/Service1.png";
 const Services = ({ theme }) => {
   const serviceData = [
     {
-      img: Service1,
-      title: "Blogs & Articles",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
-    },
-    {
       img: "https://images.pexels.com/photos/131778/pexels-photo-131778.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Website Content",
+      title: "Search Engine Optimization",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
+      url: "/seo",
     },
     {
       img: "https://images.pexels.com/photos/1738641/pexels-photo-1738641.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Product Design",
+      title: "Video Production",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
+      url: "/videoproduction",
     },
     {
       img: "https://images.pexels.com/photos/4050364/pexels-photo-4050364.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Copywriting",
+      title: "Video Editing",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
+      url: "/videoediting",
     },
     {
       img: "https://images.pexels.com/photos/4112363/pexels-photo-4112363.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "Emailer Design",
+      title: "Content Writing",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
+      url: "/contentwriting",
     },
     {
       img: "https://images.pexels.com/photos/12812687/pexels-photo-12812687.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "UIUX Design",
+      title: "SMO",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      url: "#",
+      url: "/smo",
+    },
+    {
+      img: "https://images.pexels.com/photos/3705645/pexels-photo-3705645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title: "Graphic Designing",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/graphicdesigning",
     },
   ];
   const [dataId, setDataId] = useState(0);

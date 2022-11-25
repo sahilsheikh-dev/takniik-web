@@ -135,7 +135,6 @@ body {
 }
 
 .hero-title-gradient {
-  position: absolute;
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(101.58deg, #ff55f1 8.5%, #7300ff 91.5%); */
   background: linear-gradient(
@@ -1297,8 +1296,36 @@ input:-webkit-autofill:active {
     text-align: center;
   }
   .about-cta-bg {
-    height: 350px;
+    height: 400px;
+    margin-bottom: 20px;
   }
 }
 
 /* ABOUT SECTION END */
+
+.content-writing-service-card {
+  background: linear-gradient(180deg, #19191d 0%, #0a0a0d 95.51%);
+  border: 0.882516px solid rgba(255, 255, 255, 0.22);
+  border-radius: 15.8853px;
+  min-height: 440px;
+  max-width: 500px;
+}
+
+.innershadow-bottom {
+  width: 300px;
+  height: 360px;
+  box-shadow: inset 0px 11px 8px -10px #000, inset 0px -50px 8px -10px #000;
+}
+
+.swiper-slide {
+  max-width: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+  .content-writing-service-card {
+    min-height: 100%;
+  }
+  .bg-sm-none {
+    background: none !important;
+  }
+}
