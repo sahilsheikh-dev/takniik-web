@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import Service1 from "../../../assets/img/Service1.png";
 
 const Services = ({ theme }) => {
   const serviceData = [
