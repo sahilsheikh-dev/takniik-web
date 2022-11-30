@@ -8,6 +8,7 @@ import ProductDescription from "../../../components/Marketing/Services/GraphicDe
 import GdHero from "../../../components/Marketing/Services/GraphicDesigning/GdHero";
 import TextImage from "../../../components/Marketing/Services/GraphicDesigning/TextImage";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
+import GraphicDesigningServices from "../../../components/Marketing/Services/GraphicDesigning/GraphicDesigningServices";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -53,6 +54,7 @@ const GraphicDesigningService = () => {
           <ScrollToTop />
           <GdHero />
           <ProductDescription />
+          <GraphicDesigningServices />
           <TextImage />
           <Cta />
           <Footer />

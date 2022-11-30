@@ -14,9 +14,9 @@ const VideoEditingHero = () => {
       <Container>
         <div className="w-100 container mx-3">
           <h1 className="about-hero-title text-white text-start">
-            Professional video
+            Professional Video
             <br className="d-none d-md-block d-lg-block d-xl-block" />
-            editing services
+            Editing Services
           </h1>
           <p className="about-hero-subtitle text-white text-start">
             We are your one-stop solution for all{" "}

@@ -1,41 +1,32 @@
 import React from "react";
 import ProductImage1 from "../../../../assets/img/services/graphicsdesigning/product-image-1.png";
-import ProductImage2 from "../../../../assets/img/services/graphicsdesigning/product-image-2.png";
-import ProductImage3 from "../../../../assets/img/services/graphicsdesigning/product-image-3.png";
 
 const ProductDescription = () => {
   return (
     <div className="seo-product-description my-5 py-5 text-center">
-      <h1 className="fw-bold mb-5">Custom-made designs and illustrations</h1>
-      <div className="container">
-        <div className="row text-center">
-          <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={ProductImage1} alt="img" />
-            <h3 className="fw-bold mt-5">
-              Unique designs that match your brand
-            </h3>
-            <p className="mt-3">
-              Stop sifting through the endless stream of freelancers. We find
-              the best-fit writers for your content.
+      <div className="row ms-0" style={{ maxWidth: "100vw" }}>
+        <div className="col-md-6 col-lg-6 col-xl-6 ms-md-5 ms-lg-5 ms-xl-5 me-0 pe-0 d-flex justify-content-between align-items-center">
+          <div className="text-start container ms-0 ms-md-5 ms-lg-5 ms-xl-5 ps-md-5 ps-lg-5 ps-xl-5 d-none d-md-block d-lg-block d-xl-block">
+            <h1 className="fw-bold">Custom-made designs and illustrations</h1>
+            <p className="about-out-description">
+              Create a blog brief using our hassle-free, guided flow. Get a
+              preliminary quote and estimated delivery time in under a minute.
             </p>
           </div>
-          <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={ProductImage2} alt="img" />
-            <h3 className="fw-bold mt-5">Copyright & ownership</h3>
-            <p className="mt-3">
-              There’s a difference between keyword-rich content and
-              keyword-stuffing. Our creators understand this and deliver content
-              that ranks.
-            </p>
-          </div>
-          <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={ProductImage3} alt="img" />
-            <h3 className="fw-bold mt-5">Start with 1 or a 100</h3>
-            <p className="mt-3">
-              The writers make sure you get noticed by customers. The more
-              visible you are, the better you rank,
-            </p>
-          </div>
+        </div>
+        <div className="col-md-5 col-lg-5 col-xl-5 ms-auto pb-3 pe-0">
+          <img
+            className="about-our-img about-img-right"
+            src={ProductImage1}
+            alt="img"
+          />
+        </div>
+        <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
+          <h1 className="fw-bold">Tell us what you need designed</h1>
+          <p className="about-out-description">
+            Create a blog brief using our hassle-free, guided flow. Get a
+            preliminary quote and estimated delivery time in under a minute.
+          </p>
         </div>
       </div>
     </div>

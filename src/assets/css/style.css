@@ -226,7 +226,7 @@ body {
   }
 
   .hero-title {
-    margin-top: 50px;
+    margin-top: 50px !important;
     font-size: 30px;
   }
 
@@ -329,11 +329,18 @@ body {
 
 .project-filter {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: auto;
+  white-space: nowrap;
   margin: 20px;
 }
 
+.project-filter::-webkit-scrollbar {
+  display: none;
+}
+
 .project-filter li {
+  display: inline-block;
   margin: 10px;
   padding: 10px 20px;
   font-size: 16px;

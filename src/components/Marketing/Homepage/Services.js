@@ -33,7 +33,7 @@ const Services = ({ theme }) => {
     },
     {
       img: "https://images.pexels.com/photos/12812687/pexels-photo-12812687.jpeg?auto=compress&cs=tinysrgb&w=600",
-      title: "SMO",
+      title: "Social Media Optimization",
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       url: "/smo",
@@ -89,6 +89,18 @@ const Services = ({ theme }) => {
               className={dataId === 4 ? "project-filter-active" : ""}
             >
               {serviceData[4].title}
+            </li>
+            <li
+              onClick={() => setDataId(5)}
+              className={dataId === 5 ? "project-filter-active" : ""}
+            >
+              {serviceData[5].title}
+            </li>
+            <li
+              onClick={() => setDataId(5)}
+              className={dataId === 5 ? "project-filter-active" : ""}
+            >
+              {serviceData[5].title}
             </li>
             <li
               onClick={() => setDataId(5)}

@@ -17,6 +17,7 @@ export const darkTheme = {
 export const GlobalStyles = createGlobalStyle`
   body {
     overflow-y: scroll;
+    overflow-x: scroll;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     height: 100vh;

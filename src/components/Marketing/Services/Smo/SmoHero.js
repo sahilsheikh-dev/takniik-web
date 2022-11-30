@@ -11,9 +11,9 @@ const SmoHero = () => {
         className="row mt-md-5 mt-lg-5 mt-xl-5 ms-0"
         style={{ maxWidth: "100vw" }}
       >
-        <div className="col-md-6 col-lg-6 col-xl-6 ms-md-5 ms-lg-5 ms-xl-5 me-0 pe-0">
+        <div className="col-md-6 col-lg-6 col-xl-6 ms-md-5 ms-lg-5 ms-xl-5 me-0 pe-0 d-flex align-items-center">
           <div className="container ms-0 ms-md-5 ms-lg-5 ms-xl-5 ps-md-5 ps-lg-5 ps-xl-5">
-            <h1 className="hero-title text-start">
+            <h1 className="hero-title text-start pt-0 mt-0">
               Professional design services{" "}
               <br className="d-none d-md-block d-lg-block d-xl-block" />
               for your business
