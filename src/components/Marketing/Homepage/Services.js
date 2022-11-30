@@ -96,18 +96,6 @@ const Services = ({ theme }) => {
             >
               {serviceData[5].title}
             </li>
-            <li
-              onClick={() => setDataId(5)}
-              className={dataId === 5 ? "project-filter-active" : ""}
-            >
-              {serviceData[5].title}
-            </li>
-            <li
-              onClick={() => setDataId(5)}
-              className={dataId === 5 ? "project-filter-active" : ""}
-            >
-              {serviceData[5].title}
-            </li>
           </ul>
 
           <div className="project row">
