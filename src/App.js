@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AboutUs from "./screens/Marketing/AboutUs";
-import Contactpage from "./screens/Marketing/Contactpage";
-import Homepage from "./screens/Marketing/Homepage";
+import AboutUs from "./screens/AboutUs";
+import Contactpage from "./screens/Contactpage";
+import Homepage from "./screens/Homepage";
 import ContentWritingService from "./screens/Marketing/Services/ContentWritingService";
 import GraphicDesigningService from "./screens/Marketing/Services/GraphicDesigningService";
 import SeoService from "./screens/Marketing/Services/SeoService";

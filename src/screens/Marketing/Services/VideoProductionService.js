@@ -4,11 +4,12 @@ import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
 import ScrollToTop from "../../../components/Commons/ScrollToTop";
 import CardSlider from "../../../components/Marketing/Services/VideoProduction/CardSlider";
-import Cta from "../../../components/Marketing/Services/VideoProduction/Cta";
+import FooterCTA from "../../../components/Commons/FooterCTA";
 import ImageSlider from "../../../components/Marketing/Services/VideoProduction/ImageSlider";
 import ServiceBanner from "../../../components/Marketing/Services/VideoProduction/ServiceBanner";
-import VideoProductionHero from "../../../components/Marketing/Services/VideoProduction/VideoProductionHero";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
+import HeroBg from "../../../assets/img/services/videoproduction/vp-hero.png";
+import BgImageHero from "../../../components/Commons/BgImageHero";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -52,11 +53,27 @@ const VideoProductionService = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
-          <VideoProductionHero />
+          <BgImageHero
+            HeroImg={HeroBg}
+            Heading={"Video Production Service Worldwide"}
+            SubHeading={"We are your one-stop solution for all things growth"}
+            BtnText={"Get Started"}
+            URL={"/contact"}
+          />
           <ServiceBanner theme={theme} />
           <ImageSlider />
           <CardSlider />
-          <Cta />
+          <FooterCTA
+            Heading={"Order Your First Blog"}
+            Subheading={
+              "We Are Transforming The Content Ecosystem As You Know It Today."
+            }
+            BtnText={"Sign Up Free"}
+            URL={"/contact"}
+            Point1={"Multiple revisions included"}
+            Point2={" On-demand projects"}
+            Point3={"Easy & fast collaboration"}
+          />
           <Footer />
         </section>
       </StyledApp>

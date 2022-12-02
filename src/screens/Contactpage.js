@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import AboutContent from "../../components/Marketing/AboutUs/AboutContent";
-import AboutCta from "../../components/Marketing/AboutUs/AboutCta";
-import AboutHero from "../../components/Marketing/AboutUs/AboutHero";
-import AboutImageText from "../../components/Marketing/AboutUs/AboutImageText";
-import AboutTeam from "../../components/Marketing/AboutUs/AboutTeam";
-import Footer from "../../components/Commons/Footer";
-import Header from "../../components/Commons/Header";
-import ScrollToTop from "../../components/Commons/ScrollToTop";
-import { darkTheme, GlobalStyles, lightTheme } from "../../theme";
+import Contactform from "../components/Commons/Contactpage/Contactform";
+import Contactinfo from "../components/Commons/Contactpage/Contactinfo";
+import Footer from "../components/Commons/Footer";
+import Header from "../components/Commons/Header";
+import ScrollToTop from "../components/Commons/ScrollToTop";
+import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
 `;
 
-const AboutUs = () => {
+const Contactpage = () => {
   const [theme, setTheme] = useState("dark");
 
   const themeToggler = () => {
@@ -52,11 +49,8 @@ const AboutUs = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
-          <AboutHero />
-          <AboutImageText />
-          <AboutContent />
-          <AboutTeam />
-          <AboutCta />
+          <Contactform theme={theme} />
+          <Contactinfo />
           <Footer />
         </section>
       </StyledApp>
@@ -64,4 +58,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Contactpage;

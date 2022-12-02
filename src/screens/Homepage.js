@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Achievements from "../../components/Marketing/Homepage/Achievements";
-import Clients from "../../components/Marketing/Homepage/Clients";
-import Cta from "../../components/Marketing/Homepage/Cta";
-import Footer from "../../components/Commons/Footer";
-import Header from "../../components/Commons/Header";
-import Hero from "../../components/Marketing/Homepage/Hero";
-import Review from "../../components/Marketing/Homepage/Review";
-import ScrollToTop from "../../components/Commons/ScrollToTop";
-import Services from "../../components/Marketing/Homepage/Services";
-import Timeline from "../../components/Marketing/Homepage/Timeline";
-import { darkTheme, GlobalStyles, lightTheme } from "../../theme";
+import Achievements from "../components/Marketing/Homepage/Achievements";
+import Clients from "../components/Marketing/Homepage/Clients";
+import Cta from "../components/Marketing/Homepage/Cta";
+import Footer from "../components/Commons/Footer";
+import Header from "../components/Commons/Header";
+import Hero from "../components/Marketing/Homepage/Hero";
+import Review from "../components/Marketing/Homepage/Review";
+import ScrollToTop from "../components/Commons/ScrollToTop";
+import Services from "../components/Marketing/Homepage/Services";
+import Timeline from "../components/Marketing/Homepage/Timeline";
+import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
