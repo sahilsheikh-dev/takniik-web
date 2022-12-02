@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Achievements from "../components/Marketing/Homepage/Achievements";
-import Clients from "../components/Marketing/Homepage/Clients";
-import Cta from "../components/Marketing/Homepage/Cta";
+import Achievements from "../components/Commons/Homepage/Achievements";
+import Clients from "../components/Commons/Homepage/Clients";
+import Cta from "../components/Commons/Homepage/Cta";
 import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
-import Hero from "../components/Marketing/Homepage/Hero";
-import Review from "../components/Marketing/Homepage/Review";
+import Hero from "../components/Commons/Homepage/Hero";
+import Review from "../components/Commons/Homepage/Review";
 import ScrollToTop from "../components/Commons/ScrollToTop";
-import Services from "../components/Marketing/Homepage/Services";
-import Timeline from "../components/Marketing/Homepage/Timeline";
+import ServicesMarketing from "../components/Marketing/Homepage/Services";
+import ServicesTechnology from "../components/Technical/Homepage/Services";
+import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 
 const StyledApp = styled.div`
@@ -56,7 +57,11 @@ const Homepage = () => {
           <ScrollToTop />
           <Hero />
           <Clients theme={theme} />
-          <Services theme={theme} />
+          {localStorage.getItem("currentField") === "Marketing" ? (
+            <ServicesMarketing theme={theme} />
+          ) : (
+            <ServicesTechnology theme={theme} />
+          )}
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />

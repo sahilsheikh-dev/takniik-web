@@ -29,6 +29,7 @@ import {
 import riveToggle from "../../assets/rive/toggler.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -81,6 +82,25 @@ const Header = ({ themeToggler, theme }) => {
     }
   };
 
+  const switchToField = () => {
+    if (localStorage.getItem("currentField") === "Marketing") {
+      localStorage.setItem("currentField", "Technology");
+    } else {
+      localStorage.setItem("currentField", "Marketing");
+    }
+    window.location.reload();
+  };
+
+  useEffect(() => {
+    if (
+      localStorage.getItem("currentField") === "" ||
+      localStorage.getItem("currentField") === null ||
+      localStorage.getItem("currentField") === undefined
+    ) {
+      localStorage.setItem("currentField", "Marketing");
+    }
+  }, []);
+
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <StyledApp>
@@ -123,27 +143,142 @@ const Header = ({ themeToggler, theme }) => {
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mx-auto nav-link-section">
-                <Dropdown
-                  className="nav-link"
-                  id="collasible-nav-dropdown"
-                  show={show}
-                  onMouseEnter={showDropdown}
-                  onMouseLeave={hideDropdown}
-                >
-                  <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
-                    <NavLink className="hover-pink text-decoration-none nav-opt">
-                      Services
-                    </NavLink>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu  style={{backgroundColor: theme === "dark" ? "#181A1C" : "#F5F5F5", marginTop:"-5px"}}>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/seo">SEO</Dropdown.Item>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/videoproduction">Video Production</Dropdown.Item>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/videoediting">Video Editing</Dropdown.Item>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/contentwriting">Content Writing</Dropdown.Item>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/smo">SMO</Dropdown.Item>
-                    <Dropdown.Item className="hover-item" style={{color: theme === "dark" ? "#FFFFFF" : "#000000"}} href="/graphicdesigning">Graphic Designing</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
+                {localStorage.getItem("currentField") === "Marketing" ? (
+                  <Dropdown
+                    className="nav-link"
+                    id="collasible-nav-dropdown"
+                    show={show}
+                    onMouseEnter={showDropdown}
+                    onMouseLeave={hideDropdown}
+                  >
+                    <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
+                      <NavLink className="hover-pink text-decoration-none nav-opt">
+                        Services
+                      </NavLink>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu
+                      style={{
+                        backgroundColor:
+                          theme === "dark" ? "#181A1C" : "#F5F5F5",
+                        marginTop: "-5px",
+                      }}
+                    >
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/seo"
+                      >
+                        SEO
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/videoproduction"
+                      >
+                        Video Production
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/videoediting"
+                      >
+                        Video Editing
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/contentwriting"
+                      >
+                        Content Writing
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/smo"
+                      >
+                        SMO
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/graphicdesigning"
+                      >
+                        Graphic Designing
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                ) : (
+                  <Dropdown
+                    className="nav-link"
+                    id="collasible-nav-dropdown"
+                    show={show}
+                    onMouseEnter={showDropdown}
+                    onMouseLeave={hideDropdown}
+                  >
+                    <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
+                      <NavLink className="hover-pink text-decoration-none nav-opt">
+                        Services
+                      </NavLink>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu
+                      style={{
+                        backgroundColor:
+                          theme === "dark" ? "#181A1C" : "#F5F5F5",
+                        marginTop: "-5px",
+                      }}
+                    >
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/mobiledevelopment"
+                      >
+                        Mobile App Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/webdevelopment"
+                      >
+                        Web Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/crmdevelopment"
+                      >
+                        CRM Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/cmsdevelopment"
+                      >
+                        CMS Development
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                )}
+
                 <Nav.Link href="#">
                   <NavLink className="nav-link">Case Studies</NavLink>
                 </Nav.Link>
@@ -155,8 +290,16 @@ const Header = ({ themeToggler, theme }) => {
               </Nav>
               <ButtonGroup className="nav-btn-section">
                 <NavBtn className="nav-btn" href="#">
-                  <Link to={"/technical"} style={{ textDecoration: "none" }}>
-                    <span className="nav-btn-title">Switch to Technical</span>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    onClick={() => switchToField()}
+                  >
+                    <span className="nav-btn-title">
+                      Switch to{" "}
+                      {localStorage.getItem("currentField") === "Marketing"
+                        ? "Technical"
+                        : "Marketing"}
+                    </span>
                   </Link>
                 </NavBtn>
                 <NavBtn className="nav-btn" href="#">
