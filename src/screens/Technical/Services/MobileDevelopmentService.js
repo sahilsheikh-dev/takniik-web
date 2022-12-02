@@ -1,9 +1,128 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import styled, { ThemeProvider } from "styled-components";
+import Footer from "../../../components/Commons/Footer";
+import Header from "../../../components/Commons/Header";
+import ScrollToTop from "../../../components/Commons/ScrollToTop";
+import FooterCTA from "../../../components/Commons/FooterCTA";
+import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
+import HeroImg from "../../../assets/img/services/mobiledevelopment/hero.png";
+import ColumnHero from "../../../components/Commons/ColumnHero";
+import ProductImage1 from "../../../assets/img/services/webdevelopment/img-1.png";
+import ProductImage2 from "../../../assets/img/services/webdevelopment/img-2.png";
+import ProductImage3 from "../../../assets/img/services/webdevelopment/img-3.png";
+import ImageText3 from "../../../components/Commons/ImageText3";
+import Image1 from "../../../assets/img/services/mobiledevelopment/it-img-1.png";
+import Image2 from "../../../assets/img/services/mobiledevelopment/it-img-2.png";
+import Image3 from "../../../assets/img/services/mobiledevelopment/it-img-3.png";
+import ServiceBanner from "../../../components/Technical/Services/MobileDevelopment/ServiceBanner";
+import ColumnGrid3 from "../../../components/Commons/ColumnGrid3";
+
+const StyledApp = styled.div`
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
+`;
 
 const MobileDevelopmentService = () => {
-  return (
-    <div>MobileDevelopmentService</div>
-  )
-}
+  const [theme, setTheme] = useState("dark");
 
-export default MobileDevelopmentService
+  const themeToggler = () => {
+    if (theme === "dark") {
+      localStorage.setItem("currentTheme", "light");
+      setTheme("light");
+    } else {
+      localStorage.setItem("currentTheme", "dark");
+      setTheme("dark");
+    }
+    setCurrentTheme();
+  };
+
+  const setCurrentTheme = () => {
+    if (
+      localStorage.getItem("currentTheme") === null ||
+      localStorage.getItem("currentTheme") === ""
+    ) {
+      localStorage.setItem("currentTheme", "dark");
+      setTheme("dark");
+    } else {
+      setTheme(localStorage.getItem("currentTheme"));
+    }
+  };
+
+  useEffect(() => {
+    setCurrentTheme();
+  }, []);
+
+  return (
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <StyledApp>
+        <GlobalStyles />
+        <Header themeToggler={themeToggler} theme={theme} />
+        <section id="main">
+          <ScrollToTop />
+          <ColumnHero
+            HeroImg={HeroImg}
+            Heading={"MOBILE APPLICATION DEVELOPMENT SERVICES"}
+            DescriptionPoints={[
+              "100% original, SEO-optimized content",
+              "Experienced subject matter experts",
+              "Phased delivery for bulk content",
+            ]}
+            BtnText={"Create a Project"}
+            URL={"/contact"}
+          />
+          <ServiceBanner />
+          <ColumnGrid3
+            Heading={"Product descriptions that aim to sell"}
+            Image1={ProductImage1}
+            Image2={ProductImage2}
+            Image3={ProductImage3}
+            Heading1={"Never Miss a Deadline Again"}
+            Heading2={"Debug the Content with Reworks"}
+            Heading3={"Concise, Clear and Creative Copy"}
+            Subheading1={
+              "Stop sifting through the endless stream of freelancers. We find the best-fit writers for your content."
+            }
+            Subheading2={
+              "There’s a difference between keyword-rich content and keyword-stuffing. Our creators understand this and deliver content that ranks."
+            }
+            Subheading3={
+              "The writers make sure you get noticed by customers. The more visible you are, the better you rank,"
+            }
+          />
+          <ImageText3
+            Heading={"Getting the perfect product description is simple"}
+            Image1={Image1}
+            Image2={Image2}
+            Image3={Image3}
+            Heading1={"Share your requirements"}
+            Heading2={"Start seeing your content flourish"}
+            Heading3={"Track the project"}
+            Subheading1={
+              "We integrate Whatsapp, SFA, Netsuite, and Hubspot solutions with CRM solutions to build 360 degrees customer relationship management capabilitie"
+            }
+            Subheading2={
+              "We integrate Whatsapp, SFA, Netsuite, and Hubspot solutions with CRM solutions to build 360 degrees customer relationship management capabilitie"
+            }
+            Subheading3={
+              "We integrate Whatsapp, SFA, Netsuite, and Hubspot solutions with CRM solutions to build 360 degrees customer relationship management capabilitie"
+            }
+          />
+          <FooterCTA
+            Heading={"Ready To Innovate? Let's Get In Touch"}
+            Subheading={
+              "We Are Transforming The Content Ecosystem As You Know It Today."
+            }
+            BtnText={"Sign Up Free"}
+            URL={"/contact"}
+            Point1={"Unique product description writings"}
+            Point2={" Easy to manage operations"}
+            Point3={"Get an estimate in 30 seconds"}
+          />
+          <Footer />
+        </section>
+      </StyledApp>
+    </ThemeProvider>
+  );
+};
+
+export default MobileDevelopmentService;
