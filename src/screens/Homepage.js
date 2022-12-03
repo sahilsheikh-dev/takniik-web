@@ -12,6 +12,8 @@ import ServicesMarketing from "../components/Marketing/Homepage/Services";
 import ServicesTechnology from "../components/Technical/Homepage/Services";
 import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
+// import InstagramIntegration from "../components/Commons/InstagramIntegration";
+// import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -65,6 +67,8 @@ const Homepage = () => {
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />
+          {/* <InstagramIntegration /> */}
+          {/* <GoogleReviewIntegration /> */}
           <Cta theme={theme} />
           <Footer />
         </section>

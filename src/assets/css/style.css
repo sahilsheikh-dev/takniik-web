@@ -608,6 +608,20 @@ body {
   object-fit: cover;
 }
 
+.testimonial-image-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.testinomial-image {
+  transition: transform 0.1s;
+}
+
+.testinomial-image:hover {
+  transform: scale(1.05);
+}
+
 .stars {
   width: fit-content;
   margin: 30px auto;

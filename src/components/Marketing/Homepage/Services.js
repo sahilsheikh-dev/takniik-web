@@ -98,31 +98,66 @@ const Services = ({ theme }) => {
             </li>
           </ul>
 
-          <div className="project row">
-            <div className="col-md-4 col-lg-4">
-              <img
-                src={serviceData[dataId].img}
-                alt="service"
-                className="project-img"
-              />
-            </div>
-            <div className="col-md-8 col-lg-8">
-              <div className="project-info">
-                <h2 className="project-title">{serviceData[dataId].title}</h2>
-                <p className="project-description">
-                  {serviceData[dataId].description}
-                </p>
-                <a
-                  href={serviceData[dataId].url}
-                  className="project-btn"
-                  style={{
-                    color: theme === "dark" ? "#F9F7F7" : "#0A0A0D",
-                  }}
-                >
-                  <i class="bi bi-arrow-right"></i>{" "}
-                </a>
+          <div className="project">
+            {dataId % 2 === 0 ? (
+              <div className="row">
+                <div className="col-md-4 col-lg-4">
+                  <img
+                    src={serviceData[dataId].img}
+                    alt="service"
+                    className="project-img"
+                  />
+                </div>
+                <div className="col-md-8 col-lg-8">
+                  <div className="project-info">
+                    <h2 className="project-title">
+                      {serviceData[dataId].title}
+                    </h2>
+                    <p className="project-description">
+                      {serviceData[dataId].description}
+                    </p>
+                    <a
+                      href={serviceData[dataId].url}
+                      className="project-btn"
+                      style={{
+                        color: theme === "dark" ? "#F9F7F7" : "#0A0A0D",
+                      }}
+                    >
+                      <i class="bi bi-arrow-right"></i>{" "}
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="row">
+                <div className="col-md-8 col-lg-8">
+                  <div className="project-info">
+                    <h2 className="project-title">
+                      {serviceData[dataId].title}
+                    </h2>
+                    <p className="project-description">
+                      {serviceData[dataId].description}
+                    </p>
+                    <a
+                      href={serviceData[dataId].url}
+                      className="project-btn"
+                      style={{
+                        color: theme === "dark" ? "#F9F7F7" : "#0A0A0D",
+                      }}
+                    >
+                      <i class="bi bi-arrow-right"></i>{" "}
+                    </a>
+                  </div>
+                </div>
+                <div className="col-md-4 col-lg-4">
+                  <img
+                    src={serviceData[dataId].img}
+                    alt="service"
+                    className="project-img"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
