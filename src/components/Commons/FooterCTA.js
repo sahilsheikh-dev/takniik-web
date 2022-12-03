@@ -33,8 +33,8 @@ const FooterCTA = ({
           className="row mx-md-5 mx-lg-5 mx-xl-5 px-md-5 px-lg-5 px-xl-5 mt-5"
           style={{ maxWidth: "100vw" }}
         >
-          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4">
-            <p className="text-center">
+          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4 px-5">
+            <p className="text-start text-md-center text-lg-center text-xl-center ms-4">
               <img
                 className="social-icon"
                 style={{ maxWidth: "24px", marginTop: "-5px" }}
@@ -44,8 +44,8 @@ const FooterCTA = ({
               &nbsp; {Point1}
             </p>
           </div>
-          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4">
-            <p className="text-center">
+          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4 px-5">
+            <p className="text-start text-md-center text-lg-center text-xl-center ms-4">
               <img
                 className="social-icon"
                 style={{ maxWidth: "24px", marginTop: "-5px" }}
@@ -55,8 +55,8 @@ const FooterCTA = ({
               &nbsp; {Point2}
             </p>
           </div>
-          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4">
-            <p className="text-center">
+          <div className="col-md-4 col-lg-4 col-xl-4 px-md-4 px-lg-4 px-xl-4 px-5">
+            <p className="text-start text-md-center text-lg-center text-xl-center ms-4">
               <img
                 className="social-icon"
                 style={{ maxWidth: "24px", marginTop: "-5px" }}

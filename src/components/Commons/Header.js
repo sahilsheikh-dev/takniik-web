@@ -289,25 +289,34 @@ const Header = ({ themeToggler, theme }) => {
                 </Nav.Link>
               </Nav>
               <ButtonGroup className="nav-btn-section">
-                <NavBtn className="nav-btn" href="#">
-                  <Link
-                    style={{ textDecoration: "none" }}
-                    onClick={() => switchToField()}
-                  >
-                    <span className="nav-btn-title">
-                      Switch to{" "}
-                      {localStorage.getItem("currentField") === "Marketing"
-                        ? "Technical"
-                        : "Marketing"}
-                    </span>
-                  </Link>
-                </NavBtn>
-                <NavBtn className="nav-btn" href="#">
-                  <Link to={"/contact"} style={{ textDecoration: "none" }}>
-                    <span className="nav-btn-title">Contact Us</span>
-                  </Link>
-                </NavBtn>
-                <div className="d-none d-lg-block">
+                <div className="row">
+                  <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center py-sm-3">
+                    <NavBtn className="nav-btn w-sm-100" href="#">
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        onClick={() => switchToField()}
+                      >
+                        <span className="nav-btn-title">
+                          Switch to{" "}
+                          {localStorage.getItem("currentField") === "Marketing"
+                            ? "Technical"
+                            : "Marketing"}
+                        </span>
+                      </Link>
+                    </NavBtn>
+                  </div>
+                  <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center py-sm-3">
+                    <NavBtn className="nav-btn w-sm-100" href="#">
+                      <Link to={"/contact"} style={{ textDecoration: "none" }}>
+                        <span className="nav-btn-title">Contact Us</span>
+                      </Link>
+                    </NavBtn>
+                  </div>
+                </div>
+                <div
+                  className="d-none d-lg-block d-flex align-items-center py-sm-3"
+                  style={{ marginTop: "5px" }}
+                >
                   {/* <Toggler themeTog={themeToggler} /> */}
                   <RiveComponent
                     className="toggle-icon"

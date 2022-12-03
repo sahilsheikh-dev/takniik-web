@@ -54,9 +54,7 @@ const Hero = () => {
         <div className="col-4">
           <div className="row">
             <div className="col-6 col-lg-8 offset-lg-2">
-              <p className="hero-info-title">
-                Our Clients &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </p>
+              <p className="hero-info-title">Our Clients</p>
               <h3 className="hero-info-count hero-title-gradient fw-bold">
                 250+
               </h3>

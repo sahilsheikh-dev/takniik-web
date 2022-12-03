@@ -33,6 +33,8 @@ const ScrollToTop = () => {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
             }}
             style={{
+              height: "30px",
+              width: "30px",
               position: "fixed",
               bottom: "50px",
               right: "50px",
