@@ -7,7 +7,7 @@ import ContactBgDark from "../../../../assets/img/glass-bg-dark.png";
 const ServiceBanner = ({ theme }) => {
   return (
     <Container>
-      <div className="service-banner text-center my-5">
+      <div className="service-banner text-center my-5 py-5">
         <h1 className="fw-bold">Standard for performance video marketing.</h1>
         <img
           className="img-fluid w-75 my-5 mx-auto"
@@ -21,15 +21,16 @@ const ServiceBanner = ({ theme }) => {
           <br className="d-none d-md-block d-lg-block d-xl-block" />
           that’s tailored to each stage of the marketing funnel
         </p>
-        <div className="row my-5 mx-md-5 mx-lg-5 mx-xl-5">
+        <div className="row my-5 mx-md-5 mx-lg-5 mx-xl-5 mt-5 pt-5">
           <div className="col-md-6 col-lg-6 col-xl-6 p-2 text-start">
             <div
               className="p-3 p-md-5 p-lg-5 p-xl-5 bg-sm-none"
               style={{
                 borderRadius: "20px",
-                backgroundSize: "100%",
                 backgroundImage:
                   theme === "dark" ? `url("${ContactBgDark}")` : ``,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             >
               <h3 className="my-3">
@@ -55,9 +56,10 @@ const ServiceBanner = ({ theme }) => {
               className="p-3 p-md-5 p-lg-5 p-xl-5 bg-sm-none"
               style={{
                 borderRadius: "20px",
-                backgroundSize: "100%",
                 backgroundImage:
                   theme === "dark" ? `url("${ContactBgDark}")` : ``,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
               }}
             >
               <h3 className="my-3">

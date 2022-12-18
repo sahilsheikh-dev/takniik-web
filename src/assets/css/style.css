@@ -210,6 +210,7 @@ body {
   text-align: center;
   text-transform: capitalize;
   animation: animateTextBeg 10s linear infinite;
+  border: none;
 }
 
 .hero-info {
@@ -615,11 +616,32 @@ body {
 }
 
 .testinomial-image {
+  background-color: #ffffff !important;
   transition: transform 0.1s;
 }
 
 .testinomial-image:hover {
   transform: scale(1.05);
+}
+
+.testinomial-1 {
+  margin-left: 150px;
+  margin-top: 0px;
+}
+
+.testinomial-2 {
+  margin-left: 0px;
+  margin-top: -70px;
+}
+
+.testinomial-3 {
+  margin-left: 250px;
+  margin-top: -100px;
+}
+
+.testinomial-4 {
+  margin-left: 100px;
+  margin-top: -100px;
 }
 
 .stars {
@@ -670,6 +692,26 @@ body {
   .client-name {
     font-weight: 600;
     font-size: 12px;
+  }
+
+  .testinomial-1 {
+    margin-left: 50px;
+    margin-top: 0px;
+  }
+
+  .testinomial-2 {
+    margin-left: 0px;
+    margin-top: -70px;
+  }
+
+  .testinomial-3 {
+    margin-left: 80px;
+    margin-top: -150px;
+  }
+
+  .testinomial-4 {
+    margin-left: 50px;
+    margin-top: -70px;
   }
 }
 

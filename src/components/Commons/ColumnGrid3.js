@@ -18,17 +18,17 @@ const ColumnGrid3 = ({
       <div className="container">
         <div className="row text-center">
           <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={Image1} alt="img" />
+            <img className="img-fluid w-50 h-50" src={Image1} alt="img" />
             <h3 className="fw-bold mt-5">{Heading1}</h3>
             <p className="mt-3">{Subheading1}</p>
           </div>
           <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={Image2} alt="img" />
+            <img className="img-fluid w-50 h-50" src={Image2} alt="img" />
             <h3 className="fw-bold mt-5">{Heading2}</h3>
             <p className="mt-3">{Subheading2}</p>
           </div>
           <div className="col-md-4 col-lg-4 col-xl-4 my-md-5 my-lg-5 my-xl-5 px-5">
-            <img className="img-fluid h-50" src={Image3} alt="img" />
+            <img className="img-fluid w-50 h-50" src={Image3} alt="img" />
             <h3 className="fw-bold mt-5">{Heading3}</h3>
             <p className="mt-3">{Subheading3}</p>
           </div>

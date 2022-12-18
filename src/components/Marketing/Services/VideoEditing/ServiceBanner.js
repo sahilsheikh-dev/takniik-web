@@ -5,7 +5,7 @@ import VeServiceBanner from "../../../../assets/img/services/videoediting/ve-ser
 const ServiceBanner = () => {
   return (
     <Container>
-      <div className="service-banner text-center my-5">
+      <div className="service-banner text-center my-5 py-5">
         <h1 className="fw-bold">Best quality editing services here</h1>
         <img
           className="img-fluid w-75 mx-auto"

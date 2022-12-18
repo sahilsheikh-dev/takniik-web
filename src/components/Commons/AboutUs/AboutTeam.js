@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Team1 from "../../../assets/img/team1.png";
-import Team2 from "../../../assets/img/team2.png";
-import Team3 from "../../../assets/img/team3.png";
-import Team4 from "../../../assets/img/team4.png";
-import Team5 from "../../../assets/img/team5.png";
-import Team6 from "../../../assets/img/team6.png";
+import Team1 from "../../../assets/img/about-us/team1.png";
+import Team2 from "../../../assets/img/about-us/team2.png";
+import Team3 from "../../../assets/img/about-us/team3.png";
+import Team4 from "../../../assets/img/about-us/team4.png";
+import Team5 from "../../../assets/img/about-us/team5.png";
+import Team6 from "../../../assets/img/about-us/team6.png";
 import { TeamCard } from "../../../theme";
 
 const AboutTeam = () => {

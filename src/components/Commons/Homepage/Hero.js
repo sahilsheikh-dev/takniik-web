@@ -4,44 +4,22 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const countLiveTouched = () => {
+  const liveCount = (uptoNumber, componentId) => {
     let counts = setInterval(updated);
     let upto = 0;
     function updated() {
-      var count = document.getElementById("live-touched-counter");
+      var count = document.getElementById(componentId);
       count.innerHTML = ++upto;
-      if (upto === 2250) {
-        clearInterval(counts);
-      }
-    }
-  };
-  const countGlobalAward = () => {
-    let counts = setInterval(updated);
-    let upto = 0;
-    function updated() {
-      var count = document.getElementById("global-award-counter");
-      count.innerHTML = ++upto;
-      if (upto === 250) {
-        clearInterval(counts);
-      }
-    }
-  };
-  const countOurClients = () => {
-    let counts = setInterval(updated);
-    let upto = 0;
-    function updated() {
-      var count = document.getElementById("our-clients-counter");
-      count.innerHTML = ++upto;
-      if (upto === 50) {
+      if (upto === uptoNumber) {
         clearInterval(counts);
       }
     }
   };
 
   useEffect(() => {
-    countLiveTouched();
-    countGlobalAward();
-    countOurClients();
+    liveCount(250, "live-touched-counter");
+    liveCount(250, "global-award-counter");
+    liveCount(100, "our-clients-counter");
   }, []);
 
   return (
@@ -75,7 +53,7 @@ const Hero = () => {
             <div className="col-8 offset-lg-2">
               <p className="hero-info-title text-center">Lives Touched</p>
               <h3 className="hero-info-count hero-title-gradient fw-bold text-center">
-                <span id="live-touched-counter"></span>+
+                2<span id="live-touched-counter"></span>+
               </h3>
             </div>
             <div className="col-2 vl"></div>

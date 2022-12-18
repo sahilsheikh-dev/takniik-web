@@ -31,6 +31,55 @@ const Services = ({ theme }) => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       url: "/cmsdevelopment",
     },
+    {
+      img: "https://images.pexels.com/photos/12812687/pexels-photo-12812687.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Custom Development",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/customdevelopment",
+    },
+    {
+      img: "https://images.pexels.com/photos/3705645/pexels-photo-3705645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      title: "AI Module",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/aimodule",
+    },
+    {
+      img: "https://images.pexels.com/photos/131778/pexels-photo-131778.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "NFT Development",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/nftdevelopment",
+    },
+    {
+      img: "https://images.pexels.com/photos/1738641/pexels-photo-1738641.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Blockchain Development",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/blockchaindevelopment",
+    },
+    {
+      img: "https://images.pexels.com/photos/4050364/pexels-photo-4050364.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Testing Automation",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/testingautomation",
+    },
+    {
+      img: "https://images.pexels.com/photos/4112363/pexels-photo-4112363.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "Deployment Consulting and Support",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/deploymentsupport",
+    },
+    {
+      img: "https://images.pexels.com/photos/12812687/pexels-photo-12812687.jpeg?auto=compress&cs=tinysrgb&w=600",
+      title: "UI/UX Development",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      url: "/uiuxdevelopment",
+    },
   ];
   const [dataId, setDataId] = useState(0);
 
@@ -69,6 +118,48 @@ const Services = ({ theme }) => {
               className={dataId === 3 ? "project-filter-active" : ""}
             >
               {serviceData[3].title}
+            </li>
+            <li
+              onClick={() => setDataId(4)}
+              className={dataId === 4 ? "project-filter-active" : ""}
+            >
+              {serviceData[4].title}
+            </li>
+            <li
+              onClick={() => setDataId(5)}
+              className={dataId === 5 ? "project-filter-active" : ""}
+            >
+              {serviceData[5].title}
+            </li>
+            <li
+              onClick={() => setDataId(6)}
+              className={dataId === 6 ? "project-filter-active" : ""}
+            >
+              {serviceData[6].title}
+            </li>
+            <li
+              onClick={() => setDataId(7)}
+              className={dataId === 7 ? "project-filter-active" : ""}
+            >
+              {serviceData[7].title}
+            </li>
+            <li
+              onClick={() => setDataId(8)}
+              className={dataId === 8 ? "project-filter-active" : ""}
+            >
+              {serviceData[8].title}
+            </li>
+            <li
+              onClick={() => setDataId(9)}
+              className={dataId === 9 ? "project-filter-active" : ""}
+            >
+              {serviceData[9].title}
+            </li>
+            <li
+              onClick={() => setDataId(10)}
+              className={dataId === 10 ? "project-filter-active" : ""}
+            >
+              {serviceData[10].title}
             </li>
           </ul>
 

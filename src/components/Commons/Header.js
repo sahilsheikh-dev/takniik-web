@@ -275,6 +275,69 @@ const Header = ({ themeToggler, theme }) => {
                       >
                         CMS Development
                       </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/customdevelopment"
+                      >
+                        Custom Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/aimodule"
+                      >
+                        AI Module
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/nftdevelopment"
+                      >
+                        NFT Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/blockchaindevelopment"
+                      >
+                        Blockchain Development
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/testingautomation"
+                      >
+                        Testing Automation
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/deploymentsupport"
+                      >
+                        Deployment Consulting and Support
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        className="hover-item"
+                        style={{
+                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                        }}
+                        href="/uiuxdevelopment"
+                      >
+                        UI/UX Development
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 )}
@@ -297,10 +360,9 @@ const Header = ({ themeToggler, theme }) => {
                         onClick={() => switchToField()}
                       >
                         <span className="nav-btn-title">
-                          Switch to{" "}
                           {localStorage.getItem("currentField") === "Marketing"
-                            ? "Technical"
-                            : "Marketing"}
+                            ? "Switch to Technical"
+                            : "Switch to Marketing"}
                         </span>
                       </Link>
                     </NavBtn>

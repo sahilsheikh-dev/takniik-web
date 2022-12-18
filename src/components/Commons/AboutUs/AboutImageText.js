@@ -1,9 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import OurMissionImg from "../../../assets/img/OurMissionImg.png";
-import OurStoryImg from "../../../assets/img/OurStoryImg.png";
-import OurTeamImg from "../../../assets/img/OurTeamImg.png";
+import OurMissionImg from "../../../assets/img/about-us/OurMissionImg.png";
+import OurStoryImg from "../../../assets/img/about-us/OurStoryImg.png";
+import OurTeamImg from "../../../assets/img/about-us/OurTeamImg.png";
 
 const AboutImageText = () => {
   return (

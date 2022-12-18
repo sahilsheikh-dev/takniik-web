@@ -21,6 +21,7 @@ import ImageText3 from "../../../components/Commons/ImageText3";
 import Image1 from "../../../assets/img/services/cms/cmd-img-1.png";
 import Image2 from "../../../assets/img/services/cms/cmd-img-2.png";
 import Image3 from "../../../assets/img/services/cms/cmd-img-3.png";
+import ColumnGrid3BG from "../../../components/Commons/ColumnGrid3BG";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -73,23 +74,24 @@ const CMSDevelopmentService = () => {
             BtnText={"Create a Project"}
             URL={"/contact"}
           />
-          <ColumnGrid3
-            Heading={"Our CMS Software Development Solutions"}
-            Image1={ProductImage1}
-            Image2={ProductImage2}
-            Image3={ProductImage3}
-            Heading1={"Website Development"}
-            Heading2={"Website Development"}
-            Heading3={"Website Development"}
-            Subheading1={
+          <ColumnGrid3BG
+            theme={theme}
+            title={"Our CMS Software Development Solutions"}
+            subtitle1={"Website Development"}
+            subtitle2={"Website Development"}
+            subtitle3={"Website Development"}
+            description1={
               "Stop sifting through the endless stream of freelancers. We find the best-fit writers for your content."
             }
-            Subheading2={
+            description2={
               "Stop sifting through the endless stream of freelancers. We find the best-fit writers for your content."
             }
-            Subheading3={
+            description3={
               "Stop sifting through the endless stream of freelancers. We find the best-fit writers for your content."
             }
+            img1={ProductImage1}
+            img2={ProductImage2}
+            img3={ProductImage3}
           />
           <ColumnGrid3
             Heading={"Product descriptions that aim to sell"}
