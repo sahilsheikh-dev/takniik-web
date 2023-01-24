@@ -22,6 +22,7 @@ import Image1 from "../../../assets/img/services/cms/cmd-img-1.png";
 import Image2 from "../../../assets/img/services/cms/cmd-img-2.png";
 import Image3 from "../../../assets/img/services/cms/cmd-img-3.png";
 import ColumnGrid3BG from "../../../components/Commons/ColumnGrid3BG";
+import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -65,6 +66,7 @@ const CMSDevelopmentService = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}
             Heading={"Dynamic and scalable Web with CMS development"}

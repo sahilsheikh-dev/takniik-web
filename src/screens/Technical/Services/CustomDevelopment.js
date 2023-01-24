@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
 import ScrollToTop from "../../../components/Commons/ScrollToTop";
+import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 import FooterCTA from "../../../components/Commons/FooterCTA";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
 import HeroImg from "../../../assets/img/services/customdevelopment/hero.png";
@@ -69,6 +70,7 @@ const CustomDevelopment = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}
             Heading={"Customer Development service made easy"}

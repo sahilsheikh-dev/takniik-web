@@ -7,12 +7,14 @@ import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
 import Hero from "../components/Commons/Homepage/Hero";
 import Review from "../components/Commons/Homepage/Review";
-import ScrollToTop from "../components/Commons/ScrollToTop";
 import ServicesMarketing from "../components/Marketing/Homepage/Services";
 import ServicesTechnology from "../components/Technical/Homepage/Services";
 import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
-// import InstagramIntegration from "../components/Commons/InstagramIntegration";
+import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
+import ScrollToTop from "../components/Commons/ScrollToTop";
+import InstagramIntegration from "../components/Commons/InstagramIntegration";
+import CookiesDialogue from "../components/Commons/CookiesDialogue";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
 
 const StyledApp = styled.div`
@@ -57,6 +59,8 @@ const Homepage = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
+          <CookiesDialogue />
           <Hero />
           <Clients theme={theme} />
           {localStorage.getItem("currentField") === "Marketing" ? (
@@ -67,7 +71,7 @@ const Homepage = () => {
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />
-          {/* <InstagramIntegration /> */}
+          <InstagramIntegration />
           {/* <GoogleReviewIntegration /> */}
           <Cta theme={theme} />
           <Footer />

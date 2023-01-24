@@ -100,7 +100,7 @@ const Services = ({ theme }) => {
 
           <div className="project">
             {dataId % 2 === 0 ? (
-              <div className="row">
+              <div className="row slide-right">
                 <div className="col-md-4 col-lg-4">
                   <img
                     src={serviceData[dataId].img}
@@ -129,7 +129,7 @@ const Services = ({ theme }) => {
                 </div>
               </div>
             ) : (
-              <div className="row">
+              <div className="row slide-left">
                 <div className="col-md-8 col-lg-8">
                   <div className="project-info">
                     <h2 className="project-title">

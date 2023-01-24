@@ -21,6 +21,7 @@ import Image1 from "../../../assets/img/services/aimodule/cd-img-1.png";
 import Image2 from "../../../assets/img/services/aimodule/cd-img-2.png";
 import Image3 from "../../../assets/img/services/aimodule/cd-img-3.png";
 import CardGrid2 from "../../../components/Commons/CardGrid2";
+import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -64,6 +65,7 @@ const AIModule = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}
             Heading={"Customer Development service made easy"}

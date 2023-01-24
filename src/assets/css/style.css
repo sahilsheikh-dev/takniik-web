@@ -1414,3 +1414,53 @@ input:-webkit-autofill:active {
     background: none !important;
   }
 }
+
+/***** Global Slide *****/
+.slide-right,
+.slide-left {
+  width: 100%;
+}
+
+/***** Slide Right *****/
+.slide-right {
+  animation: 2s slide-right;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+/***** Slide Left *****/
+.slide-left {
+  animation: 2s slide-left;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+/***** FadeIn Underline *****/
+.line {
+  border-bottom: 3px solid red;
+  width: 200px;
+  margin: auto;
+}
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

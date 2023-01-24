@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
 import ScrollToTop from "../../../components/Commons/ScrollToTop";
+import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
 import ContentWritingServices from "../../../components/Marketing/Services/ContentWriting/ContentWritingServices";
 import ColumnHero from "../../../components/Commons/ColumnHero";
@@ -59,6 +60,7 @@ const ContentWritingService = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}
             Heading={"Top-quality content writing"}

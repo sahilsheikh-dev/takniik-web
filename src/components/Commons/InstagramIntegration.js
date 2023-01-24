@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
 const InstagramIntegration = () => {
   return (
-    <div className='text-center'>InstagramIntegration</div>
-  )
-}
+    <Container>
+      <div className="achievement">
+        <h1 className="achievement-heading">Instagram Posts</h1>
 
-export default InstagramIntegration
+        <div className="row"></div>
+      </div>
+    </Container>
+  );
+};
+
+export default InstagramIntegration;

@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
 import ScrollToTop from "../../../components/Commons/ScrollToTop";
+import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 import CardSlider from "../../../components/Marketing/Services/VideoProduction/CardSlider";
 import FooterCTA from "../../../components/Commons/FooterCTA";
 import ImageSlider from "../../../components/Marketing/Services/VideoProduction/ImageSlider";
@@ -53,6 +54,7 @@ const VideoProductionService = () => {
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
           <ScrollToTop />
+          <WhatsappHoverBtn />
           <BgImageHero
             HeroImg={HeroBg}
             Heading={"Video Production Service Worldwide"}
