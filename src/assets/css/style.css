@@ -427,13 +427,16 @@ body {
   }
 
   .project-section {
-    margin: 20px 0;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .project-filter {
-    width: 100vw;
-    margin: 0;
-    padding-left: 0;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .project-filter li {
@@ -448,11 +451,13 @@ body {
   }
 
   .project {
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .project-img {
     width: 100%;
+    max-width: 400px;
     margin: 40px 0px;
   }
 
@@ -1318,10 +1323,12 @@ input:-webkit-autofill:active {
 
 .about-cta-bg {
   height: 500px;
-  background: linear-gradient(179.82deg, #222229 0.16%, #0a0a0d 99.84%);
+  /* background: linear-gradient(179.82deg, #222229 0.16%, #0a0a0d 99.84%); */
   mix-blend-mode: normal;
   display: flex;
   align-items: center;
+  /* border-top: 1px solid #010101; */
+  /* border-bottom: 1px solid #010101; */
 }
 
 @media only screen and (max-width: 992px) {

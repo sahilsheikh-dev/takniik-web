@@ -22,7 +22,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    <i class="bi bi-linkedin"></i>
+                    <i className="bi bi-linkedin"></i>
                   </a>
                 </h4>
                 <h4 className="me-3">
@@ -32,7 +32,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    <i class="bi bi-twitter"></i>
+                    <i className="bi bi-twitter"></i>
                   </a>
                 </h4>
                 <h4 className="me-3">
@@ -42,7 +42,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    <i class="bi bi-facebook"></i>
+                    <i className="bi bi-facebook"></i>
                   </a>
                 </h4>
                 <h4 className="me-3">
@@ -52,7 +52,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    <i class="bi bi-instagram"></i>
+                    <i className="bi bi-instagram"></i>
                   </a>
                 </h4>
                 <h4 className="me-3">
@@ -62,7 +62,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    <i class="bi bi-youtube"></i>
+                    <i className="bi bi-youtube"></i>
                   </a>
                 </h4>
               </div>

@@ -10,9 +10,9 @@ const Timeline = () => {
       <div className="timeline-section">
         <h1 className="timeline-heading">Here’s how we do it</h1>
         <div className="timeline-section">
-          <div class="timeline">
-            <div class="container-timeline right-card">
-              <div class="content">
+          <div className="timeline">
+            <div className="container-timeline right-card">
+              <div className="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
                     <img
@@ -44,9 +44,9 @@ const Timeline = () => {
               </div>
             </div>
           </div>
-          <div class="timeline">
-            <div class="container-timeline right-card">
-              <div class="content">
+          <div className="timeline">
+            <div className="container-timeline right-card">
+              <div className="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
                     <img
@@ -78,9 +78,9 @@ const Timeline = () => {
               </div>
             </div>
           </div>
-          <div class="timeline">
-            <div class="container-timeline right-card">
-              <div class="content">
+          <div className="timeline">
+            <div className="container-timeline right-card">
+              <div className="content">
                 <div className="row">
                   <div className="col-md-6 col-lg-6 col-xl-6 d-block d-md-none d-lg-none d-xl-none">
                     <img

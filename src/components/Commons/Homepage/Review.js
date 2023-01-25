@@ -58,20 +58,20 @@ const Review = ({ theme }) => {
           <div className="col-md-8 col-lg-8 col-xl-8 text-center">
             <div className="testimonial-image-section">
               <div
-                class="testinomial-image testinomial-1 w-75 text-start p-4 "
+                className="testinomial-image testinomial-1 w-75 text-start p-4 "
                 id="testinomial-1"
                 onMouseEnter={testinomial1}
                 onMouseLeave={testinomialHover}
               >
-                <div class=" text-dark">
-                  <p class="fw-bold mt-0">
+                <div className=" text-dark">
+                  <p className="fw-bold mt-0">
                     "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
                     odit omnis Consequatur"
                   </p>
-                  <div class="row m-1">
-                    <div class="col-auto p-0 rounded-circle">
+                  <div className="row m-1">
+                    <div className="col-auto p-0 rounded-circle">
                       <img
-                        class="img-fluid w-100 rounded-circle"
+                        className="img-fluid w-100 rounded-circle"
                         style={{
                           maxWidth: "50px",
                           maxHeight: "50px",
@@ -82,32 +82,32 @@ const Review = ({ theme }) => {
                       />
                     </div>
                     <div
-                      class="col-auto my-1 py-1"
+                      className="col-auto my-1 py-1"
                       style={{
                         fontSize: "12px",
                       }}
                     >
-                      <p class="my-0">Megan Novalum</p>
-                      <p class="text-secondary my-0">CEO, ABC Company</p>
+                      <p className="my-0">Megan Novalum</p>
+                      <p className="text-secondary my-0">CEO, ABC Company</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="testinomial-image testinomial-2 w-75 text-start p-4  text-dark"
+                className="testinomial-image testinomial-2 w-75 text-start p-4  text-dark"
                 id="testinomial-2"
                 onMouseEnter={testinomial2}
                 onMouseLeave={testinomialHover}
               >
-                <div class=" text-dark">
-                  <p class="fw-bold mt-0">
+                <div className=" text-dark">
+                  <p className="fw-bold mt-0">
                     "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
                     odit omnis Consequatur"
                   </p>
-                  <div class="row m-1">
-                    <div class="col-auto p-0 rounded-circle">
+                  <div className="row m-1">
+                    <div className="col-auto p-0 rounded-circle">
                       <img
-                        class="img-fluid w-100 rounded-circle"
+                        className="img-fluid w-100 rounded-circle"
                         style={{
                           maxWidth: "50px",
                           maxHeight: "50px",
@@ -118,32 +118,32 @@ const Review = ({ theme }) => {
                       />
                     </div>
                     <div
-                      class="col-auto my-1 py-1"
+                      className="col-auto my-1 py-1"
                       style={{
                         fontSize: "12px",
                       }}
                     >
-                      <p class="my-0">Megan Novalum</p>
-                      <p class="text-secondary my-0">CEO, ABC Company</p>
+                      <p className="my-0">Megan Novalum</p>
+                      <p className="text-secondary my-0">CEO, ABC Company</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="testinomial-image testinomial-3 w-75 text-start p-4  text-dark"
+                className="testinomial-image testinomial-3 w-75 text-start p-4  text-dark"
                 id="testinomial-3"
                 onMouseEnter={testinomial3}
                 onMouseLeave={testinomialHover}
               >
-                <div class=" text-dark">
-                  <p class="fw-bold mt-0">
+                <div className=" text-dark">
+                  <p className="fw-bold mt-0">
                     "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
                     odit omnis Consequatur"
                   </p>
-                  <div class="row m-1">
-                    <div class="col-auto p-0 rounded-circle">
+                  <div className="row m-1">
+                    <div className="col-auto p-0 rounded-circle">
                       <img
-                        class="img-fluid w-100 rounded-circle"
+                        className="img-fluid w-100 rounded-circle"
                         style={{
                           maxWidth: "50px",
                           maxHeight: "50px",
@@ -154,32 +154,32 @@ const Review = ({ theme }) => {
                       />
                     </div>
                     <div
-                      class="col-auto my-1 py-1"
+                      className="col-auto my-1 py-1"
                       style={{
                         fontSize: "12px",
                       }}
                     >
-                      <p class="my-0">Megan Novalum</p>
-                      <p class="text-secondary my-0">CEO, ABC Company</p>
+                      <p className="my-0">Megan Novalum</p>
+                      <p className="text-secondary my-0">CEO, ABC Company</p>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="testinomial-image testinomial-4 w-75 text-start p-4  text-dark"
+                className="testinomial-image testinomial-4 w-75 text-start p-4  text-dark"
                 id="testinomial-4"
                 onMouseEnter={testinomial4}
                 onMouseLeave={testinomialHover}
               >
-                <div class=" text-dark">
-                  <p class="fw-bold mt-0">
+                <div className=" text-dark">
+                  <p className="fw-bold mt-0">
                     "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
                     odit omnis Consequatur"
                   </p>
-                  <div class="row m-1">
-                    <div class="col-auto p-0 rounded-circle">
+                  <div className="row m-1">
+                    <div className="col-auto p-0 rounded-circle">
                       <img
-                        class="img-fluid w-100 rounded-circle"
+                        className="img-fluid w-100 rounded-circle"
                         style={{
                           maxWidth: "50px",
                           maxHeight: "50px",
@@ -190,13 +190,13 @@ const Review = ({ theme }) => {
                       />
                     </div>
                     <div
-                      class="col-auto my-1 py-1"
+                      className="col-auto my-1 py-1"
                       style={{
                         fontSize: "12px",
                       }}
                     >
-                      <p class="my-0">Megan Novalum</p>
-                      <p class="text-secondary my-0">CEO, ABC Company</p>
+                      <p className="my-0">Megan Novalum</p>
+                      <p className="text-secondary my-0">CEO, ABC Company</p>
                     </div>
                   </div>
                 </div>

@@ -126,7 +126,7 @@ const Contactform = ({ theme }) => {
               </div>
             </div>
             <div
-              class="row"
+              className="row"
               style={{
                 margin: "0 1px",
                 background: "rgba(255, 255, 255, 0.07)",

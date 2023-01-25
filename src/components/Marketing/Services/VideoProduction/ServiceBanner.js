@@ -46,7 +46,7 @@ const ServiceBanner = ({ theme }) => {
                   to={"/contact"}
                   style={{ textDecoration: "none", color: "#ffffff" }}
                 >
-                  Get Started &nbsp; <i class="bi bi-arrow-right"></i>{" "}
+                  Get Started &nbsp; <i className="bi bi-arrow-right"></i>{" "}
                 </Link>
               </Button>
             </div>
@@ -74,7 +74,7 @@ const ServiceBanner = ({ theme }) => {
                   to={"/contact"}
                   style={{ textDecoration: "none", color: "#ffffff" }}
                 >
-                  Become a Partner &nbsp; <i class="bi bi-arrow-right"></i>{" "}
+                  Become a Partner &nbsp; <i className="bi bi-arrow-right"></i>{" "}
                 </Link>
               </Button>
             </div>

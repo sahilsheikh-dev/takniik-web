@@ -54,7 +54,7 @@ const CardSlider = () => {
               onClick={previousSlide}
             >
               <i
-                class="slide-icon bi bi-chevron-left"
+                className="slide-icon bi bi-chevron-left"
                 style={{ fontSize: "30px" }}
               ></i>
             </button>
@@ -64,7 +64,7 @@ const CardSlider = () => {
               onClick={nextSlide}
             >
               <i
-                class="slide-icon bi bi-chevron-right"
+                className="slide-icon bi bi-chevron-right"
                 style={{ fontSize: "30px" }}
               ></i>
             </button>
@@ -99,7 +99,7 @@ const CardSlider = () => {
             onClick={previousSlide}
           >
             <i
-              class="slide-icon bi bi-chevron-left"
+              className="slide-icon bi bi-chevron-left"
               style={{ fontSize: "30px" }}
             ></i>
           </button>
@@ -109,7 +109,7 @@ const CardSlider = () => {
             onClick={nextSlide}
           >
             <i
-              class="slide-icon bi bi-chevron-right"
+              className="slide-icon bi bi-chevron-right"
               style={{ fontSize: "30px" }}
             ></i>
           </button>

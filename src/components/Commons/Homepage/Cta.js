@@ -25,7 +25,7 @@ const Cta = ({ theme }) => {
               <p className="cta-subheading">Are you ready to join us?</p>
               <div className="text-center">
                 <Button className="hero-btn">
-                  Get Started &nbsp; <i class="bi bi-arrow-right"></i>{" "}
+                  Get Started &nbsp; <i className="bi bi-arrow-right"></i>{" "}
                 </Button>
               </div>
             </div>

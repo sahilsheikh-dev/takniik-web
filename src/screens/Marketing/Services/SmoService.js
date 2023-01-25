@@ -41,7 +41,7 @@ const SmoService = () => {
       localStorage.getItem("currentTheme") === null ||
       localStorage.getItem("currentTheme") === ""
     ) {
-      localStorage.setItem("currentTheme", "dark");
+      localStorage.setItem("currentTheme", "light");
       setTheme("dark");
     } else {
       setTheme(localStorage.getItem("currentTheme"));

@@ -56,15 +56,15 @@ const AboutTeam = () => {
           {teamData.map((teamItem, index) => (
             <div className="col-md-4 col-lg-4 col-xl-4" key={index}>
               <TeamCard
-                class="mx-auto"
+                className="mx-auto"
                 style={{
                   maxWidth: "250px",
                 }}
               >
-                <img src={teamItem.img} class="card-img-top" alt="img" />
+                <img src={teamItem.img} className="card-img-top" alt="img" />
                 <div className="p-3">
-                  <h5 class="card-title fw-bold mb-2">{teamItem.name}</h5>
-                  <p class="card-text">{teamItem.position}</p>
+                  <h5 className="card-title fw-bold mb-2">{teamItem.name}</h5>
+                  <p className="card-text">{teamItem.position}</p>
                 </div>
               </TeamCard>
             </div>

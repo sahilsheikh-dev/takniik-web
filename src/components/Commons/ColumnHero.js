@@ -35,7 +35,7 @@ const ColumnHero = ({ HeroImg, Heading, DescriptionPoints, BtnText, URL }) => {
                   to={URL}
                   style={{ textDecoration: "none", color: "#ffffff" }}
                 >
-                  {BtnText} &nbsp; <i class="bi bi-arrow-right"></i>{" "}
+                  {BtnText} &nbsp; <i className="bi bi-arrow-right"></i>{" "}
                 </Link>
               </Button>
             </div>

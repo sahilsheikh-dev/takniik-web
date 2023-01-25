@@ -51,7 +51,7 @@ const ScrollToTop = () => {
             }}
           >
             {/* <BsArrowUpCircleFill color="#27AE60" size={"lg"} /> */}
-            <i class="bi bi-caret-up-fill"></i>
+            <i className="bi bi-caret-up-fill"></i>
           </button>
         </div>
       ) : (

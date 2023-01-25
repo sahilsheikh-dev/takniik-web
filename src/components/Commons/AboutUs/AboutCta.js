@@ -5,7 +5,7 @@ const AboutCta = () => {
   return (
     <div className="about-us about-cta-bg">
       <div className="about-cta-section w-100 text-center">
-        <h1 className="about-us-heading text-white">Join Us</h1>
+        <h1 className="about-us-heading">Join Us</h1>
         <p className="about-us-subheading w-75 mx-auto">
           We are transforming the content ecosystem as{" "}
           <br className="d-none d-md-block d-lg-block d-xl-block" /> you know it

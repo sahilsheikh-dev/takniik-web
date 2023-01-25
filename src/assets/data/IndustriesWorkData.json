@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Generate new value from new technology",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "url": "/test",
+    "imgUrl": "https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "buttonTitle": "Tech to watch"
+  },
+  {
+    "title": "intuition engineeredhuman insight at superhuman speed",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "url": "/test",
+    "imgUrl": "https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "buttonTitle": "Intuition engineered"
+  },
+  {
+    "title": "Take the pulse of your payment strategy",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "url": "/test",
+    "imgUrl": "https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "buttonTitle": "Digital payments"
+  },
+  {
+    "title": "Disrupt markets faster",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "url": "/test",
+    "imgUrl": "https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "buttonTitle": "Digital disruptors"
+  }
+]

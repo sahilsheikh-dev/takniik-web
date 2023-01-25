@@ -14,7 +14,7 @@ const FooterCTA = ({
   return (
     <div className="about-us about-cta-bg mt-5">
       <div className="about-cta-section w-100 text-center">
-        <h1 className="about-us-heading text-white">{Heading}</h1>
+        <h1 className="about-us-heading">{Heading}</h1>
         <p className="about-us-subheading w-75 mx-auto">{Subheading}</p>
         <div className="about-contact-btn text-center">
           <Link

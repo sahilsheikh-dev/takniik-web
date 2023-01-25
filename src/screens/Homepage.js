@@ -13,8 +13,9 @@ import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
 import ScrollToTop from "../components/Commons/ScrollToTop";
-import InstagramIntegration from "../components/Commons/InstagramIntegration";
 import CookiesDialogue from "../components/Commons/CookiesDialogue";
+import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorked";
+// import InstagramIntegration from "../components/Commons/InstagramIntegration";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
 
 const StyledApp = styled.div`
@@ -41,7 +42,7 @@ const Homepage = () => {
       localStorage.getItem("currentTheme") === null ||
       localStorage.getItem("currentTheme") === ""
     ) {
-      localStorage.setItem("currentTheme", "dark");
+      localStorage.setItem("currentTheme", "light");
       setTheme("dark");
     } else {
       setTheme(localStorage.getItem("currentTheme"));
@@ -71,8 +72,9 @@ const Homepage = () => {
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />
-          <InstagramIntegration />
+          {/* <InstagramIntegration /> */}
           {/* <GoogleReviewIntegration /> */}
+          <IndustriesWeWorked />
           <Cta theme={theme} />
           <Footer />
         </section>
