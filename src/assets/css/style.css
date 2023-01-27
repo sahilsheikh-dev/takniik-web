@@ -349,7 +349,7 @@ body {
   flex-wrap: nowrap;
   overflow: auto;
   white-space: nowrap;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .project-filter::-webkit-scrollbar {
@@ -365,16 +365,16 @@ body {
   font-weight: 600;
   cursor: pointer;
   list-style-type: none;
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
   border-radius: 25px;
 }
 
 .project-filter li:hover {
-  border: 2px solid #ff55f1;
+  /* border: 2px solid #ff55f1; */
 }
 
 .project-filter-active {
-  border: 2px solid #ff55f1 !important;
+  /* border: 2px solid #ff55f1 !important; */
 }
 
 .project {
