@@ -10,9 +10,7 @@ import {
   Navbar,
 } from "react-bootstrap";
 import NavLogo from "../../assets/svg/nav-logo.svg";
-// import Moon from "../../assets/svg/Moon.svg";
 import MoonActive from "../../assets/svg/MoonActive.svg";
-// import Sun from "../../assets/svg/Sun.svg";
 import SunActive from "../../assets/svg/SunActive.svg";
 import NavToggleDark from "../../assets/svg/NavToggleDark.svg";
 import NavToggleLight from "../../assets/svg/NavToggleLight.svg";
@@ -30,6 +28,7 @@ import riveToggle from "../../assets/rive/toggler.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import FieldChangeToggle from "./FieldChangeToggle";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -42,6 +41,10 @@ const Header = ({ themeToggler, theme }) => {
   const [togglerNavIconLight, settoggleNavIconLight] = useState(NavToggleLight);
 
   const [show, setShow] = useState(false);
+
+  const currentUrl = window.location.href;
+  const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
+
   const showDropdown = (e) => {
     setShow(!show);
   };
@@ -82,15 +85,6 @@ const Header = ({ themeToggler, theme }) => {
     }
   };
 
-  const switchToField = () => {
-    if (localStorage.getItem("currentField") === "Marketing") {
-      localStorage.setItem("currentField", "Technology");
-    } else {
-      localStorage.setItem("currentField", "Marketing");
-    }
-    window.location.reload();
-  };
-
   useEffect(() => {
     if (
       localStorage.getItem("currentField") === "" ||
@@ -105,8 +99,16 @@ const Header = ({ themeToggler, theme }) => {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <StyledApp>
         <GlobalStyles />
-        <Navbar className="navbar" expand="lg">
-          <Container>
+        <Navbar
+          className="navbar my-0 py-0"
+          expand="lg"
+          fixed="top"
+          style={{
+            background: theme === "dark" ? "#0A0A0D" : "#FAFCFF",
+            opacity: 0.9,
+          }}
+        >
+          <Container className="my-0">
             <Navbar.Brand href="#">
               <Link to={"/"} style={{ textDecoration: "none" }}>
                 <Image className="nav-icon" fluid src={NavLogo} />
@@ -144,246 +146,290 @@ const Header = ({ themeToggler, theme }) => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mx-auto nav-link-section">
                 {localStorage.getItem("currentField") === "Marketing" ? (
-                  <Dropdown
-                    className="nav-link"
-                    id="collasible-nav-dropdown"
-                    show={show}
-                    onMouseEnter={showDropdown}
-                    onMouseLeave={hideDropdown}
-                  >
-                    <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
-                      <NavLink className="hover-pink text-decoration-none nav-opt">
-                        Services
-                      </NavLink>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu
-                      style={{
-                        backgroundColor:
-                          theme === "dark" ? "#181A1C" : "#F5F5F5",
-                        marginTop: "-5px",
-                      }}
+                  <Nav.Link href="#">
+                    <Dropdown
+                      className="nav-link"
+                      id="collasible-nav-dropdown"
+                      show={show}
+                      onMouseEnter={showDropdown}
+                      onMouseLeave={hideDropdown}
                     >
-                      <Dropdown.Item
-                        className="hover-item"
+                      <Dropdown id="dropdown-basic" className="hover-pink">
+                        <NavLink className="hover-pink text-decoration-none nav-opt">
+                          Services <i class="bi bi-caret-down-fill"></i>
+                        </NavLink>
+                      </Dropdown>
+                      <Dropdown.Menu
                         style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                          backgroundColor:
+                            theme === "dark" ? "#181A1C" : "#F5F5F5",
+                          marginTop: "-5px",
                         }}
-                        href="/seo"
                       >
-                        SEO
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/videoproduction"
-                      >
-                        Video Production
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/videoediting"
-                      >
-                        Video Editing
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/contentwriting"
-                      >
-                        Content Writing
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/smo"
-                      >
-                        SMO
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/graphicdesigning"
-                      >
-                        Graphic Designing
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/seo"
+                          >
+                            SEO
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/videoproduction"
+                          >
+                            Video Production
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/videoediting"
+                          >
+                            Video Editing
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/contentwriting"
+                          >
+                            Content Writing
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/smo"
+                          >
+                            SMO
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to={"/graphicdesigning"}
+                          >
+                            Graphic Designing
+                          </Link>
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Nav.Link>
                 ) : (
-                  <Dropdown
-                    className="nav-link"
-                    id="collasible-nav-dropdown"
-                    show={show}
-                    onMouseEnter={showDropdown}
-                    onMouseLeave={hideDropdown}
-                  >
-                    <Dropdown.Toggle id="dropdown-basic" className="hover-pink">
-                      <NavLink className="hover-pink text-decoration-none nav-opt">
-                        Services
-                      </NavLink>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu
-                      style={{
-                        backgroundColor:
-                          theme === "dark" ? "#181A1C" : "#F5F5F5",
-                        marginTop: "-5px",
-                      }}
+                  <Nav.Link href="#">
+                    <Dropdown
+                      className="nav-link"
+                      id="collasible-nav-dropdown"
+                      show={show}
+                      onMouseEnter={showDropdown}
+                      onMouseLeave={hideDropdown}
                     >
-                      <Dropdown.Item
-                        className="hover-item"
+                      <Dropdown id="dropdown-basic" className="hover-pink">
+                        <NavLink className="hover-pink text-decoration-none nav-opt">
+                          Services <i class="bi bi-caret-down-fill"></i>
+                        </NavLink>
+                      </Dropdown>
+                      <Dropdown.Menu
                         style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
+                          backgroundColor:
+                            theme === "dark" ? "#181A1C" : "#F5F5F5",
+                          marginTop: "-5px",
                         }}
-                        href="/mobiledevelopment"
                       >
-                        Mobile App Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/webdevelopment"
-                      >
-                        Web Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/crmdevelopment"
-                      >
-                        CRM Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/cmsdevelopment"
-                      >
-                        CMS Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/customdevelopment"
-                      >
-                        Custom Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/aimodule"
-                      >
-                        AI Module
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/nftdevelopment"
-                      >
-                        NFT Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/blockchaindevelopment"
-                      >
-                        Blockchain Development
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/testingautomation"
-                      >
-                        Testing Automation
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/deploymentsupport"
-                      >
-                        Deployment Consulting and Support
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        className="hover-item"
-                        style={{
-                          color: theme === "dark" ? "#FFFFFF" : "#000000",
-                        }}
-                        href="/uiuxdevelopment"
-                      >
-                        UI/UX Development
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/mobiledevelopment"
+                          >
+                            Mobile App Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/webdevelopment"
+                          >
+                            Web Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/crmdevelopment"
+                          >
+                            CRM Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/cmsdevelopment"
+                          >
+                            CMS Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/customdevelopment"
+                          >
+                            Custom Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/aimodule"
+                          >
+                            AI Module
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/nftdevelopment"
+                          >
+                            NFT Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/blockchaindevelopment"
+                          >
+                            Blockchain Development
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/testingautomation"
+                          >
+                            Testing Automation
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/deploymentsupport"
+                          >
+                            Deployment Consulting and Support
+                          </Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="hover-item">
+                          <Link
+                            className="text-decoration-none"
+                            style={{
+                              color: theme === "dark" ? "#FFFFFF" : "#000000",
+                            }}
+                            to="/uiuxdevelopment"
+                          >
+                            UI/UX Development
+                          </Link>
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Nav.Link>
                 )}
 
                 <Nav.Link href="#">
-                  <NavLink className="nav-link">Case Studies</NavLink>
+                  <Link to={"/casestudies"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">Case Studies</NavLink>
+                  </Link>
                 </Nav.Link>
                 <Nav.Link href="#">
                   <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
                     <NavLink className="nav-link">About Us</NavLink>
                   </Link>
                 </Nav.Link>
+                <Nav.Link href="#">
+                  <Link to={"/blogs"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">Blogs</NavLink>
+                  </Link>
+                </Nav.Link>
               </Nav>
+
               <ButtonGroup className="nav-btn-section">
-                <div className="row">
-                  <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center py-sm-3">
-                    <NavBtn className="nav-btn w-sm-100" href="#">
-                      <Link
-                        style={{ textDecoration: "none" }}
-                        onClick={() => switchToField()}
-                      >
-                        <span className="nav-btn-title">
-                          {localStorage.getItem("currentField") === "Marketing"
-                            ? "Switch to Technical"
-                            : "Switch to Marketing"}
-                        </span>
-                      </Link>
-                    </NavBtn>
-                  </div>
-                  <div className="col-12 col-md-6 col-lg-6 col-xl-6 d-flex align-items-center py-sm-3">
+                <div className="d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex">
+                  <div className="d-flex align-items-center py-sm-3">
                     <NavBtn className="nav-btn w-sm-100" href="#">
                       <Link to={"/contact"} style={{ textDecoration: "none" }}>
                         <span className="nav-btn-title">Contact Us</span>
                       </Link>
                     </NavBtn>
                   </div>
-                </div>
-                <div
-                  className="d-none d-lg-block d-flex align-items-center py-sm-3"
-                  style={{ marginTop: "5px" }}
-                >
-                  {/* <Toggler themeTog={themeToggler} /> */}
-                  <RiveComponent
-                    className="toggle-icon"
-                    onClick={() => toggleComponent()}
-                  />
+                  <div className="d-flex align-items-center py-sm-3">
+                    {pageName === "" ||
+                    pageName === "aboutus" ||
+                    pageName === "contact" ? (
+                      <div className="d-flex align-items-center py-sm-3">
+                        <FieldChangeToggle />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <div className="d-flex align-items-center py-sm-3">
+                    <div
+                      className="d-none d-lg-block ms-3"
+                      style={{ marginTop: "5px" }}
+                    >
+                      <RiveComponent
+                        className="toggle-icon"
+                        onClick={() => toggleComponent()}
+                      />
+                    </div>
+                  </div>
                 </div>
               </ButtonGroup>
             </Navbar.Collapse>

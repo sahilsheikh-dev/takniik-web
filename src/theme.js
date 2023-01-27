@@ -59,13 +59,12 @@ export const ContactInput = styled.input`
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 7.14477px;
-  // color: ${({ theme }) => theme.text};
-  color: #fafcff !important;
+  color: ${({ theme }) => theme.text};
+  // color: #fafcff !important;
 `;
 
 export const ContactSpanNumber = styled.span`
-  // color: ${({ theme }) => theme.text};
-  color: #fafcff !important;
+  color: ${({ theme }) => theme.text};
 `;
 
 export const ContactInputNumber = styled.input`
@@ -73,8 +72,8 @@ export const ContactInputNumber = styled.input`
   padding: 15px;
   background: transparent;
   border: none;
-  // color: ${({ theme }) => theme.text};
-  color: #fafcff !important;
+  color: ${({ theme }) => theme.text};
+  // color: #fafcff !important;
 `;
 
 export const ContactSelect = styled.select`

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 import IndustruesWorkData from "../../../assets/data/IndustriesWorkData.json";
 
 const IndustriesWeWorked = () => {
@@ -30,15 +31,14 @@ const IndustriesWeWorked = () => {
                   <div className="text-center text-md-start text-lg-start text-xl-start">
                     <h className="hero-title mb-3">{carouselItem.title}</h>
                     <h3 className="my-3">{carouselItem.subtitle}</h3>
-                    <a
-                      className="btn btn-success px-5"
-                      href={carouselItem.url}
-                      style={{
-                        borderRadius: "25px",
-                      }}
-                    >
-                      Find out more <i className="bi bi-caret-right"></i>
-                    </a>
+                    <Button className="hero-btn">
+                      <Link
+                        to={carouselItem.url}
+                        style={{ textDecoration: "none", color: "#ffffff" }}
+                      >
+                        Find out more <i className="bi bi-caret-right"></i>
+                      </Link>
+                    </Button>
                   </div>
                 </div>
                 <div className="col-md-6 col-lg-6 col-xl-6 my-3">
@@ -57,7 +57,7 @@ const IndustriesWeWorked = () => {
           {industriesJson.map((carouselItem, indexY) => (
             <p
               className={
-                indexX === indexY ? "fw-bold me-4 text-success" : "me-4"
+                indexX === indexY ? "fw-bold me-4 hero-title-gradient" : "me-4"
               }
               key={indexY}
               style={{ fontSize: "16px", cursor: "pointer" }}

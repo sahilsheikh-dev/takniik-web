@@ -3,7 +3,6 @@ import { Button, Container } from "react-bootstrap";
 import {
   ContactInput,
   ContactInputNumber,
-  ContactSelect,
   ContactSpanNumber,
 } from "../../../theme";
 import LocationIcon from "../../../assets/svg/LocationIcon.svg";
@@ -48,83 +47,14 @@ const Contactform = ({ theme }) => {
               name={"company-name"}
               placeholder={"Company Name"}
             />
-            <div className="row">
-              <div className="col-6">
-                <ContactSelect
-                  className="contact-form-input"
-                  required
-                  id={"empoyees"}
-                  name={"empoyees"}
-                >
-                  <option
-                    style={{
-                      background:
-                        theme === "dark"
-                          ? "rgba(0, 0, 0, 0.7)"
-                          : "rgba(255, 255, 255, 0.7)",
-                    }}
-                    selected
-                    disabled
-                  >
-                    No. of Employees
-                  </option>
-                  <option
-                    style={{
-                      background:
-                        theme === "dark"
-                          ? "rgba(0, 0, 0, 0.7)"
-                          : "rgba(255, 255, 255, 0.7)",
-                    }}
-                    value={"10"}
-                  >
-                    10 Employees
-                  </option>
-                  <option
-                    style={{
-                      background:
-                        theme === "dark"
-                          ? "rgba(0, 0, 0, 0.7)"
-                          : "rgba(255, 255, 255, 0.7)",
-                    }}
-                    value={"50"}
-                  >
-                    50 Employees
-                  </option>
-                  <option
-                    style={{
-                      background:
-                        theme === "dark"
-                          ? "rgba(0, 0, 0, 0.7)"
-                          : "rgba(255, 255, 255, 0.7)",
-                    }}
-                    value={"100"}
-                  >
-                    100 Employees
-                  </option>
-                  <option
-                    style={{
-                      background:
-                        theme === "dark"
-                          ? "rgba(0, 0, 0, 0.7)"
-                          : "rgba(255, 255, 255, 0.7)",
-                    }}
-                    value={"500+"}
-                  >
-                    500+ Employees
-                  </option>
-                </ContactSelect>
-              </div>
-              <div className="col-6">
-                <ContactInput
-                  className="contact-form-input"
-                  type={"email"}
-                  required
-                  id={"email"}
-                  name={"email"}
-                  placeholder={"Email ID"}
-                />
-              </div>
-            </div>
+            <ContactInput
+              className="contact-form-input"
+              type={"email"}
+              required
+              id={"email"}
+              name={"email"}
+              placeholder={"Email ID"}
+            />
             <div
               className="row"
               style={{
@@ -139,6 +69,7 @@ const Contactform = ({ theme }) => {
                 style={{
                   margin: "0 0 0 12px",
                   padding: "15px",
+                  color: theme === "dark" ? "" : "#000000",
                 }}
               >
                 <ContactSpanNumber>+91</ContactSpanNumber>
@@ -171,7 +102,10 @@ const Contactform = ({ theme }) => {
                 <img className="" src={ContactCallIcon} alt="icon" /> &nbsp;
                 <a
                   href="tel:+45 71 99 77 07"
-                  style={{ textDecoration: "none", color: "#fafcff" }}
+                  style={{
+                    textDecoration: "none",
+                    color: theme === "dark" ? "#fafcff" : "#0A0A0D",
+                  }}
                 >
                   +45 71 99 77 07
                 </a>
@@ -182,7 +116,7 @@ const Contactform = ({ theme }) => {
                   href="mailto:mail@takniik.com"
                   style={{
                     textDecoration: "none",
-                    color: "#fafcff",
+                    color: theme === "dark" ? "#fafcff" : "#0A0A0D",
                     textTransform: "none",
                   }}
                 >

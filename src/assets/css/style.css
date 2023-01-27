@@ -132,7 +132,12 @@ body {
 
 /* HERO SECTION */
 .hero {
-  height: 80vh;
+  height: 95vh;
+  padding-top: 80px;
+}
+
+.column-hero {
+  padding-top: 80px;
 }
 
 .hero-title {
@@ -230,6 +235,11 @@ body {
 @media only screen and (max-width: 992px) {
   .hero {
     height: 70vh;
+    padding-top: 80px;
+  }
+
+  .column-hero {
+    padding-top: 80px;
   }
 
   .hero-title {
@@ -1044,6 +1054,7 @@ body {
 
 .contact-form {
   margin: 50px;
+  margin-top: 150px;
   padding: 50px;
   left: 0px;
   top: 0px;
@@ -1057,7 +1068,6 @@ body {
   font-size: 24px;
   line-height: 150%;
   text-transform: capitalize;
-  color: #fafcff !important;
 }
 
 .contact-form-subheading {
@@ -1067,7 +1077,6 @@ body {
   font-size: 16px;
   line-height: 150%;
   text-transform: capitalize;
-  color: #fafcff !important;
 }
 
 .contact-form-input {
@@ -1094,16 +1103,16 @@ input:-webkit-autofill:active {
 } */
 
 ::placeholder {
-  color: #fafcff;
+  /* color: #fafcff; */
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #fafcff;
+  /* color: #fafcff; */
 }
 
 ::-ms-input-placeholder {
-  color: #fafcff;
+  /* color: #fafcff; */
 }
 
 @media only screen and (max-width: 992px) {
@@ -1242,6 +1251,7 @@ input:-webkit-autofill:active {
   text-align: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  margin-top: 140px;
   height: 80vh;
   -moz-box-shadow: inset 0 -300px 300px -10px #0a0a0d;
   -webkit-box-shadow: inset 0 -300px 300px -10px #0a0a0d;
@@ -1342,6 +1352,7 @@ input:-webkit-autofill:active {
     max-width: 100%;
     max-height: 300px;
     padding: 20px 0;
+    margin-top: 70px;
     overflow: hidden;
     -moz-box-shadow: inset 0 -100px 100px -10px #0a0a0d;
     -webkit-box-shadow: inset 0 -100px 100px -10px #0a0a0d;

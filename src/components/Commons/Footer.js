@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="mx-3" style={{ display: "inline-flex" }}>
                 <h4 className="me-3">
                   <a
-                    className="text-decoration-none"
+                    className="text-decoration-none hero-title-gradient"
                     href="https://linkedin.com"
                     target={"_blank"}
                     rel="noreferrer"
@@ -27,7 +27,7 @@ const Footer = () => {
                 </h4>
                 <h4 className="me-3">
                   <a
-                    className="text-decoration-none"
+                    className="text-decoration-none hero-title-gradient"
                     href="https://twitter.com"
                     target={"_blank"}
                     rel="noreferrer"
@@ -37,7 +37,7 @@ const Footer = () => {
                 </h4>
                 <h4 className="me-3">
                   <a
-                    className="text-decoration-none"
+                    className="text-decoration-none hero-title-gradient"
                     href="https://facebook.com"
                     target={"_blank"}
                     rel="noreferrer"
@@ -47,7 +47,7 @@ const Footer = () => {
                 </h4>
                 <h4 className="me-3">
                   <a
-                    className="text-decoration-none"
+                    className="text-decoration-none hero-title-gradient"
                     href="https://instagram.com"
                     target={"_blank"}
                     rel="noreferrer"
@@ -57,7 +57,7 @@ const Footer = () => {
                 </h4>
                 <h4 className="me-3">
                   <a
-                    className="text-decoration-none"
+                    className="text-decoration-none hero-title-gradient"
                     href="https://youtube.com"
                     target={"_blank"}
                     rel="noreferrer"
@@ -127,7 +127,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-9 col-lg-9 col-xl-9 my-3">
               <div className="mb-3 row">
-                <h4 className="text-primary mb-3 fw-bold">Industries</h4>
+                <h4 className="hero-title-gradient mb-3 fw-bold">Industries</h4>
                 <div className="col-md-4 col-lg-4 col-xl-4">
                   <a className="text-decoration-none text-dark" href="/">
                     Automotive
@@ -200,7 +200,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="mb-3 row">
-                <h4 className="text-primary my-3 fw-bold">Services</h4>
+                <h4 className="hero-title-gradient my-3 fw-bold">Services</h4>
                 <div className="col-md-4 col-lg-4 col-xl-4">
                   <a className="text-decoration-none text-dark" href="/">
                     Application Services & Modernization
@@ -269,14 +269,14 @@ const Footer = () => {
                 </div>
               </div>
               <div className="mb-3 row">
-                <h4 className="text-primary my-3">
+                <h4 className="hero-title-gradient my-3">
                   <a className="text-decoration-none fw-bold" href="/">
                     Consulting
                   </a>
                 </h4>
               </div>
               <div className="mb-3 row">
-                <h4 className="text-primary my-3 fw-bold">Insights</h4>
+                <h4 className="hero-title-gradient my-3 fw-bold">Insights</h4>
                 <div className="col-md-4 col-lg-4 col-xl-4">
                   <p className="text-decoration-none text-dark fw-bold">
                     Themes
@@ -340,7 +340,9 @@ const Footer = () => {
             </div>
             <div className="col-md-3 col-lg-3 col-xl-3 my-3">
               <div className="mb-3">
-                <h4 className="text-primary mb-3 fw-bold">About Takniik</h4>
+                <h4 className="hero-title-gradient mb-3 fw-bold">
+                  About Takniik
+                </h4>
                 <a className="text-decoration-none text-dark" href="/">
                   2023 in Focus
                 </a>{" "}
@@ -403,14 +405,14 @@ const Footer = () => {
                 <br />
               </div>
               <div className="mb-3">
-                <h4 className="text-primary my-3">
+                <h4 className="hero-title-gradient my-3">
                   <a className="text-decoration-none fw-bold" href="/">
                     Glossary
                   </a>
                 </h4>
               </div>
               <div className="mb-3">
-                <h4 className="text-primary my-3">
+                <h4 className="hero-title-gradient my-3">
                   <a className="text-decoration-none fw-bold" href="/">
                     Information of Suppliers
                   </a>

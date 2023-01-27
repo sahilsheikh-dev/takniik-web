@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Achievements from "../components/Commons/Homepage/Achievements";
 import Clients from "../components/Commons/Homepage/Clients";
-import Cta from "../components/Commons/Homepage/Cta";
 import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
 import Hero from "../components/Commons/Homepage/Hero";
@@ -15,6 +14,7 @@ import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
 import ScrollToTop from "../components/Commons/ScrollToTop";
 import CookiesDialogue from "../components/Commons/CookiesDialogue";
 import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorked";
+// import Cta from "../components/Commons/Homepage/Cta";
 // import InstagramIntegration from "../components/Commons/InstagramIntegration";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
 
@@ -63,19 +63,19 @@ const Homepage = () => {
           <WhatsappHoverBtn />
           <CookiesDialogue />
           <Hero />
-          <Clients theme={theme} />
           {localStorage.getItem("currentField") === "Marketing" ? (
             <ServicesMarketing theme={theme} />
           ) : (
             <ServicesTechnology theme={theme} />
           )}
+          <Clients theme={theme} />
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />
           {/* <InstagramIntegration /> */}
           {/* <GoogleReviewIntegration /> */}
           <IndustriesWeWorked />
-          <Cta theme={theme} />
+          {/* <Cta theme={theme} /> */}
           <Footer />
         </section>
       </StyledApp>

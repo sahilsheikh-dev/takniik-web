@@ -43,7 +43,8 @@ const Hero = () => {
             to={"/contact"}
             style={{ textDecoration: "none", color: "#ffffff" }}
           >
-            Let’s Build Your Product &nbsp; <i className="bi bi-arrow-right"></i>{" "}
+            Let’s Build Your Product &nbsp;{" "}
+            <i className="bi bi-arrow-right"></i>{" "}
           </Link>
         </Button>
       </div>

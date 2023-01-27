@@ -11,17 +11,30 @@ const AboutImageText = () => {
       <div className="about-us">
         <div className="row about-our-section">
           <div className="col-md-6 col-lg-6 col-xl-6">
-            <img className="about-our-img" src={OurMissionImg} alt="img" />
+            <img className="about-our-img" src={OurTeamImg} alt="img" />
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">&nbsp;mission</span>
+              Our <span className="hero-title-gradient">&nbsp;story</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
               understand the fundamentals of personal finance and are capable of
               making decisions in their best long term interest.
             </p>
+            <div className="about-contact-btn">
+              <Link
+                to={"/contact"}
+                className="hero-btn"
+                style={{
+                  textDecoration: "none",
+                  color: "#FFFFFF",
+                }}
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact Us
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </Link>
+            </div>
           </div>
         </div>
         <div className="row about-our-section">
@@ -55,30 +68,17 @@ const AboutImageText = () => {
         </div>
         <div className="row about-our-section">
           <div className="col-md-6 col-lg-6 col-xl-6">
-            <img className="about-our-img" src={OurTeamImg} alt="img" />
+            <img className="about-our-img" src={OurMissionImg} alt="img" />
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6">
             <h1 className="about-our-title">
-              Our <span className="hero-title-gradient">&nbsp;story</span>
+              Our <span className="hero-title-gradient">&nbsp;mission</span>
             </h1>
             <p className="about-out-description">
               We are raising a new, financially aware generation of Indians who
               understand the fundamentals of personal finance and are capable of
               making decisions in their best long term interest.
             </p>
-            <div className="about-contact-btn">
-              <Link
-                to={"/contact"}
-                className="hero-btn"
-                style={{
-                  textDecoration: "none",
-                  color: "#FFFFFF",
-                }}
-              >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact Us
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </Link>
-            </div>
           </div>
         </div>
       </div>
