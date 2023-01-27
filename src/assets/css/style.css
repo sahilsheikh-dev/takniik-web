@@ -1054,11 +1054,11 @@ body {
 
 .contact-form {
   margin: 50px;
-  margin-top: 150px;
+  margin-top: 144px;
   padding: 50px;
   left: 0px;
   top: 0px;
-  backdrop-filter: blur(200px);
+  /* backdrop-filter: blur(200px); */
   border-radius: 30px;
 }
 
@@ -1118,7 +1118,7 @@ input:-webkit-autofill:active {
 @media only screen and (max-width: 992px) {
   .contact-form {
     margin: 10px;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
     border-radius: 10px;
     background-color: transparent !important;
     background-image: none !important;

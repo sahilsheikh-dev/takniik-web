@@ -69,9 +69,9 @@ const Footer = () => {
             </div>
             <div className="col-md-6 col-lg-6 col-xl-6 my-3">
               <div
-                className="ms-3 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex"
+                className="ms-3 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0"
                 style={{
-                  width: "100%",
+                  maxWidth: "100%",
                 }}
               >
                 <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">

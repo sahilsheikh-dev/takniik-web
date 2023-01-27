@@ -33,16 +33,25 @@ function App() {
         <Route path="/smo" element={<SmoService />} />
         <Route path="/videoediting" element={<VideoEditingService />} />
         <Route path="/videoproduction" element={<VideoProductionService />} />
-        <Route path="/mobiledevelopment" element={<MobileDevelopmentService />} />
+        <Route
+          path="/mobiledevelopment"
+          element={<MobileDevelopmentService />}
+        />
         <Route path="/webdevelopment" element={<WebDevelopmentService />} />
         <Route path="/crmdevelopment" element={<CRMDevelopmentService />} />
         <Route path="/cmsdevelopment" element={<CMSDevelopmentService />} />
         <Route path="/customdevelopment" element={<CustomDevelopment />} />
         <Route path="/aimodule" element={<AIModule />} />
         <Route path="/nftdevelopment" element={<NFTDevelopment />} />
-        <Route path="/blockchaindevelopment" element={<BlockchainDevelopment />} />
+        <Route
+          path="/blockchaindevelopment"
+          element={<BlockchainDevelopment />}
+        />
         <Route path="/testingautomation" element={<TestingAutomation />} />
-        <Route path="/deploymentsupport" element={<DeploymentConsultingSupport />} />
+        <Route
+          path="/deploymentsupport"
+          element={<DeploymentConsultingSupport />}
+        />
         <Route path="/uiuxdevelopment" element={<UIUXDevelopment />} />
         {/* <Route path="/ProjectInfo/:projectIndex" element={<ProjectInfo />} /> */}
       </Routes>

@@ -41,6 +41,7 @@ const Contactpage = () => {
 
   useEffect(() => {
     setCurrentTheme();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

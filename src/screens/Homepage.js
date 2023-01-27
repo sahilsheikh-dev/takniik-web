@@ -14,6 +14,7 @@ import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
 import ScrollToTop from "../components/Commons/ScrollToTop";
 import CookiesDialogue from "../components/Commons/CookiesDialogue";
 import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorked";
+import ContactForm from "../components/Commons/ContactForm";
 // import Cta from "../components/Commons/Homepage/Cta";
 // import InstagramIntegration from "../components/Commons/InstagramIntegration";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
@@ -50,6 +51,7 @@ const Homepage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setCurrentTheme();
   }, []);
 
@@ -75,6 +77,7 @@ const Homepage = () => {
           {/* <InstagramIntegration /> */}
           {/* <GoogleReviewIntegration /> */}
           <IndustriesWeWorked />
+          <ContactForm theme={theme} />
           {/* <Cta theme={theme} /> */}
           <Footer />
         </section>

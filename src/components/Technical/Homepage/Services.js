@@ -86,7 +86,7 @@ const Services = ({ theme }) => {
   return (
     <Container>
       <div className="service">
-        <h1 className="service-heading">Our Services</h1>
+        <h1 className="service-heading mt-5">Our Services</h1>
         <p className="service-subheading">
           We company that brings ideas to life{" "}
           <br className="d-none d-lg-block d-xl-block" />

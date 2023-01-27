@@ -55,6 +55,7 @@ const AIModule = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setCurrentTheme();
   }, []);
 

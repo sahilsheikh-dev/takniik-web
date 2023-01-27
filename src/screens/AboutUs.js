@@ -5,6 +5,7 @@ import AboutCta from "../components/Commons/AboutUs/AboutCta";
 import AboutHero from "../components/Commons/AboutUs/AboutHero";
 import AboutImageText from "../components/Commons/AboutUs/AboutImageText";
 import AboutTeam from "../components/Commons/AboutUs/AboutTeam";
+import ContactForm from "../components/Commons/ContactForm";
 import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
 import ScrollToTop from "../components/Commons/ScrollToTop";
@@ -43,6 +44,7 @@ const AboutUs = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setCurrentTheme();
   }, []);
 
@@ -59,6 +61,7 @@ const AboutUs = () => {
           <AboutContent />
           <AboutTeam />
           <AboutCta />
+          <ContactForm theme={theme} />
           <Footer />
         </section>
       </StyledApp>
