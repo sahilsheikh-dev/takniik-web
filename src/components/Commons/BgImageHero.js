@@ -8,6 +8,7 @@ const BgImageHero = ({ HeroImg, Heading, SubHeading, BtnText, URL }) => {
       className="about-us about-hero"
       style={{
         backgroundImage: `url(${HeroImg})`,
+        maxWidth: "100%",
       }}
     >
       <Container>
