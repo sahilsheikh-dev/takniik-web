@@ -53,13 +53,13 @@ const IndustriesWeWorked = () => {
           ))}
         </Carousel>
 
-        <ul className="project-filter px-0 mx-0">
+        <ul className="project-filter px-0 w-100">
           {industriesJson.map((carouselItem, indexY) => (
             <li
               className={
                 indexX === indexY
-                  ? "fw-bold ms-0 me-4 hero-title-gradient"
-                  : "ms-0 me-4"
+                  ? "fw-bold ms-0 me-4 hero-title-gradient w-100"
+                  : "ms-0 me-4 w-100"
               }
               key={indexY}
               style={{ fontSize: "16px", cursor: "pointer" }}
@@ -69,21 +69,6 @@ const IndustriesWeWorked = () => {
             </li>
           ))}
         </ul>
-
-        {/* <div className="my-3 d-none d-md-inline-flex d-lg-inline-flex d-xl-inline-flex">
-          {industriesJson.map((carouselItem, indexY) => (
-            <p
-              className={
-                indexX === indexY ? "fw-bold me-4 hero-title-gradient" : "me-4"
-              }
-              key={indexY}
-              style={{ fontSize: "16px", cursor: "pointer" }}
-              onClick={() => slideHandler(indexY)}
-            >
-              {carouselItem.buttonTitle}
-            </p>
-          ))}
-        </div> */}
       </div>
     </Container>
   );

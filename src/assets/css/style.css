@@ -350,6 +350,7 @@ body {
   overflow: auto;
   white-space: nowrap;
   margin: 20px 0;
+  width: 100% !important;
 }
 
 .project-filter::-webkit-scrollbar {
@@ -443,7 +444,6 @@ body {
 
   .project-filter {
     width: 100%;
-    max-width: 90%;
     margin: 0 !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
