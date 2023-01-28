@@ -131,13 +131,21 @@ const AboutTeam = ({ theme }) => {
               >
                 {slideData.map((currentSlide, index) => (
                   <SwiperSlide index={index} className="swiper-slide">
-                    <div className="card">
+                    <div
+                      className="inner-shadow-bottom pb-3 text-center shadow shadow-sm"
+                      style={{
+                        background: theme === "dark" ? "#000000" : "#F9F9F9",
+                        borderRadius: "20px",
+                        minWidth: "300px",
+                        minHeight: "360px",
+                      }}
+                    >
                       <img
                         src={currentSlide.userImage}
-                        className="card-img-top rounded-0"
+                        className="card-img-top rounded-0 mb-3"
                         alt="logo"
                       />
-                      <div className="card-body">
+                      <div className="card-body px-3">
                         <h5 className="card-title fw-bold mb-3">
                           {currentSlide.name}
                         </h5>

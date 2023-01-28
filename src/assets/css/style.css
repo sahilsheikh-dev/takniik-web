@@ -1482,3 +1482,36 @@ input:-webkit-autofill:active {
     opacity: 1;
   }
 }
+
+.FancyButton {
+  display: block;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #f3f3f3;
+  color: #000;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.FancyButton:hover {
+  background-color: #fff;
+}
+
+.active {
+  color: red !important;
+}
+
+.nav-service-container {
+  display: flex;
+  justify-content: center;
+  background-color: #000000d3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+}

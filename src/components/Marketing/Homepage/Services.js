@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+// import LayoutContext from "../../Commons/LayoutContext";
+// import Navigation from "../../Commons/Navigation";
+// import Section from "../../Commons/Section";
 
 const Services = ({ theme }) => {
   const serviceData = [
@@ -47,6 +50,10 @@ const Services = ({ theme }) => {
     },
   ];
   const [dataId, setDataId] = useState(0);
+  // const [isColumn, setIsColumn] = useState(true);
+  // const styleLayoutColumn = {
+  //   flexDirection: isColumn ? "column" : "row",
+  // };
 
   return (
     <Container>
@@ -57,6 +64,36 @@ const Services = ({ theme }) => {
           <br className="d-none d-lg-block d-xl-block" />
           through scalable, sustainable and futuristic design solutions.
         </p>
+
+        {/* <LayoutContext.Provider value={[isColumn, setIsColumn]}>
+          <div className="row">
+            <div className="col-md-3 col-lg-3 col-xl-3">
+              <Navigation />
+            </div>
+            <div className="col-md-9 col-lg-9 col-xl-9">
+              <div className="parent-section">
+                <Section id="box-1" color="red">
+                  Box 1
+                </Section>
+                <Section id="box-2" color="blue">
+                  Box 2
+                </Section>
+                <Section id="box-3" color="green">
+                  Box 3
+                </Section>
+                <Section id="box-4" color="red">
+                  Box 4
+                </Section>
+                <Section id="box-5" color="blue">
+                  Box 5
+                </Section>
+                <Section id="box-6" color="green">
+                  Box 6
+                </Section>
+              </div>
+            </div>
+          </div>
+        </LayoutContext.Provider> */}
 
         <div className="project-section">
           <ul className="project-filter">
@@ -97,7 +134,6 @@ const Services = ({ theme }) => {
               {serviceData[5].title}
             </li>
           </ul>
-
           <div className="project">
             {dataId % 2 === 0 ? (
               <div className="row slide-right">
