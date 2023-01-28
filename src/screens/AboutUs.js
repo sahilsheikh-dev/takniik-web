@@ -59,7 +59,7 @@ const AboutUs = () => {
           <AboutHero />
           <AboutImageText />
           <AboutContent />
-          <AboutTeam />
+          <AboutTeam theme={theme} />
           <AboutCta />
           <ContactForm theme={theme} />
           <Footer />

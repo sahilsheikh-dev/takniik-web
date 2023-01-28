@@ -1,209 +1,172 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper";
+import "swiper/css";
+import cardBgImg1 from "../../../assets/img/services/videoproduction/card-img-1.png";
+import cardBgImg2 from "../../../assets/img/services/videoproduction/card-img-2.png";
+import cardBgImg3 from "../../../assets/img/services/videoproduction/card-img-3.png";
+import RevirewCard from "./RevirewCard";
 
 const Review = ({ theme }) => {
-  const testinomialHover = () => {
-    document.getElementById("testinomial-1").style.transform = "scale(1)";
-    document.getElementById("testinomial-2").style.transform = "scale(1)";
-    document.getElementById("testinomial-3").style.transform = "scale(1)";
-    document.getElementById("testinomial-4").style.transform = "scale(1)";
-  };
+  const [my_swiper, set_my_swiper] = useState({});
+  const slideData = [
+    {
+      userImage: cardBgImg1,
+      name: "Giana Bothman",
+      position: "Founder",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      userImage: cardBgImg2,
+      name: "Skylar Septimus",
+      position: "CEO",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      userImage: cardBgImg3,
+      name: "Lydia Calzoni",
+      position: "Manager",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      userImage: cardBgImg1,
+      name: "Kaiya Westervelt",
+      position: "Design",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      userImage: cardBgImg2,
+      name: "Tatiana Siphron",
+      position: "HR",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+    {
+      userImage: cardBgImg3,
+      name: "Kaiya Vetrovs",
+      position: "Marketing",
+      text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    },
+  ];
 
-  const testinomial1 = () => {
-    document.getElementById("testinomial-1").style.transform = "scale(1.1)";
-    document.getElementById("testinomial-2").style.transform = "none";
-    document.getElementById("testinomial-3").style.transform = "none";
-    document.getElementById("testinomial-4").style.transform = "scale(1)";
+  const nextSlide = () => {
+    const wid = window.innerWidth;
+    // change or add the conditions for more device aspect ratios
+    if (wid >= 1000) {
+      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
+        my_swiper.slideNext();
+      }
+    } else {
+      if (my_swiper.realIndex !== slideData.length) {
+        my_swiper.slideNext();
+      }
+    }
   };
-  const testinomial2 = () => {
-    document.getElementById("testinomial-1").style.transform = "none";
-    document.getElementById("testinomial-2").style.transform = "scale(1.1)";
-    document.getElementById("testinomial-3").style.transform = "none";
-    document.getElementById("testinomial-4").style.transform = "scale(1)";
-  };
-  const testinomial3 = () => {
-    document.getElementById("testinomial-1").style.transform = "none";
-    document.getElementById("testinomial-2").style.transform = "scale(1)";
-    document.getElementById("testinomial-3").style.transform = "scale(1.1)";
-    document.getElementById("testinomial-4").style.transform = "none";
-  };
-  const testinomial4 = () => {
-    document.getElementById("testinomial-1").style.transform = "none";
-    document.getElementById("testinomial-2").style.transform = "scale(1)";
-    document.getElementById("testinomial-3").style.transform = "none";
-    document.getElementById("testinomial-4").style.transform = "scale(1.1)";
+  const previousSlide = () => {
+    if (my_swiper.realIndex !== 0) {
+      my_swiper.slidePrev();
+    }
   };
 
   useEffect(() => {
-    testinomialHover();
     console.log(theme);
   });
   return (
     <div className="testinomial-section my-5">
       <div className="py-5 container">
-        <div className="row">
-          <div className="col-md-4 col-lg-4 col-xl-4 text-start d-flex align-items-center">
-            <div className="text-center">
-              <h1 className="achievement-heading text-md-start text-lg-start text-xl-start">
-                What our Clients says about us
-              </h1>
-              <p className="achievement-subheading text-md-start text-lg-start text-xl-start">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
-                quae maxime eos odit id aspernatur. Consequatur, nihil
-                inventore. Ut similique magni ipsum repellat? Earum laudantium
-                libero praesentium odio animi blanditiis.
-              </p>
-            </div>
-          </div>
-          <div className="col-md-8 col-lg-8 col-xl-8 text-center">
-            <div className="testimonial-image-section">
-              <div
-                className="testinomial-image testinomial-1 w-75 text-start p-4 "
-                id="testinomial-1"
-                onMouseEnter={testinomial1}
-                onMouseLeave={testinomialHover}
-              >
-                <div className=" text-dark">
-                  <p className="fw-bold mt-0">
-                    "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
-                    odit omnis Consequatur"
-                  </p>
-                  <div className="row m-1">
-                    <div className="col-auto p-0 rounded-circle">
-                      <img
-                        className="img-fluid w-100 rounded-circle"
-                        style={{
-                          maxWidth: "50px",
-                          maxHeight: "50px",
-                          objectFit: "cover",
-                        }}
-                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="logo"
-                      />
-                    </div>
-                    <div
-                      className="col-auto my-1 py-1"
-                      style={{
-                        fontSize: "12px",
-                      }}
-                    >
-                      <p className="my-0">Megan Novalum</p>
-                      <p className="text-secondary my-0">CEO, ABC Company</p>
-                    </div>
-                  </div>
-                </div>
+        <Container>
+          <div className="container px-0">
+            <div className="row py-5">
+              <div className="col-md-9 col-lg-9 col-xl-9">
+                <h1 className="fw-bold text-center text-md-start text-lg-start text-xl-start">
+                  What our Clients
+                  <br className="d-none d-mg-block d-lg-block d-xl-block" />
+                  says about us
+                </h1>
               </div>
-              <div
-                className="testinomial-image testinomial-2 w-75 text-start p-4  text-dark"
-                id="testinomial-2"
-                onMouseEnter={testinomial2}
-                onMouseLeave={testinomialHover}
-              >
-                <div className=" text-dark">
-                  <p className="fw-bold mt-0">
-                    "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
-                    odit omnis Consequatur"
-                  </p>
-                  <div className="row m-1">
-                    <div className="col-auto p-0 rounded-circle">
-                      <img
-                        className="img-fluid w-100 rounded-circle"
-                        style={{
-                          maxWidth: "50px",
-                          maxHeight: "50px",
-                          objectFit: "cover",
-                        }}
-                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="logo"
-                      />
-                    </div>
-                    <div
-                      className="col-auto my-1 py-1"
-                      style={{
-                        fontSize: "12px",
-                      }}
-                    >
-                      <p className="my-0">Megan Novalum</p>
-                      <p className="text-secondary my-0">CEO, ABC Company</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="testinomial-image testinomial-3 w-75 text-start p-4  text-dark"
-                id="testinomial-3"
-                onMouseEnter={testinomial3}
-                onMouseLeave={testinomialHover}
-              >
-                <div className=" text-dark">
-                  <p className="fw-bold mt-0">
-                    "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
-                    odit omnis Consequatur"
-                  </p>
-                  <div className="row m-1">
-                    <div className="col-auto p-0 rounded-circle">
-                      <img
-                        className="img-fluid w-100 rounded-circle"
-                        style={{
-                          maxWidth: "50px",
-                          maxHeight: "50px",
-                          objectFit: "cover",
-                        }}
-                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="logo"
-                      />
-                    </div>
-                    <div
-                      className="col-auto my-1 py-1"
-                      style={{
-                        fontSize: "12px",
-                      }}
-                    >
-                      <p className="my-0">Megan Novalum</p>
-                      <p className="text-secondary my-0">CEO, ABC Company</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="testinomial-image testinomial-4 w-75 text-start p-4  text-dark"
-                id="testinomial-4"
-                onMouseEnter={testinomial4}
-                onMouseLeave={testinomialHover}
-              >
-                <div className=" text-dark">
-                  <p className="fw-bold mt-0">
-                    "Lorem ipsum dolor sit amet, elit consectetur adipisicing.
-                    odit omnis Consequatur"
-                  </p>
-                  <div className="row m-1">
-                    <div className="col-auto p-0 rounded-circle">
-                      <img
-                        className="img-fluid w-100 rounded-circle"
-                        style={{
-                          maxWidth: "50px",
-                          maxHeight: "50px",
-                          objectFit: "cover",
-                        }}
-                        src="https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="logo"
-                      />
-                    </div>
-                    <div
-                      className="col-auto my-1 py-1"
-                      style={{
-                        fontSize: "12px",
-                      }}
-                    >
-                      <p className="my-0">Megan Novalum</p>
-                      <p className="text-secondary my-0">CEO, ABC Company</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="col-md-3 col-lg-3 col-xl-3 text-end d-none d-md-block d-lg-block d-xl-block">
+                <button
+                  className="bg-transparent border-none"
+                  onClick={previousSlide}
+                >
+                  <i
+                    className="slide-icon bi bi-chevron-left"
+                    style={{
+                      fontSize: "30px",
+                      color: theme === "dark" ? "#FFFFFF" : "#000000",
+                    }}
+                  ></i>
+                </button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button
+                  className="bg-transparent border-none"
+                  onClick={nextSlide}
+                >
+                  <i
+                    className="slide-icon bi bi-chevron-right"
+                    style={{
+                      fontSize: "30px",
+                      color: theme === "dark" ? "#FFFFFF" : "#000000",
+                    }}
+                  ></i>
+                </button>
               </div>
             </div>
+            <div className="container py-md-4 py-lg-4 py-xl-4 justify-content-center px-0">
+              <Swiper
+                freeMode={false}
+                grabCursor={true}
+                modules={[FreeMode]}
+                className="mySwiper"
+                slides
+                PerView={1}
+                spaceBetween={30}
+                onInit={(ev) => {
+                  set_my_swiper(ev);
+                }}
+              >
+                {slideData.map((currentSlide, index) => (
+                  <SwiperSlide index={index} className="swiper-slide">
+                    <RevirewCard
+                      theme={theme}
+                      userImage={currentSlide.userImage}
+                      name={currentSlide.name}
+                      position={currentSlide.position}
+                      text={currentSlide.text}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="w-100 py-4 text-center d-block d-md-none d-lg-none d-xl-none">
+              <button
+                className="bg-transparent border-none"
+                onClick={previousSlide}
+              >
+                <i
+                  className="slide-icon bi bi-chevron-left"
+                  style={{
+                    fontSize: "30px",
+                    color: theme === "dark" ? "#FFFFFF" : "#000000",
+                  }}
+                ></i>
+              </button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button
+                className="bg-transparent border-none"
+                onClick={nextSlide}
+              >
+                <i
+                  className="slide-icon bi bi-chevron-right"
+                  style={{
+                    fontSize: "30px",
+                    color: theme === "dark" ? "#FFFFFF" : "#000000",
+                  }}
+                ></i>
+              </button>
+            </div>
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );

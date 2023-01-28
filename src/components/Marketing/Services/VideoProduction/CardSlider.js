@@ -42,7 +42,7 @@ const CardSlider = () => {
       <div className="container">
         <div className="row py-5">
           <div className="col-md-9 col-lg-9 col-xl-9">
-            <h1 className="fw-bold">
+            <h1 className="fw-bold text-center text-md-start text-lg-start text-xl-start">
               We've Delivered Results For
               <br className="d-none d-mg-block d-lg-block d-xl-block" />
               Companies In Every Industry
