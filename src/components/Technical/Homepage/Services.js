@@ -20,20 +20,13 @@ const Services = () => {
             <div className="col-md-9 col-lg-9 col-xl-9">
               <div className="parent-section">
                 {serviceDataJson.map((serviceItem, index) => (
-                  <Section id={"box-" + index} key={index}>
-                    <h1 className="fw-bold" style={{ fontSize: "20px" }}>
-                      {serviceItem.title}
-                    </h1>
-                    <p className="text-secondary" style={{ fontSize: "16px" }}>
-                      {serviceItem.description}
-                    </p>
-                    <img
-                      className="img-fluid"
-                      src={serviceItem.img}
-                      alt="logo"
-                    />
-                    <hr className="my-5" />
-                  </Section>
+                  <Section
+                    id={"box-" + index}
+                    key={index}
+                    title={serviceItem.title}
+                    description={serviceItem.description}
+                    img={serviceItem.img}
+                  />
                 ))}
               </div>
             </div>

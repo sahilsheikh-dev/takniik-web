@@ -27,20 +27,6 @@ const Services = () => {
                     description={serviceItem.description}
                     img={serviceItem.img}
                   />
-                  // <Section id={"box-" + index} key={index}>
-                  //   <h1 className="fw-bold" style={{ fontSize: "20px" }}>
-                  //     {serviceItem.title}
-                  //   </h1>
-                  //   <p className="text-secondary" style={{ fontSize: "16px" }}>
-                  //     {serviceItem.description}
-                  //   </p>
-                  //   <img
-                  //     className="img-fluid"
-                  //     src={serviceItem.img}
-                  //     alt="logo"
-                  //   />
-                  //   <hr className="my-5" />
-                  // </Section>
                 ))}
               </div>
             </div>
