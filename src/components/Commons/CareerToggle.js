@@ -40,7 +40,12 @@ const CareerToggle = ({ theme }) => {
             </h4>
             {jobsData.map((jobItem, index) => (
               <div className="mb-3" key={index}>
-                <a className="text-decoration-none" href={jobItem.url}>
+                <a
+                  className="text-decoration-none"
+                  href={jobItem.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <h5
                     className="mb-0 fw-bold hero-title-gradient"
                     style={{ fontSize: "16px" }}
