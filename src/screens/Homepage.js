@@ -6,8 +6,8 @@ import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
 import Hero from "../components/Commons/Homepage/Hero";
 import Review from "../components/Commons/Homepage/Review";
-// import ServicesMarketing from "../components/Marketing/Homepage/Services";
-// import ServicesTechnology from "../components/Technical/Homepage/Services";
+import ServicesMarketing from "../components/Marketing/Homepage/Services";
+import ServicesTechnology from "../components/Technical/Homepage/Services";
 import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
@@ -27,7 +27,6 @@ const StyledApp = styled.div`
 const Homepage = () => {
   const [theme, setTheme] = useState("dark");
   const [currentField, setCurrentField] = useState("");
-  console.log(currentField);
 
   const themeToggler = () => {
     if (theme === "dark") {
@@ -95,11 +94,11 @@ const Homepage = () => {
           <WhatsappHoverBtn />
           <CookiesDialogue />
           <Hero />
-          {/* {currentField === "Marketing" ? (
+          {currentField === "Marketing" ? (
             <ServicesMarketing />
           ) : (
             <ServicesTechnology theme={theme} />
-          )} */}
+          )}
           <Clients theme={theme} />
           <Achievements theme={theme} />
           <Review theme={theme} />
