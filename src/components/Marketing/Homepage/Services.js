@@ -11,29 +11,36 @@ const Services = () => {
 
   return (
     <Container>
-      <div id="service" className="service mt-5">
+      <div id="service" className="service mt-5 mx-0 px-0">
         <LayoutContext.Provider value={[isColumn, setIsColumn]}>
-          <div className="row">
-            <div className="col-md-3 col-lg-3 col-xl-3">
+          <div className="row mx-0 px-0">
+            <div className="col-md-3 col-lg-3 col-xl-3 mx-0 px-0">
               <Navigation serviceDataJson={serviceDataJson} />
             </div>
-            <div className="col-md-9 col-lg-9 col-xl-9">
+            <div className="col-md-9 col-lg-9 col-xl-9 mx-0 px-0">
               <div className="parent-section">
                 {serviceDataJson.map((serviceItem, index) => (
-                  <Section id={"box-" + index} key={index}>
-                    <h1 className="fw-bold" style={{ fontSize: "20px" }}>
-                      {serviceItem.title}
-                    </h1>
-                    <p className="text-secondary" style={{ fontSize: "16px" }}>
-                      {serviceItem.description}
-                    </p>
-                    <img
-                      className="img-fluid"
-                      src={serviceItem.img}
-                      alt="logo"
-                    />
-                    <hr className="my-5" />
-                  </Section>
+                  <Section
+                    id={"box-" + index}
+                    key={index}
+                    title={serviceItem.title}
+                    description={serviceItem.description}
+                    img={serviceItem.img}
+                  />
+                  // <Section id={"box-" + index} key={index}>
+                  //   <h1 className="fw-bold" style={{ fontSize: "20px" }}>
+                  //     {serviceItem.title}
+                  //   </h1>
+                  //   <p className="text-secondary" style={{ fontSize: "16px" }}>
+                  //     {serviceItem.description}
+                  //   </p>
+                  //   <img
+                  //     className="img-fluid"
+                  //     src={serviceItem.img}
+                  //     alt="logo"
+                  //   />
+                  //   <hr className="my-5" />
+                  // </Section>
                 ))}
               </div>
             </div>

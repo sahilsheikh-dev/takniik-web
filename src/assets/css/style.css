@@ -1494,7 +1494,6 @@ input:-webkit-autofill:active {
 }
 
 .active {
-  color: rgb(0, 0, 0) !important;
   font-weight: bold;
   border-left: 3px solid #ff55f1 !important;
 }
