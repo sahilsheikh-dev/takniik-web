@@ -1,10 +1,6 @@
-export default function Section({ id, color, children }) {
+export default function Section({ id, children }) {
   return (
-    <section
-      id={id}
-      className="section"
-      style={{ background: color, minHeight: "100vh" }}
-    >
+    <section id={id} className="nav-service-section">
       {children}
     </section>
   );

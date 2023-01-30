@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import IndustruesWorkData from "../../../assets/data/IndustriesWorkData.json";
 
-const IndustriesWeWorked = () => {
+const IndustriesWeWorked = ({ theme }) => {
   const industriesJson = IndustruesWorkData;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [indexX, setIndexX] = useState(0);
@@ -28,7 +28,10 @@ const IndustriesWeWorked = () => {
             <Carousel.Item key={index}>
               <div className="row mt-5">
                 <div className="col-md-6 col-lg-6 col-xl-6 my-3 d-flex align-items-center">
-                  <div className="text-center text-md-start text-lg-start text-xl-start">
+                  <div
+                    className="text-center text-md-start text-lg-start text-xl-start"
+                    style={{ color: theme === "dark" ? "#FFFFFF" : "#000000" }}
+                  >
                     <h className="hero-title mb-3">{carouselItem.title}</h>
                     <h3 className="my-3">{carouselItem.subtitle}</h3>
                     <Button className="hero-btn">
@@ -58,8 +61,8 @@ const IndustriesWeWorked = () => {
             <li
               className={
                 indexX === indexY
-                  ? "fw-bold ms-0 me-4 hero-title-gradient w-100"
-                  : "ms-0 me-4 w-100"
+                  ? "fw-bold ms-0 me-4 hero-title-gradient"
+                  : "ms-0 me-4"
               }
               key={indexY}
               style={{ fontSize: "16px", cursor: "pointer" }}

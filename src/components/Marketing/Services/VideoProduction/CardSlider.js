@@ -8,7 +8,7 @@ import cardBgImg1 from "../../../../assets/img/services/videoproduction/card-img
 import cardBgImg2 from "../../../../assets/img/services/videoproduction/card-img-2.png";
 import cardBgImg3 from "../../../../assets/img/services/videoproduction/card-img-3.png";
 
-const CardSlider = () => {
+const CardSlider = ({ theme }) => {
   const [my_swiper, set_my_swiper] = useState({});
   const slideData = [
     { url: cardBgImg1, text: "Beauty" },
@@ -54,8 +54,11 @@ const CardSlider = () => {
               onClick={previousSlide}
             >
               <i
-                className="slide-icon bi bi-chevron-left"
-                style={{ fontSize: "30px" }}
+                className="slide-icon bi bi-arrow-left-circle-fill"
+                style={{
+                  fontSize: "50px",
+                  color: theme === "dark" ? "#FFFFFF" : "#000000",
+                }}
               ></i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;
@@ -64,8 +67,11 @@ const CardSlider = () => {
               onClick={nextSlide}
             >
               <i
-                className="slide-icon bi bi-chevron-right"
-                style={{ fontSize: "30px" }}
+                className="slide-icon bi bi-arrow-right-circle-fill"
+                style={{
+                  fontSize: "50px",
+                  color: theme === "dark" ? "#FFFFFF" : "#000000",
+                }}
               ></i>
             </button>
           </div>
@@ -84,7 +90,7 @@ const CardSlider = () => {
             }}
           >
             {slideData.map((currentSlide, index) => (
-              <SwiperSlide index={index} className="swiper-slide">
+              <SwiperSlide key={index} className="swiper-slide">
                 <CardSlid
                   cardBgImg={currentSlide.url}
                   CardText={currentSlide.text}
@@ -99,8 +105,11 @@ const CardSlider = () => {
             onClick={previousSlide}
           >
             <i
-              className="slide-icon bi bi-chevron-left"
-              style={{ fontSize: "30px" }}
+              className="slide-icon bi bi-arrow-left-circle-fill"
+              style={{
+                fontSize: "50px",
+                color: theme === "dark" ? "#FFFFFF" : "#000000",
+              }}
             ></i>
           </button>
           &nbsp;&nbsp;&nbsp;&nbsp;
@@ -109,8 +118,11 @@ const CardSlider = () => {
             onClick={nextSlide}
           >
             <i
-              className="slide-icon bi bi-chevron-right"
-              style={{ fontSize: "30px" }}
+              className="slide-icon bi bi-arrow-right-circle-fill"
+              style={{
+                fontSize: "50px",
+                color: theme === "dark" ? "#FFFFFF" : "#000000",
+              }}
             ></i>
           </button>
         </div>

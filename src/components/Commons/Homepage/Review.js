@@ -10,6 +10,7 @@ import RevirewCard from "./RevirewCard";
 
 const Review = ({ theme }) => {
   const [my_swiper, set_my_swiper] = useState({});
+  const [swipable, setSwipable] = useState(true);
   const slideData = [
     {
       userImage: cardBgImg1,
@@ -54,23 +55,56 @@ const Review = ({ theme }) => {
     // change or add the conditions for more device aspect ratios
     if (wid >= 1000) {
       if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
+        setSwipable(true);
         my_swiper.slideNext();
       }
     } else {
       if (my_swiper.realIndex !== slideData.length) {
+        setSwipable(true);
         my_swiper.slideNext();
       }
     }
   };
+
   const previousSlide = () => {
     if (my_swiper.realIndex !== 0) {
+      setSwipable(true);
       my_swiper.slidePrev();
+    }
+  };
+
+  const updateSlideChange = () => {
+    const wid = window.innerWidth;
+    if (wid >= 1000) {
+      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
+        console.log(my_swiper.realIndex);
+        console.log("swiped to previous slide");
+      }
+    } else {
+      if (my_swiper.realIndex !== slideData.length) {
+        console.log(my_swiper.realIndex);
+        console.log("swiped to previous slide");
+      }
+    }
+    if (my_swiper.realIndex !== 0) {
+      console.log(my_swiper.realIndex);
+      console.log("swiped to next slide");
+      console.log(Math.round(slideData.length / 5));
+      if (my_swiper.realIndex !== Math.round(slideData.length / 5) - 1) {
+        setSwipable(false);
+        console.log("last index");
+        console.log(swipable);
+      } else {
+        setSwipable(true);
+        console.log("not a last index");
+      }
     }
   };
 
   useEffect(() => {
     console.log(theme);
-  });
+  }, [theme]);
+
   return (
     <div className="testinomial-section my-5">
       <div className="py-5 container">
@@ -90,9 +124,9 @@ const Review = ({ theme }) => {
                   onClick={previousSlide}
                 >
                   <i
-                    className="slide-icon bi bi-chevron-left"
+                    className="slide-icon bi bi-arrow-left-circle-fill"
                     style={{
-                      fontSize: "30px",
+                      fontSize: "50px",
                       color: theme === "dark" ? "#FFFFFF" : "#000000",
                     }}
                   ></i>
@@ -103,9 +137,9 @@ const Review = ({ theme }) => {
                   onClick={nextSlide}
                 >
                   <i
-                    className="slide-icon bi bi-chevron-right"
+                    className="slide-icon bi bi-arrow-right-circle-fill"
                     style={{
-                      fontSize: "30px",
+                      fontSize: "50px",
                       color: theme === "dark" ? "#FFFFFF" : "#000000",
                     }}
                   ></i>
@@ -114,19 +148,22 @@ const Review = ({ theme }) => {
             </div>
             <div className="container py-md-4 py-lg-4 py-xl-4 justify-content-center px-0">
               <Swiper
+                id="swiper"
+                className="mySwiper"
                 freeMode={false}
                 grabCursor={true}
                 modules={[FreeMode]}
-                className="mySwiper"
                 slides
                 PerView={1}
                 spaceBetween={30}
+                onSlideChange={() => updateSlideChange()}
+                wrapperclassName={swipable === true ? "swiper-wrapper" : "disabled"}
                 onInit={(ev) => {
                   set_my_swiper(ev);
                 }}
               >
                 {slideData.map((currentSlide, index) => (
-                  <SwiperSlide index={index} className="swiper-slide">
+                  <SwiperSlide key={index} className="swiper-slide">
                     <RevirewCard
                       theme={theme}
                       userImage={currentSlide.userImage}
@@ -144,9 +181,9 @@ const Review = ({ theme }) => {
                 onClick={previousSlide}
               >
                 <i
-                  className="slide-icon bi bi-chevron-left"
+                  className="slide-icon bi bi-arrow-left-circle-fill"
                   style={{
-                    fontSize: "30px",
+                    fontSize: "50px",
                     color: theme === "dark" ? "#FFFFFF" : "#000000",
                   }}
                 ></i>
@@ -157,9 +194,9 @@ const Review = ({ theme }) => {
                 onClick={nextSlide}
               >
                 <i
-                  className="slide-icon bi bi-chevron-right"
+                  className="slide-icon bi bi-arrow-right-circle-fill"
                   style={{
-                    fontSize: "30px",
+                    fontSize: "50px",
                     color: theme === "dark" ? "#FFFFFF" : "#000000",
                   }}
                 ></i>

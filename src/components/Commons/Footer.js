@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="pt-3" style={{ background: "#E8E8E6" }}>
         <Container>
           <div className="row">
-            <div className="col-md-6 col-lg-6 col-xl-6 mt-3">
+            <div className="col-md-4 col-lg-4 col-xl-4 mt-3">
               <div className="mx-3" style={{ display: "inline-flex" }}>
                 <h4 className="me-3">
                   <a
@@ -67,9 +67,12 @@ const Footer = () => {
                 </h4>
               </div>
             </div>
-            <div className="col-md-6 col-lg-6 col-xl-6 my-3">
+            <div className="col-md-8 col-lg-8 col-xl-8 my-3">
+              <p className="me-3 ms-md-auto ms-lg-auto ms-xl-auto text-dark text-start text-md-end text-lg-end text-xl-end">
+                &copy; Takniik, all rights reserved
+              </p>
               <div
-                className="ms-3 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0"
+                className="ms-3 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0 w-100"
                 style={{
                   maxWidth: "100%",
                 }}
@@ -81,7 +84,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    Sitmap
+                    Privacy and Security Policy
                   </a>
                 </p>
                 <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
@@ -91,7 +94,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    Terms
+                    Terms of Use
                   </a>
                 </p>
                 <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
@@ -101,7 +104,7 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    Privacy Notice
+                    Payer Terms & Conditions
                   </a>
                 </p>
                 <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
@@ -111,11 +114,8 @@ const Footer = () => {
                     target={"_blank"}
                     rel="noreferrer"
                   >
-                    Cookie Notice
+                    Sitemap
                   </a>
-                </p>
-                <p className="me-3 ms-md-auto ms-lg-auto ms-xl-auto text-dark">
-                  &copy; Takniik, all rights reserved
                 </p>
               </div>
             </div>
@@ -268,75 +268,6 @@ const Footer = () => {
                   <br />
                 </div>
               </div>
-              <div className="mb-3 row">
-                <h4 className="hero-title-gradient my-3">
-                  <a className="text-decoration-none fw-bold" href="/">
-                    Consulting
-                  </a>
-                </h4>
-              </div>
-              <div className="mb-3 row">
-                <h4 className="hero-title-gradient my-3 fw-bold">Insights</h4>
-                <div className="col-md-4 col-lg-4 col-xl-4">
-                  <p className="text-decoration-none text-dark fw-bold">
-                    Themes
-                  </p>
-                  <a className="text-decoration-none text-dark" href="/">
-                    Modern Business
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    Sustainability and Resilience
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    Tech to Watch
-                  </a>{" "}
-                  <br />
-                </div>
-                <div className="col-md-4 col-lg-4 col-xl-4">
-                  <p className="text-decoration-none text-dark fw-bold">
-                    Research
-                  </p>
-                  <a className="text-decoration-none text-dark" href="/">
-                    The Future of Us
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    The Future-Ready Business Benchmark
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    The Green Ruch
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    The Work Ahead
-                  </a>{" "}
-                  <br />
-                </div>
-                <div className="col-md-4 col-lg-4 col-xl-4">
-                  <p className="text-decoration-none text-dark fw-bold">
-                    Explore
-                  </p>
-                  <a className="text-decoration-none text-dark" href="/">
-                    Blog
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    Case Studies
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    Insights
-                  </a>{" "}
-                  <br />
-                  <a className="text-decoration-none text-dark" href="/">
-                    Podcasts
-                  </a>{" "}
-                  <br />
-                </div>
-              </div>
             </div>
             <div className="col-md-3 col-lg-3 col-xl-3 my-3">
               <div className="mb-3">
@@ -403,20 +334,6 @@ const Footer = () => {
                   Talent Worldwide
                 </a>{" "}
                 <br />
-              </div>
-              <div className="mb-3">
-                <h4 className="hero-title-gradient my-3">
-                  <a className="text-decoration-none fw-bold" href="/">
-                    Glossary
-                  </a>
-                </h4>
-              </div>
-              <div className="mb-3">
-                <h4 className="hero-title-gradient my-3">
-                  <a className="text-decoration-none fw-bold" href="/">
-                    Information of Suppliers
-                  </a>
-                </h4>
               </div>
             </div>
           </div>

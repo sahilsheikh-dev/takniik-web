@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../../assets/css/style.css";
 import riveToggle from "../../assets/rive/fieldToggle.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { useEffect } from "react";
 
-const FieldChangeToggle = () => {
+const FieldChangeToggle = ({ fieldToggler }) => {
   const STATEMACHINE_NAME = "Switch";
   const INPUT_NAME = "Trigger 1";
 
@@ -24,15 +24,8 @@ const FieldChangeToggle = () => {
   const toggleComponent = () => {
     onClickInput.fire();
     console.log("done");
-    switchToField();
-  };
-
-  const switchToField = () => {
-    if (localStorage.getItem("currentField") === "Marketing") {
-      localStorage.setItem("currentField", "Technology");
-    } else {
-      localStorage.setItem("currentField", "Marketing");
-    }
+    // switchToField();
+    fieldToggler();
   };
 
   useEffect(() => {

@@ -35,7 +35,7 @@ const StyledApp = styled.div`
   color: ${({ theme }) => theme.text};
 `;
 
-const Header = ({ themeToggler, theme }) => {
+const Header = ({ themeToggler, fieldToggler, theme }) => {
   const [showIcon, setShowIcon] = useState(false);
   const [togglerNavIconDark, settoggleNavIconDark] = useState(NavToggleDark);
   const [togglerNavIconLight, settoggleNavIconLight] = useState(NavToggleLight);
@@ -156,7 +156,7 @@ const Header = ({ themeToggler, theme }) => {
                     >
                       <Dropdown id="dropdown-basic" className="hover-pink">
                         <NavLink className="hover-pink text-decoration-none nav-opt">
-                          Services <i class="bi bi-caret-down-fill"></i>
+                          Services <i className="bi bi-caret-down-fill"></i>
                         </NavLink>
                       </Dropdown>
                       <Dropdown.Menu
@@ -246,7 +246,7 @@ const Header = ({ themeToggler, theme }) => {
                     >
                       <Dropdown id="dropdown-basic" className="hover-pink">
                         <NavLink className="hover-pink text-decoration-none nav-opt">
-                          Services <i class="bi bi-caret-down-fill"></i>
+                          Services <i className="bi bi-caret-down-fill"></i>
                         </NavLink>
                       </Dropdown>
                       <Dropdown.Menu
@@ -397,6 +397,19 @@ const Header = ({ themeToggler, theme }) => {
                     <NavLink className="nav-link">Blogs</NavLink>
                   </Link>
                 </Nav.Link>
+                <Nav.Link>
+                  <div className="d-flex align-items-center d-block d-md-none d-lg-none d-xl-none py-0">
+                    {pageName === "" ||
+                    pageName === "aboutus" ||
+                    pageName === "contact" ? (
+                      <div className="d-flex align-items-center my-0">
+                        <FieldChangeToggle fieldToggler={fieldToggler} />
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                </Nav.Link>
               </Nav>
 
               <ButtonGroup className="nav-btn-section">
@@ -408,12 +421,12 @@ const Header = ({ themeToggler, theme }) => {
                       </Link>
                     </NavBtn>
                   </div>
-                  <div className="d-flex align-items-center py-sm-3">
+                  <div className="d-flex align-items-center py-sm-3 d-none d-md-block d-lg-block d-xl-block">
                     {pageName === "" ||
                     pageName === "aboutus" ||
                     pageName === "contact" ? (
                       <div className="d-flex align-items-center py-sm-3">
-                        <FieldChangeToggle />
+                        <FieldChangeToggle fieldToggler={fieldToggler} />
                       </div>
                     ) : (
                       ""

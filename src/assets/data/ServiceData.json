@@ -1,0 +1,108 @@
+[
+  [
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Search Engine Optimization",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/seo"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Video Production",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/videoproduction"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Video Editing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/videoediting"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Content Writing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/contentwriting"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Social Media Optimization",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/smo"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Graphic Designing",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/graphicdesigning"
+    }
+  ],
+  [
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Mobile App Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/mobiledevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Web Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/webdevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "CRM Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/crmdevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "CMS Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/cmsdevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Custom Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/customdevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "AI Module",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/aimodule"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "NFT Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/nftdevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Blockchain Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/blockchaindevelopment"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Testing Automation",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/testingautomation"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Deployment Consulting and Support",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/deploymentsupport"
+    },
+    {
+      "img": "https://images.pexels.com/photos/2962069/pexels-photo-2962069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "UI/UX Development",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "url": "/uiuxdevelopment"
+    }
+  ]
+]

@@ -425,6 +425,7 @@ body {
 @media only screen and (max-width: 992px) {
   .service {
     padding: 20px 0;
+    margin-top: 120px;
   }
 
   .service-heading {
@@ -1485,33 +1486,30 @@ input:-webkit-autofill:active {
 
 .FancyButton {
   display: block;
-  margin: 10px 5px;
   padding: 10px 15px;
   text-decoration: none;
-  background-color: #f3f3f3;
-  color: #000;
-  border-radius: 3px;
+  color: gray;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.FancyButton:hover {
-  background-color: #fff;
-}
-
 .active {
-  color: red !important;
+  color: rgb(0, 0, 0) !important;
+  font-weight: bold;
+  border-left: 3px solid #ff55f1 !important;
 }
 
 .nav-service-container {
   display: flex;
   justify-content: center;
-  background-color: #000000d3;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 300px;
+  max-width: 300px;
   flex-direction: column;
   padding: 10px;
-  height: 100vh;
+}
+
+.nav-service-section {
+  font-size: 30px;
+  font-weight: bold;
 }

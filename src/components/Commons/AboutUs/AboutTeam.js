@@ -94,9 +94,9 @@ const AboutTeam = ({ theme }) => {
                   onClick={previousSlide}
                 >
                   <i
-                    className="slide-icon bi bi-chevron-left"
+                    className="slide-icon bi bi-arrow-left-circle-fill"
                     style={{
-                      fontSize: "30px",
+                      fontSize: "50px",
                       color: theme === "dark" ? "#FFFFFF" : "#000000",
                     }}
                   ></i>
@@ -107,9 +107,9 @@ const AboutTeam = ({ theme }) => {
                   onClick={nextSlide}
                 >
                   <i
-                    className="slide-icon bi bi-chevron-right"
+                    className="slide-icon bi bi-arrow-right-circle-fill"
                     style={{
-                      fontSize: "30px",
+                      fontSize: "50px",
                       color: theme === "dark" ? "#FFFFFF" : "#000000",
                     }}
                   ></i>
@@ -130,7 +130,7 @@ const AboutTeam = ({ theme }) => {
                 }}
               >
                 {slideData.map((currentSlide, index) => (
-                  <SwiperSlide index={index} className="swiper-slide">
+                  <SwiperSlide key={index} className="swiper-slide">
                     <div
                       className="inner-shadow-bottom pb-3 text-center shadow shadow-sm"
                       style={{
@@ -164,9 +164,9 @@ const AboutTeam = ({ theme }) => {
                 onClick={previousSlide}
               >
                 <i
-                  className="slide-icon bi bi-chevron-left"
+                  className="slide-icon bi bi-arrow-left-circle-fill"
                   style={{
-                    fontSize: "30px",
+                    fontSize: "50px",
                     color: theme === "dark" ? "#FFFFFF" : "#000000",
                   }}
                 ></i>
@@ -177,9 +177,9 @@ const AboutTeam = ({ theme }) => {
                 onClick={nextSlide}
               >
                 <i
-                  className="slide-icon bi bi-chevron-right"
+                  className="slide-icon bi bi-arrow-right-circle-fill"
                   style={{
-                    fontSize: "30px",
+                    fontSize: "50px",
                     color: theme === "dark" ? "#FFFFFF" : "#000000",
                   }}
                 ></i>

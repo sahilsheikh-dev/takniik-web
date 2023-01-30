@@ -65,7 +65,7 @@ const VideoProductionService = () => {
           />
           <ServiceBanner theme={theme} />
           <ImageSlider />
-          <CardSlider />
+          <CardSlider theme={theme} />
           <FooterCTA
             Heading={"Order Your First Blog"}
             Subheading={

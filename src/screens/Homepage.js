@@ -26,6 +26,7 @@ const StyledApp = styled.div`
 
 const Homepage = () => {
   const [theme, setTheme] = useState("dark");
+  const [currentField, setCurrentField] = useState("");
 
   const themeToggler = () => {
     if (theme === "dark") {
@@ -50,23 +51,51 @@ const Homepage = () => {
     }
   };
 
+  const getCurrentField = () => {
+    if (
+      localStorage.getItem("currentField") === null ||
+      localStorage.getItem("currentField") === ""
+    ) {
+      localStorage.setItem("currentField", "Marketing");
+      setCurrentField("Marketing");
+    } else {
+      setCurrentField(localStorage.getItem("currentField"));
+    }
+  };
+
+  const fieldToggler = () => {
+    if (localStorage.getItem("currentField") === "Marketing") {
+      localStorage.setItem("currentField", "Technology");
+      setCurrentField("Technology");
+    } else {
+      localStorage.setItem("currentField", "Marketing");
+      setCurrentField("Marketing");
+    }
+    getCurrentField();
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     setCurrentTheme();
+    getCurrentField();
   }, []);
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <StyledApp>
         <GlobalStyles />
-        <Header themeToggler={themeToggler} theme={theme} />
+        <Header
+          themeToggler={themeToggler}
+          fieldToggler={fieldToggler}
+          theme={theme}
+        />
         <section id="main">
           <ScrollToTop />
           <WhatsappHoverBtn />
           <CookiesDialogue />
           <Hero />
-          {localStorage.getItem("currentField") === "Marketing" ? (
-            <ServicesMarketing theme={theme} />
+          {currentField === "Marketing" ? (
+            <ServicesMarketing />
           ) : (
             <ServicesTechnology theme={theme} />
           )}
@@ -76,7 +105,7 @@ const Homepage = () => {
           <Timeline theme={theme} />
           {/* <InstagramIntegration /> */}
           {/* <GoogleReviewIntegration /> */}
-          <IndustriesWeWorked />
+          <IndustriesWeWorked theme={theme} />
           <ContactForm theme={theme} />
           {/* <Cta theme={theme} /> */}
           <Footer />

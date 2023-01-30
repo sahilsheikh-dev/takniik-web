@@ -1,25 +1,61 @@
 import { createRef } from "react";
-import FancyButton from "./FancyButton";
-import ScrollSpy from "react-scrollspy-navigation";
-// import ScrollSpy from "react-scrollspy-navigation/dist/ScrollSpy";
+import ScrollSpy from "react-scrollspy-navigation/dist/ScrollSpy";
 
-export default function Navigation() {
+export default function Navigation({ serviceDataJson }) {
+  const goToField = (e, index) => {
+    e.preventDefault();
+    document.getElementById("box-" + index) &&
+      document.getElementById("box-" + index).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
   return (
     <nav
-      className="nav-service-container"
+      className="nav-service-container my-5"
       style={{
-        height: "100vh",
-        background: "#000000",
+        height: "100%",
+        maxHeight: "100vh",
       }}
     >
-      <ScrollSpy>
-        <FancyButton href="#box-1" text="Box 1" ref={createRef()} />
-        <FancyButton href="#box-2" text="Box 2" ref={createRef()} />
-        <FancyButton href="#box-3" text="Box 3" ref={createRef()} />
-        <FancyButton href="#box-4" text="Box 4" ref={createRef()} />
-        <FancyButton href="#box-5" text="Box 5" ref={createRef()} />
-        <FancyButton href="#box-6" text="Box 6" ref={createRef()} />
-      </ScrollSpy>
+      <div className="d-none d-md-block d-lg-block d-xl-block">
+        <ScrollSpy>
+          {serviceDataJson.map((serviceItem, index) => (
+            <a
+              key={index}
+              href={"#box-" + index}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("box-" + index) &&
+                  document.getElementById("box-" + index).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+              }}
+              className="FancyButton"
+              ref={createRef()}
+              style={{ borderLeft: "3px solid #cfcfcf" }}
+            >
+              {serviceItem.title}
+            </a>
+          ))}
+        </ScrollSpy>
+      </div>
+      <div className="d-flex align-items-center d-block d-md-none d-lg-none d-xl-none">
+        {serviceDataJson.map((serviceItem, index) => (
+          <a
+            key={index}
+            href="/"
+            onClick={(e) => goToField(e, index)}
+            className="FancyButton"
+            id={"box-index-" + index}
+          >
+            {index + 1}
+            {console.log(serviceItem.title)}
+          </a>
+        ))}
+      </div>
     </nav>
   );
 }
