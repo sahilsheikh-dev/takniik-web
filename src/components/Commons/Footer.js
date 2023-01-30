@@ -67,6 +67,58 @@ const Footer = () => {
                 </h4>
               </div>
             </div>
+            <div className="col-md-8 col-lg-8 col-xl-8 my-3 mx-0">
+              <p className="me-2 ms-md-auto ms-lg-auto ms-xl-auto text-dark text-start text-md-end text-lg-end text-xl-end">
+                &copy; Takniik, all rights reserved
+              </p>
+              <div
+                className="ms-2 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0 w-100"
+                style={{
+                  maxWidth: "80%",
+                }}
+              >
+                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Privacy and Security Policy
+                  </a>
+                </p>
+                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Terms of Use
+                  </a>
+                </p>
+                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Payer Terms & Conditions
+                  </a>
+                </p>
+                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                  <a
+                    className="text-decoration-none text-dark"
+                    href="/"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Sitemap
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
