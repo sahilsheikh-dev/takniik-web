@@ -1,7 +1,7 @@
-export default function Section({ id, children, title, description, img }) {
+export default function Section({ id, title, description, img }) {
   return (
     <section id={id} className="nav-service-section mx-0 px-0">
-      {children}
+      {/* {children} */}
       <h1 className="fw-bold" style={{ fontSize: "20px" }}>
         {title}
       </h1>
