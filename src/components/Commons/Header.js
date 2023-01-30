@@ -109,7 +109,7 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
             opacity: 0.9,
           }}
         >
-          <CareerToggle />
+          <CareerToggle theme={theme} />
           <Container className="my-0">
             <Navbar.Brand href="#">
               <Link to={"/"} style={{ textDecoration: "none" }}>

@@ -31,13 +31,35 @@ const CareerToggle = ({ theme }) => {
             background: theme === "dark" ? "#FFFFFF" : "#000000",
           }}
         >
-          <div className="text-start ms-3 mt-3 mt-md-5 mt-lg-5 mt-xl-5">
-            <h4
-              className="fw-bold mb-3"
-              style={{ color: theme === "dark" ? "#000000" : "#ffffff" }}
-            >
-              Latest Jobs
-            </h4>
+          <div className="text-start ms-3 mt-5">
+            <div className="row mb-3">
+              <div className="col-8">
+                <h4
+                  className="fw-bold mb-3"
+                  style={{ color: theme === "dark" ? "#000000" : "#ffffff" }}
+                >
+                  Latest Jobs
+                </h4>
+              </div>
+              <div className="col-4">
+                <button
+                  className="btn p-0 m-0 text-decoration-none"
+                  style={{
+                    color: theme === "dark" ? "#000000" : "#ffffff",
+                    fontSize: "30px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setToggeled(false)}
+                >
+                  <h4
+                    className="fw-bold mb-3 ms-auto w-100"
+                    style={{ color: theme === "dark" ? "#000000" : "#ffffff" }}
+                  >
+                    <i class="bi bi-x ms-auto w-100"></i>
+                  </h4>
+                </button>
+              </div>
+            </div>
             {jobsData.map((jobItem, index) => (
               <div className="mb-3" key={index}>
                 <a
