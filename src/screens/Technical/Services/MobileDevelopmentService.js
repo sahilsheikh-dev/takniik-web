@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
-import ScrollToTop from "../../../components/Commons/ScrollToTop";
 import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 import FooterCTA from "../../../components/Commons/FooterCTA";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
@@ -17,6 +16,7 @@ import Image2 from "../../../assets/img/services/mobiledevelopment/it-img-2.png"
 import Image3 from "../../../assets/img/services/mobiledevelopment/it-img-3.png";
 import ServiceBanner from "../../../components/Technical/Services/MobileDevelopment/ServiceBanner";
 import ColumnGrid3 from "../../../components/Commons/ColumnGrid3";
+// import ScrollToTop from "../../../components/Commons/ScrollToTop";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -60,7 +60,7 @@ const MobileDevelopmentService = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}

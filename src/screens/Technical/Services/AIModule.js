@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
-import ScrollToTop from "../../../components/Commons/ScrollToTop";
 import FooterCTA from "../../../components/Commons/FooterCTA";
 import { darkTheme, GlobalStyles, lightTheme } from "../../../theme";
 import HeroImg from "../../../assets/img/services/aimodule/hero.png";
@@ -22,6 +21,7 @@ import Image2 from "../../../assets/img/services/aimodule/cd-img-2.png";
 import Image3 from "../../../assets/img/services/aimodule/cd-img-3.png";
 import CardGrid2 from "../../../components/Commons/CardGrid2";
 import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
+// import ScrollToTop from "../../../components/Commons/ScrollToTop";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -65,7 +65,7 @@ const AIModule = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
           <ColumnHero
             HeroImg={HeroImg}

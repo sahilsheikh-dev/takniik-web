@@ -8,9 +8,9 @@ import AboutTeam from "../components/Commons/AboutUs/AboutTeam";
 import ContactForm from "../components/Commons/ContactForm";
 import Footer from "../components/Commons/Footer";
 import Header from "../components/Commons/Header";
-import ScrollToTop from "../components/Commons/ScrollToTop";
 import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
+// import ScrollToTop from "../components/Commons/ScrollToTop";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -54,7 +54,7 @@ const AboutUs = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
           <AboutHero />
           <AboutImageText />

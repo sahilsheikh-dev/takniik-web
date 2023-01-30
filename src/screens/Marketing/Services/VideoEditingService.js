@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import Footer from "../../../components/Commons/Footer";
 import Header from "../../../components/Commons/Header";
-import ScrollToTop from "../../../components/Commons/ScrollToTop";
 import WhatsappHoverBtn from "../../../components/Commons/WhatsappHoverBtn";
 import FooterCTA from "../../../components/Commons/FooterCTA";
 import ServiceBanner from "../../../components/Marketing/Services/VideoEditing/ServiceBanner";
@@ -13,6 +12,7 @@ import Image1 from "../../../assets/img/services/videoediting/ve-img-1.png";
 import Image2 from "../../../assets/img/services/videoediting/ve-img-2.png";
 import Image3 from "../../../assets/img/services/videoediting/ve-img-3.png";
 import ImageText3 from "../../../components/Commons/ImageText3";
+// import ScrollToTop from "../../../components/Commons/ScrollToTop";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -56,7 +56,7 @@ const VideoEditingService = () => {
         <GlobalStyles />
         <Header themeToggler={themeToggler} theme={theme} />
         <section id="main">
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
           <BgImageHero
             HeroImg={HeroBg}

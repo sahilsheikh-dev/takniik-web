@@ -29,6 +29,7 @@ import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import FieldChangeToggle from "./FieldChangeToggle";
+import CareerToggle from "./CareerToggle";
 
 const StyledApp = styled.div`
   background: ${({ theme }) => theme.body};
@@ -108,6 +109,7 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
             opacity: 0.9,
           }}
         >
+          <CareerToggle />
           <Container className="my-0">
             <Navbar.Brand href="#">
               <Link to={"/"} style={{ textDecoration: "none" }}>

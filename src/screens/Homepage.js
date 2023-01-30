@@ -11,10 +11,10 @@ import ServicesTechnology from "../components/Technical/Homepage/Services";
 import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
-import ScrollToTop from "../components/Commons/ScrollToTop";
 import CookiesDialogue from "../components/Commons/CookiesDialogue";
 import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorked";
 import ContactForm from "../components/Commons/ContactForm";
+// import ScrollToTop from "../components/Commons/ScrollToTop";
 // import Cta from "../components/Commons/Homepage/Cta";
 // import InstagramIntegration from "../components/Commons/InstagramIntegration";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
@@ -90,7 +90,7 @@ const Homepage = () => {
           theme={theme}
         />
         <section id="main">
-          <ScrollToTop />
+          {/* {/* <ScrollToTop /> */} */}
           <WhatsappHoverBtn />
           <CookiesDialogue />
           <Hero />
