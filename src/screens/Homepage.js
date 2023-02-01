@@ -90,7 +90,7 @@ const Homepage = () => {
           theme={theme}
         />
         <section id="main">
-          {/* {/* <ScrollToTop /> */} */}
+          {/* {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
           <CookiesDialogue />
           <Hero />
