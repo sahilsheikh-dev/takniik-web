@@ -1499,10 +1499,10 @@ input:-webkit-autofill:active {
 }
 
 .nav-service-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   position: sticky;
-  top: 0;
+  top: 25%;
   max-width: 300px;
   flex-direction: column;
   padding: 10px;

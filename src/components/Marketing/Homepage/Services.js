@@ -26,6 +26,7 @@ const Services = () => {
                     title={serviceItem.title}
                     description={serviceItem.description}
                     img={serviceItem.img}
+                    url={serviceItem.url}
                   />
                 ))}
               </div>

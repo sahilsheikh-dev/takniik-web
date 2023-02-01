@@ -13,7 +13,7 @@ export default function Navigation({ serviceDataJson }) {
 
   return (
     <nav
-      className="nav-service-container my-5 mx-0 px-0"
+      className="nav-service-container m-0 p-0"
       style={{
         height: "100%",
         maxHeight: "100vh",
