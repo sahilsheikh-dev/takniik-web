@@ -1495,7 +1495,7 @@ input:-webkit-autofill:active {
 
 .active {
   font-weight: bold;
-  border-left: 3px solid #ff55f1;
+  border-color: #fb10c4 !important;
 }
 
 .nav-service-container {
