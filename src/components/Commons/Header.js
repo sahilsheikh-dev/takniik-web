@@ -147,6 +147,12 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mx-auto nav-link-section">
+                <Nav.Link href="#">
+                  <Link to={"/"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">Home</NavLink>
+                  </Link>
+                </Nav.Link>
+
                 {localStorage.getItem("currentField") === "Marketing" ? (
                   <Nav.Link href="#">
                     <Dropdown
@@ -385,13 +391,8 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                 )}
 
                 <Nav.Link href="#">
-                  <Link to={"/casestudies"} style={{ textDecoration: "none" }}>
-                    <NavLink className="nav-link">Case Studies</NavLink>
-                  </Link>
-                </Nav.Link>
-                <Nav.Link href="#">
-                  <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
-                    <NavLink className="nav-link">About Us</NavLink>
+                  <Link to={"/industries"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">Industries</NavLink>
                   </Link>
                 </Nav.Link>
                 <Nav.Link href="#">

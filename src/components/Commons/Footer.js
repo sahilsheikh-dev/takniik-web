@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="pt-3" style={{ background: "#E8E8E6" }}>
         <Container>
           <div className="row">
-            <div className="col-md-4 col-lg-4 col-xl-4 mt-3">
+            <div className="col-auto mt-3">
               <div className="mx-3" style={{ display: "inline-flex" }}>
                 <h4 className="me-3">
                   <a
@@ -67,17 +67,9 @@ const Footer = () => {
                 </h4>
               </div>
             </div>
-            <div className="col-md-8 col-lg-8 col-xl-8 my-3 mx-0">
-              <p className="me-2 ms-md-auto ms-lg-auto ms-xl-auto text-dark text-start text-md-end text-lg-end text-xl-end">
-                &copy; Takniik, all rights reserved
-              </p>
-              <div
-                className="ms-2 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0 w-100"
-                style={{
-                  maxWidth: "80%",
-                }}
-              >
-                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+            <div className="col-auto my-3 mx-0 ms-0 ms-md-auto ms-lg-auto ms-xl-auto">
+              <div className="ms-2 ms-md-auto ms-lg-auto ms-xl-auto d-block d-md-inline-flex d-lg-inline-flex d-xl-inline-flex mx-0 w-100">
+                <p className="mx-0 mx-md-3 mx-lg-3 mx-xl-3">
                   <a
                     className="text-decoration-none text-dark"
                     href="/"
@@ -87,7 +79,7 @@ const Footer = () => {
                     Privacy and Security Policy
                   </a>
                 </p>
-                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                <p className="mx-0 mx-md-3 mx-lg-3 mx-xl-3">
                   <a
                     className="text-decoration-none text-dark"
                     href="/"
@@ -97,7 +89,7 @@ const Footer = () => {
                     Terms of Use
                   </a>
                 </p>
-                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                <p className="mx-0 mx-md-3 mx-lg-3 mx-xl-3">
                   <a
                     className="text-decoration-none text-dark"
                     href="/"
@@ -107,7 +99,7 @@ const Footer = () => {
                     Payer Terms & Conditions
                   </a>
                 </p>
-                <p className="me-3  ms-md-auto ms-lg-auto ms-xl-auto">
+                <p className="mx-0 mx-md-3 mx-lg-3 mx-xl-3">
                   <a
                     className="text-decoration-none text-dark"
                     href="/"
@@ -116,6 +108,9 @@ const Footer = () => {
                   >
                     Sitemap
                   </a>
+                </p>
+                <p className="mx-0 text-dark">
+                  &copy; Takniik, all rights reserved
                 </p>
               </div>
             </div>
