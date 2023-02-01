@@ -25,7 +25,7 @@ const IndustriesWeWorked = ({ theme }) => {
           activeIndex={currentSlide}
         >
           {industriesJson.map((carouselItem, index) => (
-            <Carousel.Item key={index}>
+            <Carousel.Item className="border-0" key={index}>
               <div className="row mt-5">
                 <div className="col-md-6 col-lg-6 col-xl-6 my-3 d-flex align-items-center">
                   <div
