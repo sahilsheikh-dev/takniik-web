@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import LayoutContext from "../../Commons/LayoutContext";
-import Navigation from "../../Commons/Navigation";
-import Section from "../../Commons/Section";
-import ServiceDataJson from "../../../assets/data/ServiceData.json";
+import LayoutContext from "../Common/LayoutContext";
+import Navigation from "../Common/Navigation";
+import Section from "../Common/Section";
+import ServiceDataJson from "../../../../../assets/data/ServiceData.json";
 
 const Services = () => {
   const serviceDataJson = ServiceDataJson[1];
