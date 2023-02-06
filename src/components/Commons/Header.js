@@ -391,8 +391,8 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                 )}
 
                 <Nav.Link href="#">
-                  <Link to={"/industries"} style={{ textDecoration: "none" }}>
-                    <NavLink className="nav-link">Industries</NavLink>
+                  <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">About Us</NavLink>
                   </Link>
                 </Nav.Link>
                 <Nav.Link href="#">

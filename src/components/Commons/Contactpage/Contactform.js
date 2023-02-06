@@ -11,8 +11,39 @@ import ContactCallIcon from "../../../assets/svg/ContactCallIcon.svg";
 import ContactMessageIcon from "../../../assets/svg/ContactMessageIcon.svg";
 import ContactBgLight from "../../../assets/svg/ContactBgLight.svg";
 import ContactBgDark from "../../../assets/svg/ContactBgDark.svg";
+import { useState } from "react";
 
 const Contactform = ({ theme }) => {
+  const [username, setUsername] = useState("");
+  const [userCompanyName, setUserCompanyName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userNumber, setUserNumber] = useState("");
+
+  const sendMail = () => {
+    if (
+      username === "" ||
+      username === null ||
+      username === undefined ||
+      userCompanyName === "" ||
+      userCompanyName === null ||
+      userCompanyName === undefined ||
+      userEmail === "" ||
+      userEmail === null ||
+      userEmail === undefined ||
+      userNumber === "" ||
+      userNumber === null ||
+      userNumber === undefined ||
+      userNumber.length < 10
+    ) {
+      alert("Please Fill the Info");
+    } else {
+      console.log(username);
+      console.log(userCompanyName);
+      console.log(userEmail);
+      console.log(userNumber);
+    }
+  };
+
   return (
     <Container>
       <div
@@ -38,6 +69,7 @@ const Contactform = ({ theme }) => {
               id={"name"}
               name={"name"}
               placeholder={"Name"}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <ContactInput
               className="contact-form-input"
@@ -46,6 +78,7 @@ const Contactform = ({ theme }) => {
               id={"company-name"}
               name={"company-name"}
               placeholder={"Company Name"}
+              onChange={(e) => setUserCompanyName(e.target.value)}
             />
             <ContactInput
               className="contact-form-input"
@@ -54,6 +87,7 @@ const Contactform = ({ theme }) => {
               id={"email"}
               name={"email"}
               placeholder={"Email ID"}
+              onChange={(e) => setUserEmail(e.target.value)}
             />
             <div
               className="row"
@@ -82,11 +116,12 @@ const Contactform = ({ theme }) => {
                   id={"phone"}
                   name={"phone"}
                   placeholder={"Mobile Number"}
+                  onChange={(e) => setUserNumber(e.target.value)}
                 />
               </div>
             </div>
             <div className="text-center">
-              <Button className="hero-btn">
+              <Button className="hero-btn" onClick={() => sendMail()}>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </Button>
             </div>

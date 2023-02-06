@@ -1,15 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
-import "swiper/css";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { FreeMode } from "swiper";
+// import "swiper/css";
 import CardSlid from "./CardSlid";
 import cardBgImg1 from "../../../../assets/img/services/videoproduction/card-img-1.png";
 import cardBgImg2 from "../../../../assets/img/services/videoproduction/card-img-2.png";
 import cardBgImg3 from "../../../../assets/img/services/videoproduction/card-img-3.png";
+import { useRef } from "react";
+import Slider from "react-slick";
 
 const CardSlider = ({ theme }) => {
-  const [my_swiper, set_my_swiper] = useState({});
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false,
+  };
+  const settingsSmallScreen = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+  const sliderRef = useRef();
+  const sliderRefMobile = useRef();
+
   const slideData = [
     { url: cardBgImg1, text: "Beauty" },
     { url: cardBgImg2, text: "Education" },
@@ -20,23 +40,15 @@ const CardSlider = ({ theme }) => {
   ];
 
   const nextSlide = () => {
-    const wid = window.innerWidth;
-    // change or add the conditions for more device aspect ratios
-    if (wid >= 1000) {
-      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
-        my_swiper.slideNext();
-      }
-    } else {
-      if (my_swiper.realIndex !== slideData.length) {
-        my_swiper.slideNext();
-      }
-    }
+    sliderRef.current.slickNext();
+    sliderRefMobile.current.slickNext();
   };
+
   const previousSlide = () => {
-    if (my_swiper.realIndex !== 0) {
-      my_swiper.slidePrev();
-    }
+    sliderRef.current.slickPrev();
+    sliderRefMobile.current.slickPrev();
   };
+
   return (
     <Container>
       <div className="container">
@@ -77,27 +89,32 @@ const CardSlider = ({ theme }) => {
           </div>
         </div>
         <div className="container py-md-4 py-lg-4 py-xl-4 justify-content-center">
-          <Swiper
-            freeMode={false}
-            grabCursor={true}
-            modules={[FreeMode]}
-            className="mySwiper"
-            slides
-            PerView={1}
-            spaceBetween={30}
-            onInit={(ev) => {
-              set_my_swiper(ev);
-            }}
+          <Slider
+            className="d-none d-md-block d-lg-block d-xl-block"
+            {...settings}
+            ref={sliderRef}
           >
             {slideData.map((currentSlide, index) => (
-              <SwiperSlide key={index} className="swiper-slide">
-                <CardSlid
-                  cardBgImg={currentSlide.url}
-                  CardText={currentSlide.text}
-                />
-              </SwiperSlide>
+              <CardSlid
+                key={index}
+                cardBgImg={currentSlide.url}
+                cardText={currentSlide.text}
+              />
             ))}
-          </Swiper>
+          </Slider>
+          <Slider
+            className="d-block d-md-none d-lg-none d-xl-none"
+            {...settingsSmallScreen}
+            ref={sliderRefMobile}
+          >
+            {slideData.map((currentSlide, index) => (
+              <CardSlid
+                key={index}
+                cardBgImg={currentSlide.url}
+                cardText={currentSlide.text}
+              />
+            ))}
+          </Slider>
         </div>
         <div className="w-100 py-4 text-center d-block d-md-none d-lg-none d-xl-none">
           <button

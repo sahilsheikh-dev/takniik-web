@@ -19,6 +19,8 @@ import NFTDevelopment from "./screens/Technical/Services/NFTDevelopment";
 import TestingAutomation from "./screens/Technical/Services/TestingAutomation";
 import UIUXDevelopment from "./screens/Technical/Services/UIUXDevelopment";
 import WebDevelopmentService from "./screens/Technical/Services/WebDevelopmentService";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

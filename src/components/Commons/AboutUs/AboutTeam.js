@@ -1,17 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+import { useRef } from "react";
 import { Container } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
-import "swiper/css";
+import Slider from "react-slick";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { FreeMode } from "swiper";
+// import "swiper/css";
 import Team1 from "../../../assets/img/about-us/team1.png";
 import Team2 from "../../../assets/img/about-us/team2.png";
 import Team3 from "../../../assets/img/about-us/team3.png";
 import Team4 from "../../../assets/img/about-us/team4.png";
 import Team5 from "../../../assets/img/about-us/team5.png";
 import Team6 from "../../../assets/img/about-us/team6.png";
+import TeamCard from "./Abouteam/TeamCard";
 
 const AboutTeam = ({ theme }) => {
-  const [my_swiper, set_my_swiper] = useState({});
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+  };
+  const settingsSmallScreen = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+  const sliderRef = useRef();
+  const sliderRefMobile = useRef();
+
   const slideData = [
     {
       userImage: Team1,
@@ -52,22 +73,13 @@ const AboutTeam = ({ theme }) => {
   ];
 
   const nextSlide = () => {
-    const wid = window.innerWidth;
-    // change or add the conditions for more device aspect ratios
-    if (wid >= 1000) {
-      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
-        my_swiper.slideNext();
-      }
-    } else {
-      if (my_swiper.realIndex !== slideData.length) {
-        my_swiper.slideNext();
-      }
-    }
+    sliderRef.current.slickNext();
+    sliderRefMobile.current.slickNext();
   };
+
   const previousSlide = () => {
-    if (my_swiper.realIndex !== 0) {
-      my_swiper.slidePrev();
-    }
+    sliderRef.current.slickPrev();
+    sliderRefMobile.current.slickPrev();
   };
 
   return (
@@ -117,46 +129,36 @@ const AboutTeam = ({ theme }) => {
               </div>
             </div>
             <div className="container py-md-4 py-lg-4 py-xl-4 justify-content-center px-0">
-              <Swiper
-                freeMode={false}
-                grabCursor={true}
-                modules={[FreeMode]}
-                className="mySwiper"
-                slides
-                PerView={1}
-                spaceBetween={30}
-                onInit={(ev) => {
-                  set_my_swiper(ev);
-                }}
+              <Slider
+                className="d-none d-md-block d-lg-block d-xl-block"
+                {...settings}
+                ref={sliderRef}
               >
                 {slideData.map((currentSlide, index) => (
-                  <SwiperSlide key={index} className="swiper-slide">
-                    <div
-                      className="inner-shadow-bottom pb-3 text-center shadow shadow-sm"
-                      style={{
-                        background: theme === "dark" ? "#000000" : "#F9F9F9",
-                        borderRadius: "20px",
-                        minWidth: "300px",
-                        minHeight: "360px",
-                      }}
-                    >
-                      <img
-                        src={currentSlide.userImage}
-                        className="card-img-top rounded-0 mb-3"
-                        alt="logo"
-                      />
-                      <div className="card-body px-3">
-                        <h5 className="card-title fw-bold mb-3">
-                          {currentSlide.name}
-                        </h5>
-                        <p className="card-text" style={{ fontSize: "14px" }}>
-                          {currentSlide.text}
-                        </p>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                  <TeamCard
+                    key={index}
+                    theme={theme}
+                    userImage={currentSlide.userImage}
+                    name={currentSlide.name}
+                    text={currentSlide.text}
+                  />
                 ))}
-              </Swiper>
+              </Slider>
+              <Slider
+                className="d-block d-md-none d-lg-none d-xl-none"
+                {...settingsSmallScreen}
+                ref={sliderRefMobile}
+              >
+                {slideData.map((currentSlide, index) => (
+                  <TeamCard
+                    key={index}
+                    theme={theme}
+                    userImage={currentSlide.userImage}
+                    name={currentSlide.name}
+                    text={currentSlide.text}
+                  />
+                ))}
+              </Slider>
             </div>
             <div className="w-100 py-4 text-center d-block d-md-none d-lg-none d-xl-none">
               <button

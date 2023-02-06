@@ -1,16 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
-import "swiper/css";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { FreeMode } from "swiper";
+// import "swiper/css";
 import cardBgImg1 from "../../../assets/img/services/videoproduction/card-img-1.png";
 import cardBgImg2 from "../../../assets/img/services/videoproduction/card-img-2.png";
 import cardBgImg3 from "../../../assets/img/services/videoproduction/card-img-3.png";
 import RevirewCard from "./RevirewCard";
+import Slider from "react-slick";
+import { useRef } from "react";
 
 const Review = ({ theme }) => {
-  const [my_swiper, set_my_swiper] = useState({});
-  const [swipable, setSwipable] = useState(true);
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false,
+  };
+  const settingsSmallScreen = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+  const sliderRef = useRef();
+  const sliderRefMobile = useRef();
+
   const slideData = [
     {
       userImage: cardBgImg1,
@@ -51,54 +70,13 @@ const Review = ({ theme }) => {
   ];
 
   const nextSlide = () => {
-    const wid = window.innerWidth;
-    // change or add the conditions for more device aspect ratios
-    if (wid >= 1000) {
-      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
-        setSwipable(true);
-        my_swiper.slideNext();
-      }
-    } else {
-      if (my_swiper.realIndex !== slideData.length) {
-        setSwipable(true);
-        my_swiper.slideNext();
-      }
-    }
+    sliderRef.current.slickNext();
+    sliderRefMobile.current.slickNext();
   };
 
   const previousSlide = () => {
-    if (my_swiper.realIndex !== 0) {
-      setSwipable(true);
-      my_swiper.slidePrev();
-    }
-  };
-
-  const updateSlideChange = () => {
-    const wid = window.innerWidth;
-    if (wid >= 1000) {
-      if (my_swiper.realIndex !== Math.round(slideData.length / 5)) {
-        console.log(my_swiper.realIndex);
-        console.log("swiped to previous slide");
-      }
-    } else {
-      if (my_swiper.realIndex !== slideData.length) {
-        console.log(my_swiper.realIndex);
-        console.log("swiped to previous slide");
-      }
-    }
-    if (my_swiper.realIndex !== 0) {
-      console.log(my_swiper.realIndex);
-      console.log("swiped to next slide");
-      console.log(Math.round(slideData.length / 5));
-      if (my_swiper.realIndex !== Math.round(slideData.length / 5) - 1) {
-        setSwipable(false);
-        console.log("last index");
-        console.log(swipable);
-      } else {
-        setSwipable(true);
-        console.log("not a last index");
-      }
-    }
+    sliderRef.current.slickPrev();
+    sliderRefMobile.current.slickPrev();
   };
 
   useEffect(() => {
@@ -147,33 +125,38 @@ const Review = ({ theme }) => {
               </div>
             </div>
             <div className="container py-md-4 py-lg-4 py-xl-4 justify-content-center px-0">
-              <Swiper
-                id="swiper"
-                className="mySwiper"
-                freeMode={false}
-                grabCursor={true}
-                modules={[FreeMode]}
-                slides
-                PerView={1}
-                spaceBetween={30}
-                onSlideChange={() => updateSlideChange()}
-                wrapperclassName={swipable === true ? "swiper-wrapper" : "disabled"}
-                onInit={(ev) => {
-                  set_my_swiper(ev);
-                }}
+              <Slider
+                className="d-none d-md-block d-lg-block d-xl-block"
+                {...settings}
+                ref={sliderRef}
               >
                 {slideData.map((currentSlide, index) => (
-                  <SwiperSlide key={index} className="swiper-slide">
-                    <RevirewCard
-                      theme={theme}
-                      userImage={currentSlide.userImage}
-                      name={currentSlide.name}
-                      position={currentSlide.position}
-                      text={currentSlide.text}
-                    />
-                  </SwiperSlide>
+                  <RevirewCard
+                    key={index}
+                    theme={theme}
+                    userImage={currentSlide.userImage}
+                    name={currentSlide.name}
+                    position={currentSlide.position}
+                    text={currentSlide.text}
+                  />
                 ))}
-              </Swiper>
+              </Slider>
+              <Slider
+                className="d-block d-md-none d-lg-none d-xl-none"
+                {...settingsSmallScreen}
+                ref={sliderRefMobile}
+              >
+                {slideData.map((currentSlide, index) => (
+                  <RevirewCard
+                    key={index}
+                    theme={theme}
+                    userImage={currentSlide.userImage}
+                    name={currentSlide.name}
+                    position={currentSlide.position}
+                    text={currentSlide.text}
+                  />
+                ))}
+              </Slider>
             </div>
             <div className="w-100 py-4 text-center d-block d-md-none d-lg-none d-xl-none">
               <button

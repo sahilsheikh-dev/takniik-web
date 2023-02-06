@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardSlid = ({ cardBgImg, CardText }) => {
+const CardSlid = ({ cardBgImg, cardText }) => {
   return (
     <div style={{ maxWidth: "300px" }}>
       <div
@@ -18,12 +18,11 @@ const CardSlid = ({ cardBgImg, CardText }) => {
           className="fw-bold"
           style={{
             position: "absolute",
-            bottom: "20px",
-            left: "10px",
+            top: "80%",
             marginLeft: "20px",
           }}
         >
-          {CardText}
+          {cardText}
         </h3>
       </div>
     </div>
