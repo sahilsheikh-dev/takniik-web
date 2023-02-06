@@ -153,6 +153,12 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                   </Link>
                 </Nav.Link>
 
+                <Nav.Link href="#">
+                  <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
+                    <NavLink className="nav-link">About Us</NavLink>
+                  </Link>
+                </Nav.Link>
+
                 {localStorage.getItem("currentField") === "Marketing" ? (
                   <Nav.Link href="#">
                     <Dropdown
@@ -390,11 +396,6 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                   </Nav.Link>
                 )}
 
-                <Nav.Link href="#">
-                  <Link to={"/aboutus"} style={{ textDecoration: "none" }}>
-                    <NavLink className="nav-link">About Us</NavLink>
-                  </Link>
-                </Nav.Link>
                 <Nav.Link href="#">
                   <Link to={"/blogs"} style={{ textDecoration: "none" }}>
                     <NavLink className="nav-link">Blogs</NavLink>

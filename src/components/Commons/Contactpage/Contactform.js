@@ -12,6 +12,7 @@ import ContactMessageIcon from "../../../assets/svg/ContactMessageIcon.svg";
 import ContactBgLight from "../../../assets/svg/ContactBgLight.svg";
 import ContactBgDark from "../../../assets/svg/ContactBgDark.svg";
 import { useState } from "react";
+import MailAPI from "../../../lib/MailAPI";
 
 const Contactform = ({ theme }) => {
   const [username, setUsername] = useState("");
@@ -37,10 +38,7 @@ const Contactform = ({ theme }) => {
     ) {
       alert("Please Fill the Info");
     } else {
-      console.log(username);
-      console.log(userCompanyName);
-      console.log(userEmail);
-      console.log(userNumber);
+      alert(MailAPI.sendMail(username, userCompanyName, userEmail, userNumber));
     }
   };
 

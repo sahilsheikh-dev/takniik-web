@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import TelecomImg from "../../assets/img/telecom.png";
+import MailAPI from "../../lib/MailAPI";
 import {
   ContactInput,
   ContactInputNumber,
@@ -32,10 +33,7 @@ const ContactForm = ({ theme }) => {
     ) {
       alert("Please Fill the Info");
     } else {
-      console.log(username);
-      console.log(userCompanyName);
-      console.log(userEmail);
-      console.log(userNumber);
+      alert(MailAPI.sendMail(username, userCompanyName, userEmail, userNumber));
     }
   };
 
