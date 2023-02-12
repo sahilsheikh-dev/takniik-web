@@ -33,7 +33,7 @@ const ContactForm = ({ theme }) => {
     ) {
       alert("Please Fill the Info");
     } else {
-      alert(MailAPI.sendMail(username, userCompanyName, userEmail, userNumber));
+      MailAPI.sendMail();
     }
   };
 
@@ -46,7 +46,7 @@ const ContactForm = ({ theme }) => {
             <img className="img-fluid w-100" src={TelecomImg} alt="logo" />
           </div>
           <div className="col-md-6 col-lg-6 col-xl-6 my-3 d-flex align-items-center">
-            <form>
+            <form method="POST" id="formName" name="formName">
               <h3 className="contact-form-heading">Contact Us</h3>
               <p className="contact-form-subheading">
                 Quality content generation, work with top <br />
@@ -100,8 +100,8 @@ const ContactForm = ({ theme }) => {
                 </div>
                 <div className="col">
                   <ContactInputNumber
-                    type={"tel"}
-                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    type={"number"}
+                    // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     required
                     id={"phone"}
                     name={"phone"}
@@ -111,7 +111,11 @@ const ContactForm = ({ theme }) => {
                 </div>
               </div>
               <div className="text-center">
-                <Button className="hero-btn" onClick={() => sendMail()}>
+                <Button
+                  className="hero-btn"
+                  type="submit"
+                  onClick={() => sendMail()}
+                >
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </Button>
               </div>

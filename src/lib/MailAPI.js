@@ -1,21 +1,20 @@
 class MailAPI {
-  sendMail(username, userCompanyName, userEmail, userNumber) {
-    // const user = "sahil.aspaksheikh@gmail.com";
-    // const pass = "dsjoz.sdasldjrolj";
-    // const from = "sahil.aspaksheikh@gmail.com";
-    // const to = "sahilsheikh.dev@gmail.com";
-    // const subject = "You have a Message from " + username;
-    // const message =
-    //   "User Name: " +
-    //   username +
-    //   ", Company Name: " +
-    //   userCompanyName +
-    //   ", User Email: " +
-    //   userEmail +
-    //   ", User Number: " +
-    //   userNumber;
+  sendMail() {
+    const scriptURL = "<Web-app-URL>";
+    const form = document.forms["formName"];
 
-    return "Credentials Required";
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          console.log(response);
+          alert("Thank you! your form is submitted successfully.");
+        })
+        .then(() => {
+          window.location.reload();
+        })
+        .catch((error) => alert("Error!" + error.message));
+    });
   }
 }
 

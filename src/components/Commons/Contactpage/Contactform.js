@@ -38,7 +38,7 @@ const Contactform = ({ theme }) => {
     ) {
       alert("Please Fill the Info");
     } else {
-      alert(MailAPI.sendMail(username, userCompanyName, userEmail, userNumber));
+      MailAPI.sendMail();
     }
   };
 
@@ -60,69 +60,74 @@ const Contactform = ({ theme }) => {
               Quality content generation, work with top <br />
               talent, use content OS and more.
             </p>
-            <ContactInput
-              className="contact-form-input"
-              type={"text"}
-              required
-              id={"name"}
-              name={"name"}
-              placeholder={"Name"}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-            <ContactInput
-              className="contact-form-input"
-              type={"text"}
-              required
-              id={"company-name"}
-              name={"company-name"}
-              placeholder={"Company Name"}
-              onChange={(e) => setUserCompanyName(e.target.value)}
-            />
-            <ContactInput
-              className="contact-form-input"
-              type={"email"}
-              required
-              id={"email"}
-              name={"email"}
-              placeholder={"Email ID"}
-              onChange={(e) => setUserEmail(e.target.value)}
-            />
-            <div
-              className="row"
-              style={{
-                margin: "0 1px",
-                background: "rgba(255, 255, 255, 0.07)",
-                border: "1px solid rgba(0, 0, 0, 0.2)",
-                borderRadius: "7.14477px",
-              }}
-            >
+            <form method="POST" id="formName" name="formName">
+              <ContactInput
+                className="contact-form-input"
+                type={"text"}
+                required
+                id={"name"}
+                name={"name"}
+                placeholder={"Name"}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <ContactInput
+                className="contact-form-input"
+                type={"text"}
+                required
+                id={"company-name"}
+                name={"company-name"}
+                placeholder={"Company Name"}
+                onChange={(e) => setUserCompanyName(e.target.value)}
+              />
+              <ContactInput
+                className="contact-form-input"
+                type={"email"}
+                required
+                id={"email"}
+                name={"email"}
+                placeholder={"Email ID"}
+                onChange={(e) => setUserEmail(e.target.value)}
+              />
               <div
-                className="col-1"
+                className="row"
                 style={{
-                  margin: "0 0 0 12px",
-                  padding: "15px",
-                  color: theme === "dark" ? "" : "#000000",
+                  margin: "0 1px",
+                  background: "rgba(255, 255, 255, 0.07)",
+                  border: "1px solid rgba(0, 0, 0, 0.2)",
+                  borderRadius: "7.14477px",
                 }}
               >
-                <ContactSpanNumber>+91</ContactSpanNumber>
+                <div
+                  className="col-1"
+                  style={{
+                    margin: "0 0 0 12px",
+                    padding: "15px",
+                    color: theme === "dark" ? "" : "#000000",
+                  }}
+                >
+                  <ContactSpanNumber>+91</ContactSpanNumber>
+                </div>
+                <div className="col">
+                  <ContactInputNumber
+                    type={"number"}
+                    required
+                    id={"phone"}
+                    name={"phone"}
+                    placeholder={"Mobile Number"}
+                    onChange={(e) => setUserNumber(e.target.value)}
+                  />
+                </div>
               </div>
-              <div className="col">
-                <ContactInputNumber
-                  type={"tel"}
-                  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  required
-                  id={"phone"}
-                  name={"phone"}
-                  placeholder={"Mobile Number"}
-                  onChange={(e) => setUserNumber(e.target.value)}
-                />
+              <div className="text-center">
+                <Button
+                  className="hero-btn"
+                  type="submit"
+                  onClick={() => sendMail()}
+                >
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </Button>
               </div>
-            </div>
-            <div className="text-center">
-              <Button className="hero-btn" onClick={() => sendMail()}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </Button>
-            </div>
+            </form>
           </div>
           <div className="col-md-6">
             <div className="contact-details">
