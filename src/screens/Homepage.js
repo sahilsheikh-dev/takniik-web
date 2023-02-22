@@ -16,7 +16,7 @@ import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorke
 import ContactForm from "../components/Commons/ContactForm";
 // import ScrollToTop from "../components/Commons/ScrollToTop";
 // import Cta from "../components/Commons/Homepage/Cta";
-// import InstagramIntegration from "../components/Commons/InstagramIntegration";
+import TwitterIntegration from "../components/Commons/TwitterIntegration";
 // import GoogleReviewIntegration from "../components/Commons/GoogleReviewIntegration";
 
 const StyledApp = styled.div`
@@ -103,7 +103,7 @@ const Homepage = () => {
           <Achievements theme={theme} />
           <Review theme={theme} />
           <Timeline theme={theme} />
-          {/* <InstagramIntegration /> */}
+          <TwitterIntegration />
           {/* <GoogleReviewIntegration /> */}
           <IndustriesWeWorked theme={theme} />
           <ContactForm theme={theme} />
