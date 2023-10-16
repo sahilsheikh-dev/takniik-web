@@ -11,7 +11,7 @@ import ServicesTechnology from "../components/Commons/Homepage/Services/Technica
 import Timeline from "../components/Commons/Homepage/Timeline";
 import { darkTheme, GlobalStyles, lightTheme } from "../theme";
 import WhatsappHoverBtn from "../components/Commons/WhatsappHoverBtn";
-import CookiesDialogue from "../components/Commons/CookiesDialogue";
+// import CookiesDialogue from "../components/Commons/CookiesDialogue";
 import IndustriesWeWorked from "../components/Commons/Homepage/IndustriesWeWorked";
 import ContactForm from "../components/Commons/ContactForm";
 // import ScrollToTop from "../components/Commons/ScrollToTop";
@@ -92,7 +92,7 @@ const Homepage = () => {
         <section id="main">
           {/* <ScrollToTop /> */}
           <WhatsappHoverBtn />
-          <CookiesDialogue />
+          {/* <CookiesDialogue /> */}
           <Hero />
           {currentField === "Marketing" ? (
             <ServicesMarketing />
