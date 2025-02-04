@@ -26,9 +26,12 @@ export const GlobalStyles = createGlobalStyle`
     font-family: Montserrat, 'Poppins', BlinkMacSystemFont, Helvetica, sans-serif;
     transition: all 0.25s linear;
     scroll-behavior: smooth;
-  }
+  }  
   body::-webkit-scrollbar {
     display: none;
+  }
+  a {
+    color: ${({ theme }) => theme.text};
   }
   `;
 

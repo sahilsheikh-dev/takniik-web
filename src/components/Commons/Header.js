@@ -28,7 +28,7 @@ import riveToggle from "../../assets/rive/toggler.riv";
 import { useRive, useStateMachineInput } from "@rive-app/react-canvas";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import FieldChangeToggle from "./FieldChangeToggle";
+// import FieldChangeToggle from "./FieldChangeToggle";
 import CareerToggle from "./CareerToggle";
 
 const StyledApp = styled.div`
@@ -43,8 +43,8 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
 
   const [show, setShow] = useState(false);
 
-  const currentUrl = window.location.href;
-  const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
+  // const currentUrl = window.location.href;
+  // const pageName = currentUrl.substring(currentUrl.lastIndexOf("/") + 1);
 
   const showDropdown = (e) => {
     setShow(!show);
@@ -396,12 +396,12 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                   </Nav.Link>
                 )}
 
-                <Nav.Link href="#">
+                {/* <Nav.Link href="#">
                   <Link to={"/blogs"} style={{ textDecoration: "none" }}>
                     <NavLink className="nav-link">Blogs</NavLink>
                   </Link>
-                </Nav.Link>
-                <Nav.Link>
+                </Nav.Link> */}
+                {/* <Nav.Link>
                   <div className="d-flex align-items-center d-block d-md-none d-lg-none d-xl-none py-0">
                     {pageName === "" ||
                     pageName === "aboutus" ||
@@ -413,7 +413,7 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                       ""
                     )}
                   </div>
-                </Nav.Link>
+                </Nav.Link> */}
               </Nav>
 
               <ButtonGroup className="nav-btn-section">
@@ -425,7 +425,7 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                       </Link>
                     </NavBtn>
                   </div>
-                  <div className="d-flex align-items-center py-sm-3 d-none d-md-block d-lg-block d-xl-block">
+                  {/* <div className="d-flex align-items-center py-sm-3 d-none d-md-block d-lg-block d-xl-block">
                     {pageName === "" ||
                     pageName === "aboutus" ||
                     pageName === "contact" ? (
@@ -435,7 +435,7 @@ const Header = ({ themeToggler, fieldToggler, theme }) => {
                     ) : (
                       ""
                     )}
-                  </div>
+                  </div> */}
                   <div className="d-flex align-items-center py-sm-3">
                     <div
                       className="d-none d-lg-block ms-3"
